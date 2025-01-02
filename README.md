@@ -7,7 +7,7 @@
 
 ## Installation libraries using Conda
 1. Download the Conda installer for your OS setup. https://docs.conda.io/en/latest/miniconda.html
-2. After installing Conda, create a virtual environment for the IFCLDtoBrick converter with:
+2. After installing Conda, create a virtual environment for the gb-obXML converter with:
 ```
 conda create --name gbXMLtoobXML
 ```
