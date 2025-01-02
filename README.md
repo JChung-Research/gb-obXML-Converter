@@ -2,8 +2,8 @@
 
 ## Project Objective
 - Convert gbXML schema into obXML schema using XSLT approach
-- Devlier building information in the gbXML file to the obXML file for inteoperability between Building Informatino Modeling (BIM) and Building Energy Modeling (BEM)
-- Develop an API prototype for Architecture, Engineering, Construction, and Operaiton (AECO) experts to adopt this approach in their industrial projects
+- Seamlessly deliver building information in the gbXML to the obXML file for enhancing interoperability between Building information modeling (BIM) and Building Energy Modeling (BEM)
+- Develop practical applications for Architecture, Engineering, Construction, and Operaiton (AECO) experts to adopt this BIM-OBM-BEM simulation workflow in their industrial projects
 
 ## Installation libraries using Conda
 1. Download the Conda installer for your OS setup. https://docs.conda.io/en/latest/miniconda.html
@@ -26,7 +26,7 @@ pip install lxml xmlschema
 - Download the Github repository and unzip the Zip file
 - Run the 'gb-to-obXML_converter.py' Python file, as follows:
 ```
-python gb-to-obXML_converter.py -i example_files/OfficeBuilding_gbXML.xml -o example_files/OfficeBuilding_obXML.xml
+python gb-to-obXML_converter.py -i example_files/OfficeBuilding_gbXML_v.7.04.xml -o example_files/OfficeBuilding_obXML_v.1.4.xml
 ```
 ```
 optional arguments:
@@ -39,7 +39,7 @@ optional arguments:
 ```
 
 ## Contact
-If you have any question on this code, feel free to reach out to Jihoon Chung (jihoonchung.research@gmail.com)
+If you have any questions on this code, feel free to reach out to Jihoon Chung (jihoonchung.research@gmail.com)
 
 ## References
 - Green Building XML (gbXML) Schema, available at https://www.gbxml.org/
