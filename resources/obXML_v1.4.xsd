@@ -1,0 +1,2988 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2025 (x64) (https://www.altova.com) by jason wang (New York University) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:altova="http://www.altova.com/xml-schema-extensions" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:annotation>
+		<xs:documentation>Change Log: 
+		
+1.3.3_v4
+2/2024
+1. Under Space, changed Type to SpaceType
+2. Converted System to reference under the Space element
+3. Converted MeetingEvent to base element then reference in Space element
+4. Converted MinNumOccupantsPerMeeting to base element then reference of MeetingEvent
+5. Converted MaxNumOccupantsPerMeeting to base element then reference of MeetingEvent
+6. Converted MinNumberOfMeetingsPerDay to base element then reference of MeetingEvent
+7. Converted MaxNumberOfMeetingsPerDay to base element then reference of MeetingEvent
+8. Converted MeetingDurationProbability to base element then reference of MeetingEvent
+9. Converted Parameter to base element then reference in Drivers
+10. Added ParameterType simple type
+11. Converted Type to base child and renamed to ParameterType of type ParameterType then converted to reference child in Parameter
+12. Converted Parameter to base child element then converted to reference child in Environment
+13. Added Date element
+14. Moved Holiday element to base and added reference to Holidays
+15. Converted CoolingTemperature to base child then converted to reference of ASHRAEComfortTemperatures
+16. Converted HeatingTemperature to base child then converted to reference of ASHRAEComfortTemperatures
+17. Converted ASHRAEComfortTemperatures to base child then converted to reference of Thermal
+18. Converted ASHRAEComfortEnvelope to base child then converted to reference of Thermal
+19. Converted ASHRAECoolingAdaptiveComfort to base child then converted to reference of Thermal
+20. Converted ParameterRange to base child then converted to reference of many elements
+21. Converted Thermal to base child then converted to reference of Physical
+22. Converted Visual to base child then converted to reference of Physical
+23. Converted IAQ to base child then converted to reference of Physical
+24. Converted Physical to base child then converted to reference of Needs
+25. Converted Needs to base child then converted to reference of Behavior
+26. Converted Drivers to base child then converted to reference of Behavior
+27. Converted Actions to base child then converted to reference of Behavior
+28. Converted BuildingSystems to base child then converted to reference of Behavior
+29. Converted Gender to base child then converted to reference of SocioEconomic
+30. Converted LifeStyle to base child then converted to reference of SocioEconomic
+31. Converted JobType to base child then converted to reference of SocioEconomic
+32. Converted MaritalStatus to base child then converted to reference of SocioEconomic
+33. Converted Education to base child then converted to reference of SocioEconomic
+34. Converted IncomeGroup to base child then converted to reference of SocioEconomic
+35. Converted Employment to base child then converted to reference of SocioEconomic
+36. Converted Age to base child then converted to reference of SocioEconomic
+37. Converted SocioEconomic to base child then converted to reference of Occupant
+38. Converted GeographicLocation to base child then converted to reference of Occupant
+39. Converted SubjectiveValues to base child then converted to reference of Occupant
+40. Converted PastExperience to base child then converted to reference of SubjectiveValues
+41. Converted CostConscious to base child then converted to reference of SubjectiveValues
+42. Converted EnvironmentAwareness to base child then converted to reference of SubjectiveValues
+43. Converted TechnologyOriented to base child then converted to reference of SubjectiveValues
+44. Converted Accommodating to base child then converted to reference of SubjectiveValues
+45. Converted SocialInfluence to base child then converted to reference of SubjectiveValues
+46. Converted Occupant to base child then converted to reference of Occupants
+47. Converted HVAC to reference of Systems
+48. Converted Lights to reference of Systems
+49. Converted Windows to reference of Systems
+50. Converted PlugLoad to reference of Systems
+51. Converted Thermostats to reference of Systems
+52. Converted ShadesandBlinds to reference of Systems
+53. Converted TimeofDay to reference of TimeofDays
+54. Converted Probability to base child then converted to reference of StatusTransitionProbability
+55. Converted StatusTransitionProbability to base child then converted to reference of CustomProbabilityModelType
+56. Converted Probabilty to reference of MeetingDurationProbabilityType
+57. Converted EarlyOccurTime to base child then converted to reference of MarkovChainModelType and NormalProbabilityModelType
+58. Converted TypicalOccurTime to base child then converted to reference of MarkovChainModelType and NormalProbabilityModelType
+59. Converted MeetingDuration to base child then converted to reference of MeetingDurationProbabilityType
+60. Converted TypicalDuration to base child then converted to reference of NormalDurationModelType
+61. Converted MinimumDuration to base child then converted to reference of NormalDurationModelType
+62. Converted SpaceCategory to base child then converted to reference of SpaceOccupancyType
+63. Converted PercentTimePresence to base child then converted to reference of SpaceOccupancyType
+64. Converted Duration to base child then converted to reference of SpaceOccupancyType
+65. Converted Country to base child then converted to reference of GeographicLocation
+66. Converted ClimateZone to base child then converted to reference of GeographicLocation
+67. Converted CommuteMode to base child then converted to reference of GeographicLocation
+68. Converted Policy to base child then converted to reference of GeographicLocation
+69. Converted Infrastructure to base child then converted to reference of GeographicLocation
+70. Converted Cost to base child then converted to reference of GeographicLocation
+71. Converted Systems to base child then converted to reference of both Behavior and Spac
+72. Converted CoefficientA to base child then converted to reference of many elements
+73. Converted CoefficientB to base child then converted to reference of many elements
+74. Converted CoefficientC to base child then converted to reference of many elements
+75. Converted CoefficientD to base child then converted to reference of many elements
+76. Converted Parameter1ID to base child then converted to reference of many elements
+77. Converted Parameter2ID to base child then converted to reference of many elements
+78. Converted Parameter3ID to base child then converted to reference of many elements
+79. Converted Linear1D to base child then converted to reference of Formula
+80. Converted Linear2D to base child then converted to reference of Formula
+81. Converted Linear3D to base child then converted to reference of Formula
+82. Converted ConstantValue to base child then converted to reference of Formula
+83. Converted Quadratic1D to base child then converted to reference of Formula
+84. Converted Logit1D to base child then converted to reference of Formula
+85. Converted Logit2D to base child then converted to reference of Formula
+86. Converted Logit3D to base child then converted to reference of Formula
+87. Converted Weibull1D to base child then converted to reference of Formula
+88. Converted Logit1DQuadratic to base child then converted to reference of Formula
+89. Converted ControlValue to base child then converted to reference of Interaction
+89a. Renamed Type under Interaction to InteractionType
+90. Converted InteractionType to base child then converted to reference of Interaction
+91. Converted Formula to base child then converted to reference of Interaction
+92. Converted ControlValue to base child then converted to reference of Interaction
+93. Converted Interaction to base child then converted to reference of Actions
+94. Converted SeasonType to base child then converted to reference of many elements
+95. Converted DayofWeek to base child then converted to reference of many elements
+96. Converted RandomMovementEvent to base child then converted to reference of MovementBehavior
+97. Converted StatusTransitionEvent to base child then converted to reference of MovementBehavior
+98. Converted StatusOfActivity to base child then converted to reference of Activity
+99. Converted Description to base child then converted to reference of many elements
+100. Converted Name to base child then converted to reference of many elements
+101. Converted Time to base child then converted to reference of many elements
+102. Converted Environment to base child then converted to reference of Drivers
+103. Converted EventType to base child then converted to reference of Drivers
+104. Converted OtherConstraint to base child then converted to reference of Drivers
+105. Converted Building to base child then converted to reference of Buildings
+106. Converted Address to base child then converted to reference of Building
+107. Converted Spaces to base child then converted to reference of Building
+108. Converted BuildingType to base child then converted to reference of Building
+109. Converted MovementBehavior to base child then converted to reference of Behaviors
+110. Converted Behavior to base child then converted to reference of Behaviors
+111. Converted Activity to base child then converted to reference of Behaviors
+112. Converted Priority to base child then converted to reference of Occupant
+113. Converted MovementBehaviorID to base child then converted to reference of Occupant
+114. Converted BehaviorID to base child then converted to reference of Occupant
+115. Converted TimeFrequencyType to base child then converted to reference of StatusOfActivity
+116. Renamed SystemTypeList to SystemType
+117. Converted HVACType to base child then converted to reference of HVAC
+118. Converted LightType to base child then converted to reference of Lights
+119. Converted WindowType to base child then converted to reference of Windows
+120. Converted PlugLoadType to base child then converted to reference of PlugLoad
+121. Converted ThermostatType to base child then converted to reference of Thermostats
+122. Converted ShadeAndBlindType to base child then converted to reference of ShadesAndBlinds
+
+v.1.4
+7/2024
+1. Added ClothingLevel element and simpleType to Occupant element
+2. Added ClothingChangeType element and simpleType to Action element
+4. Added PersonalHoliday value to DayofWeekType simpleType
+5. Added Visitor value to JobType simpleType
+6. Added ElectricityMeter, FieldVisit, Interview, Occupancy, SubjectObservation, WindowStateLog, and BlindStateLog values to TypesDataCollectedList simpleType
+7. Added BrightnessSensitivity element to SubjectiveValues element
+8. Added AbsenceDuration element to StatusOfActivity element
+8. Added Linear4D, Linear5D, Linear6D, Linear7D, Linear8D, Linear9D, Logit4D, Logit5D, Logit6D, Logit7D, Logit8D, and Logit9D elements to Formula element
+9. Added Quadratic2D, Logit2DQuadratic elements to Formula element
+10. Added eqLinear4DType simpleType to Linear4D element; added eqLogit4DLinearType simpleType to Logit4D element
+11. Added eqLinear5DType simpleType to Linear5D element; added eqLogit5DLinearType simpleType to Logit5D element
+12. Added eqLinear6DType simpleType to Linear6D element; added eqLogit6DLinearType simpleType to Logit6D element
+13. Added eqLinear7DType simpleType to Linear7D element; added eqLogit7DLinearType simpleType to Logit7D element
+14. Added eqLinear8DType simpleType to Linear8D element; added eqLogit8DLinearType simpleType to Logit8D element
+15. Added eqLinear9DType simpleType to Linear9D element; added eqLogit9DLinearType simpleType to Logit9D element
+16. Added eqQuadratic1DType simpleType to Quadratic2D element; added eqLogit2DQuadraticType simpleType to Logit2DQuadratic element
+17. Added Parameter4ID, Parameter5ID, Parameter6ID, Parameter7ID, Parameter8ID, Parameter9ID, CoefficientE, CoefficientF, CoefficientG, CoefficientH, CoefficientI, and CoefficientJ elements
+18. Added Cubic1D elements with eqCubic1DType complexType to Formula element
+19. Added Custom9D and Logit9DCustom elements to Formula element
+20. Added eqCustom9DType to Custom9D and added eqLogit9DCustomType to Logit9DCustom
+21. Added Fans and Doors elements to Systems element
+22. Added FanType simpleType to Fans element; added DoorType simpleType to Doors element
+23. Added element ‘NumOccupants’ with ‘xs:integer’ to element ‘Space’
+24. Added enumeration ‘RoomRelativeHumidity’ to simpleType ‘ParameterType’ 
+25. Added enumeration ‘OutdoorRelativeHumidity’ to simpleType ‘ParameterType’ 
+26. Added enumeration ‘RoomVolatileOrganicCompounds’ to simpleType ‘ParameterType’ 
+27. Added enumeration ‘RoomWindSpeed’ to simpleType ‘ParameterType’ 
+28. Added enumeration ‘OutdoorWindSpeed’ to simpleType ‘ParameterType’ 
+29. Added enumeration ‘OutdoorWindDirection’ to simpleType ‘ParameterType’ 
+30. Added enumeration ‘RoomAcousticLevel' to simpleType ‘ParameterType’ 
+31. Added enumeration ‘OutdoorPrecipitationRate’ to simpleType ‘ParameterType’
+32. Added enumeration ‘OutdoorPrecipitationDepth’ to simpleType ‘ParameterType’
+33. Added enumeration ‘OutdoorParticulateMatter’ to simpleType ‘ParameterType’ 
+34. Added enumeration ‘OutdoorCO2Concentration’ to simpleType ‘ParameterType’
+35. Added enumeration ‘RoomParticulateMatter’ to simpleType ‘ParameterType’ 
+36. Added enumeration ‘OutdoorDirectSolarIrradiance’ to simpleType ‘ParameterType’ 
+37. Added enumeration ‘OutdoorDiffuseSolarIrradiance’ to simpleType ‘ParameterType’ 
+38. Added enumeration ‘OutdoorSolarAltitudeAngle’ to simpleType ‘ParameterType’ 
+39. Added enumeration ‘RoomDirectSolarIrradiance’ to simpleType ‘ParameterType’ 
+40. Added enumeration ‘RoomCeilingDaylightIlluminance’ to simpleType ‘ParameterType’ 
+41. Added enumeration ‘RoomTransmittedSolarIrradiance’ to simpleType ‘ParameterType’ 
+42. Added enumeration ‘RoomOperativeTemperature’ to simpleType ‘ParameterType’ 
+43. Changed attribute DataCollectionRegion to attributes DataCollectionCountry and DataCollectionCity
+44. Added element ‘EnergyConsumption’ with ‘xs:decimal  to element ‘HVAC’, ‘Fans’, ‘Lights’, and ‘PlugLoad’ 
+45. Added element ‘PowerConsumption’ with ‘xs:decimal’  to element ‘HVAC’, ‘Fans’, ‘Lights’, and ‘PlugLoad’ 
+46. Added element ‘OperationTime’ with ‘xs:duration’ to element ‘HVAC’, ‘Fans’, ‘Lights’, and ‘PlugLoad’
+47. Added element ‘ModelDescription’ to element ‘Behavior’, ‘MovementBehavior’, and ‘Activity’
+48. Moved ‘AppliedBuildingType’, ‘BuildingTypeComment’, ‘ActionType’, ‘SystemType’, 'DataCollectionCountry', 'DataCollectionCity', ‘TypesDataCollected1’, ‘TypesDataCollected2’, ‘TypesDataCollected3’, ‘TypesDataCollected4’, ‘TypesDataCollected5’, ‘TypesDataCollected6’, ‘TypesDataCollectedOther’, and ‘SampleSize’ under element ‘ModelDescription’ 
+49. Added attribute 'DataCollectionClimateZone' to element ‘ModelDescription’ with simpleType ‘xs:string’ 
+50. Added attribute 'StartDateOfDataCollection' to element ‘ModelDescription’ with simpleType ‘xs:date’ 
+51. Added attribute 'EndDateOfDataCollection' to element ‘ModelDescription’ with simpleType ‘xs:date’ 
+52. Added attribute 'DurationOfDataCollection' to element ‘ModelDescription’ with simpleType ‘xs:string’ 
+53. Added attribute ‘TimeGranularity’ to element ‘ModelDescription’ with simpleType ‘TimeGranularityType’ 
+54. Added enumeration ‘LessThan1, ‘1to9’, ‘10to19’, ‘30andMoreThan59’ to simpleType ‘TimeGranularityType’ 
+55. Added attribute ‘PredictiveHorizon’ to element ‘ModelDescription’ with simpleType ‘PredictiveHorizonType’ 
+56. Added enumeration ‘LessThan1, ‘1’, ‘3’, ‘5’, ‘15’, and ‘24’ to simpleType ‘PredictiveHorizonType’
+57. Added attribute ‘ControlHorizon’ to element ‘ModelDescription’ with simpleType ‘ControlHorizonType’
+58. Added enumeration ‘LessThan1, ‘1’, ‘3’, ‘5’, ‘15’, and ‘24’ to simpleType ‘ControlHorizonType’
+59. Added attribute ‘SpaceGranularity’ to element ‘ModelDescription’ with simpleType ‘SpaceGranularityType’
+60. Added enumeration ‘LabBased’, ‘Room’, ‘Floor’, and ‘Building’ to simpleType ‘SpaceGranularityType’
+61. Added ‘Laboratory’ to element ‘BuildingType’ and simpleType ‘BuildingType’
+62. Added element ‘ModelDevelopment’ to element ‘ModelDescription’
+63. Added element ‘DataPreparation’ and ‘ModelingCategory’ to element ‘ModelDevelopment’
+64. Added element ‘DataCleaning ’ with type ‘xs:string’ to element ‘DataPreparation’
+65. Added element ‘DimensionReduction’ with type ‘xs:string’ to element ‘DataPreparation’
+66. Added element ‘DataScaling’ with type ‘xs:string’ to element ‘DataPreparation’
+67. Added element ‘FeatureCreation’ with type ‘xs:string’ to element ‘DataPreparation’
+68. Added element ‘DataPartitioning’ with type ‘xs:string’ to element ‘DataPreparation’
+69. Added element ‘DataMerging’ with type ‘xs:string’ to element ‘DataPreparation’
+70. Added element ‘RuleBasedModel’ with simpleType ‘RuleBasedModelType’ to element ‘ModelingCategory’
+71. Added attribute ‘ScheduleBased’ and ‘GenericRuleBased’ to simpleType ‘RuleBasedModelType’
+72. Added element ‘StatisticalStochasticModel’ with simpleType ‘StatisticalStochasticModelType’ to element ‘ModelingCategory’
+73. Added attribute ‘Regression’, ‘GenericProbability’, ‘Weibull’, ‘Bernoulli’, ‘BayesianNetwork’, ‘MarkovChain’, ‘MonteCarlo’, and ‘MarkoveChainMonteCarlo’ to simpleType ‘StatisticalStochasticModelType’
+74. Added element ‘DataDrivenModel’ with simpleType ‘DataDrivenModelType’ to element ‘ModelingCategory’ 
+75. Added attribute ‘SupportVectorMachine’, ‘RandomForest’, ‘LongShortTermMemory’, ‘LinearRegression’, ‘HiddenMarkov’, ‘GaussianMixture’, ‘ControlLogic’, ‘Clustering’, ‘ArtificialNeuralNetwork’, and ‘FuzzyLogic’ to element ‘DataDrivenModelType’
+76. Added element ‘ModelEvaluation’ to element ‘ModelDescription’ 
+77. Added element ‘PerformanceMetric’ to element 'ModelEvaluation’
+78. Added element ‘AbsoluteMetric’, ‘DomainMetric’, and ‘IndirectPerformanceMetric’ to ‘PerformanceMetric’
+79. Added element ‘AbsoluteMetricType’ with simpleType ‘AbsoluteMetricType’ and ‘PerformanceMetricValue’ with type ‘xs:decimal’ to element ‘AbsoluteMetric’
+80. Added enumeration ‘Accuracy’, ‘BalancedAccuracy’, ‘ConfusionMatrix’, ‘F1’, ‘FBeta’, ‘MeanAverageError’, ‘MeanSquaredError’, ‘RootMeanSquaredError’, and ‘NormalizedMeanSquaredError’ to simpleType ‘AbsoluteMetricType’
+81. Added element ‘AggregatedDomainMetric’ and ‘IntervalByIntervalMetric’ to element ‘DomainMetric’
+82. Added element ‘AggregatedDomainMetricType’ with type ‘xs:string’ and ‘PerformanceMetricValue’ with type ‘xs:decimal’ to element ‘AggregatedDomainMetric’
+83. Added element ‘IntervalByIntervalMetricType’ with type ‘xs:string’ and ‘PerformanceMetricValue’ with type ‘xs:decimal’ to element ‘IntervalByIntervalMetric’ 
+84. Added element ‘ComfortRelatedIndirectMetric’ and ‘EnergyRelatedIndirectMetric’ to element’ IndirectPerformanceMetric’ 
+85. Added element ‘ComfortRelatedIndirectMetricType’ with type ‘xs:string’ and ‘PerformanceMetricValue’ with type ‘xs:decimal’ to element ‘ComfortRelatedIndirectMetric’
+86. Added element ‘EnergyRelatedIndirectMetricType’ with type ‘xs:string’ and ‘PerformanceMetricValue’ with type ‘xs:decimal’ to element ‘EnergyRelatedIndirectMetric’
+87. Added element ‘ModelImplementation’ to element ‘ModelDescription’ 
+88. Added element ‘ComputationalEnvironment’ to element ‘ModelImplementation’ 
+89. Added attribute ‘ProgrammingLanguage’ with ‘xs:string’ to element ‘ComputationalEnvironment’ 
+90. Added attribute ‘SoftwarePackagesTools’ with ‘xs:string’ to element ‘ComputationalEnvironment’
+91. Added attribute ‘OperatingSystem’ with ‘xs:string’ to element ‘ComputationalEnvironment’
+92. Added element ‘ComputationTime’ to element ‘ModelImplementation’
+93. Added attribute ‘InferenceRuntime’ with ‘xs:duration’ to element ‘ComputationTime’
+94. Added attribute ‘InferenceMemoryRequirement’ with ‘xs:string’ to element ‘ComputationTime’
+95. Added attribute ‘TotalRequiredTrainingRuntime’ with ‘xs:duration’ to element ‘ComputationTime’
+96. Added attribute ‘ModelScalability’ with ‘xs:string’ to element ‘ComputationTime’
+97. Added element ‘ExperimentSetup’ to element ‘ModelImplementation’
+98. Added element ‘Sensors’ to element ‘ExperimentSetup’
+99. Added element ‘SensorType’ with simpleType 'SensorType' and 'SensorLocation' to element ‘Sensors’
+100. Added enumeration ‘ACState’, ‘AirPressureSensor’, ‘AirSpeedSensor’, ‘Camera’, ‘CO2Sensor’ , ‘COSensor’, ‘ElectricSensor’, ‘DoorSensor’, ‘LightSensor’, ‘LightSwitch’, ‘MotionSensor’, ‘RelativeHumiditySensor’, ‘SmartMeter’, ‘SmartPlug’, ‘SolarIrradianceSensor’, ‘SoundSensor’, ‘AirTemperatureSensor’, ‘WiFiProbeSensor’, ‘VolatileOrganicCompoundsSensor’ , ‘ParticulateMatterSensor’, and ‘WindowSensor’ to simpleType ‘SensorType’ 
+101. Added element ‘SpaceLevelofSensorLocation’ with simpleType ‘SpaceLevelofSensorLocationType’ and ‘BuildingLevelofSensorLocation’ with simpleType ‘BuildingLevelofSensorLocationType’ to element ‘SensorLocation’ 
+102. Added enumeration ‘Ceiling’, ‘Chair’, ‘Desk’, ‘DoorFrame’, ‘Wall’, and ‘WindowFrame’ to simpleType ‘SpaceLevelofSensorLocationType’ 
+103. Added enumeration ‘ElectricalPanel’, ‘HVACEquipment’, ‘MainEntrance’, and ‘RoofTop’ to simpleType ‘BuildingLevelofSensorLocationType’
+104. Added attribute ‘PaperCitation’ to element ‘Behavior’
+105. Changed the name of the element ‘Duration’ to ‘OccupancyDuration’ 
+106. Changed the name of the element ‘Weather’ to 'WeatherStation'
+107. Added enumeration ‘LightStateLog’, 'ThermostatControlLog' and 'WeatherStation' to simpleType ‘TypesDataCollectedList’
+108. Updated the equation of eqLogit1DQuadraticType from “p = A + C / {1 + exp(-B*[log10(P1)-D]}“ to “log(p/(1-p)) = A*P1*P1+B*P1+C"
+109. Added ZoneIdRef attribute of type xs:IDREF to element Space
+110. Added LightScheduleIdRef attribute of type xs:IDREF to element Space
+111. Added PlugLoadScheduleIdRef attribute of type xs:IDREF to element Space
+112. Added BuildingStoreyIdRef attribute of type xs:IDREF to element Space
+000. Added element Zones to element OccupantBehavior
+113. Added element Zone with complex type including Description element
+114. Added HeatScheduleIdRef, CoolScheduleIdRef, FanScheduleIdRef, FanTempScheduleIdRef attribute of type xs:IDREF to element Zone
+115. Added element DesignHeatT and DesignCoolTe with attribute TempUnit to element Zone
+116. Added element DesignHeatRH and DesignCoolRH to element Zone
+117. Added gbXMLAirLoopEquipmentIdRef attribute of type xs:IDREF to element HVAC
+118. Added gbXMLFanIdRef attribute of type xs:IDREF to element Fans
+119. Added gbXMLLightingSystemIdRef attribute of type xs:IDREF to element Lights
+120. Added gbXMLWindowIdRef attribute of type xs:IDREF to element Windows
+121. Added gbXMLDoorIdRef attribute of type xs:IDREF to element Doors
+122. Added gbXMLInteriorEquipmentIdRef attribute of type xs:IDREF to element PlugLoad
+123. Added gbXMLAirLoopEquipmentIdRef attribute of type xs:IDREF to element Thermostats
+124. Added gbXMLBlindIdRef attribute of type xs:IDREF to element ShadesAndBlinds
+125. Added gbXMLProjectGuid attribute of type xs:IDREF to element OccupantBehavior
+126. Added gbXMLFilename attribute of type xs:string to element OccupantBehavior
+127. Added gbXMLOriginatingSystem attribute of type xs:string to element OccupantBehavior
+128. Added gbXMLCreationDate attribute of type xs:date to element OccupantBehavior
+129. Added gbXMLAuthor attribute of type xs:IDREF to element OccupantBehavior
+000. Added element Schedules to element OccupantBehavior
+130. Added element Schedule with complex type including Description and YearSchedule elements
+131. Added element YearSchedule with complex type including Description, BeginDate, EndDate, and WeekScheduleId elements
+132. Added element WeekSchedule with complex type including Description and DayScheduleId elements
+133. Added element DaySchedule with complex type including Description and ScheduleValue elements
+134. Added attributes OutsideHighReset, OutsideLowReset, SupplyHighReset, and SupplyLowReset to ScheduleValue element
+135. Added element OperationSchedule with complex type including OperationRange elements to element ‘HVAC’
+136. Added element BuildingStorey with complex type including Description and StoreyLevel elements
+137. Added element Area with attribute AreaUnit of type AreaUnitType
+138. Added element StoreyLevel with attribute LengthUnit of type LengthUnitType
+139. Added simpleType AreaUnitType with enumerations SquareKilometers, SquareMeters, SquareCentimeters, SquareMillimeters, SquareMiles, SquareYards, SquareFeet, and SquareInches
+140. Added simpleType LengthUnitType with enumerations Kilometers, Meters, Centimeters, Millimeters, Miles, Yards, Feet, and Inches
+141. Added simpleType ScheduleType with enumerations Temp, Fraction, OnOff, ResetTemp, and ActivitiyLevel
+142. Added simpleType ScheduleTypeLimits with enumerations Continuous and Discrete
+143. Added enumeration HeatingDesignDay and CoolingDesignDay to simpleType DayofWeekType
+144. Added enumeration Laboratory to simpleType BuildingType
+145. Added elements Schedule, WeekSchedule, DaySchedule to element OccupantBehavior
+146. Added elements LowerBound and UpperBound to element ScheduleTypeLimits
+147. Added element ParameterID, Min, Max to compelxType OperationRange
+148. Changed simpleType FanType to rename OnOff to CeilingOnOff and DiscreteControl to CeilingDiscreteControl
+149. Added enumeration HVACVariableVolume and HVACConstantVolume to simpleType FanType
+150. Added element and simpleType HVACConditionType to element Space
+151. Added enumeration Heated, Cooled, HeatedAndCooled, Unconditioned, Vented, and NaturallyVentedOnly to simpleType HVACConditionType
+152. Added element BuildingStorey to element Building
+153. Added element Area to elements Space and Building
+
+</xs:documentation>
+	</xs:annotation>
+	<xs:element name="Description" type="xs:string"/>
+	<xs:element name="CoefficientA" type="xs:decimal"/>
+	<xs:element name="CoefficientB" type="xs:decimal"/>
+	<xs:element name="CoefficientC" type="xs:decimal"/>
+	<xs:element name="CoefficientD" type="xs:decimal"/>
+	<xs:element name="CoefficientE" type="xs:decimal"/>
+	<xs:element name="CoefficientF" type="xs:decimal"/>
+	<xs:element name="CoefficientG" type="xs:decimal"/>
+	<xs:element name="CoefficientH" type="xs:decimal"/>
+	<xs:element name="CoefficientI" type="xs:decimal"/>
+	<xs:element name="CoefficientJ" type="xs:decimal"/>
+	<xs:element name="Parameter1ID" type="xs:IDREF"/>
+	<xs:element name="Parameter2ID" type="xs:IDREF"/>
+	<xs:element name="Parameter3ID" type="xs:IDREF"/>
+	<xs:element name="Parameter4ID" type="xs:IDREF"/>
+	<xs:element name="Parameter5ID" type="xs:IDREF"/>
+	<xs:element name="Parameter6ID" type="xs:IDREF"/>
+	<xs:element name="Parameter7ID" type="xs:IDREF"/>
+	<xs:element name="Parameter8ID" type="xs:IDREF"/>
+	<xs:element name="Parameter9ID" type="xs:IDREF"/>
+	<xs:element name="ConstantValue" type="eqConstantValueType"/>
+	<xs:element name="Linear1D" type="eqLinear1DType"/>
+	<xs:element name="Linear2D" type="eqLinear2DType"/>
+	<xs:element name="Linear3D" type="eqLinear3DType"/>
+	<xs:element name="Linear4D" type="eqLinear4DType"/>
+	<xs:element name="Linear5D" type="eqLinear5DType"/>
+	<xs:element name="Linear6D" type="eqLinear6DType"/>
+	<xs:element name="Linear7D" type="eqLinear7DType"/>
+	<xs:element name="Linear8D" type="eqLinear8DType"/>
+	<xs:element name="Linear9D" type="eqLinear9DType"/>
+	<xs:element name="Custom9D" type="eqCustom9DType"/>
+	<xs:element name="Quadratic1D" type="eqQuadratic1DType"/>
+	<xs:element name="Quadratic2D" type="eqQuadratic2DType"/>
+	<xs:element name="Cubic1D" type="eqCubic1DType"/>
+	<xs:element name="Logit1D" type="eqLogit1DLinearType"/>
+	<xs:element name="Logit2D" type="eqLogit2DLinearType"/>
+	<xs:element name="Logit3D" type="eqLogit3DLinearType"/>
+	<xs:element name="Logit4D" type="eqLogit4DLinearType"/>
+	<xs:element name="Logit5D" type="eqLogit5DLinearType"/>
+	<xs:element name="Logit6D" type="eqLogit6DLinearType"/>
+	<xs:element name="Logit7D" type="eqLogit7DLinearType"/>
+	<xs:element name="Logit8D" type="eqLogit8DLinearType"/>
+	<xs:element name="Logit9D" type="eqLogit9DLinearType"/>
+	<xs:element name="Logit9DCustom" type="eqLogit9DCustomType"/>
+	<xs:element name="Weibull1D" type="eqWeibull1D3P"/>
+	<xs:element name="Logit1DQuadratic" type="eqLogit1DQuadraticType"/>
+	<xs:element name="Logit2DQuadratic" type="eqLogit2DQuadraticType"/>
+	<xs:element name="ControlValue" type="xs:double"/>
+	<xs:element name="InteractionType" type="InteractionType"/>
+	<xs:element name="Mean" type="xs:decimal"/>
+	<xs:element name="StDev" type="xs:decimal"/>
+	<xs:element name="LowerBound" type="xs:decimal"/>
+	<xs:element name="UpperBound" type="xs:decimal"/>
+	<xs:element name="SeasonType" type="SeasonType"/>
+	<xs:element name="DayofWeek" type="DayofWeekType"/>
+	<xs:element name="Name" type="xs:string"/>
+	<xs:element name="BuildingType" type="BuildingType"/>
+	<xs:element name="SpaceType" type="SpaceType"/>
+	<xs:element name="HVACConditionType" type="HVACConditionType"/>
+	<xs:element name="StartHour" type="xs:integer"/>
+	<xs:element name="StartMinute" type="xs:integer"/>
+	<xs:element name="EndHour" type="xs:integer"/>
+	<xs:element name="EndMinute" type="xs:integer"/>
+	<xs:element name="OtherConstraint" type="OtherConstraintType"/>
+	<xs:element name="Date" type="xs:date"/>
+	<xs:element name="TemperatureProbabilityModel" type="eqGaussianNormal1DType"/>
+	<xs:element name="ParameterRange" type="ParameterRange">
+		<xs:annotation>
+			<xs:documentation>Range of indoor air quality parameter values can be given where occupants do not feel IAQ discomfort and therefore, they don't carry out any actions.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="Gender" type="GenderType"/>
+	<xs:element name="LifeStyle" type="LifeStyleType"/>
+	<xs:element name="JobType" type="JobType"/>
+	<xs:element name="MaritalStatus" type="MaritalStatusType"/>
+	<xs:element name="Education" type="EducationType"/>
+	<xs:element name="IncomeGroup" type="IncomeGroupType"/>
+	<xs:element name="Employment" type="EmploymentType"/>
+	<xs:element name="Age" type="xs:integer"/>
+	<xs:element name="TypicalDuration" type="xs:duration"/>
+	<xs:element name="OccupancyDuration" type="xs:duration">
+		<xs:annotation>
+			<xs:documentation>Average duration of staying in a space category</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="PercentTimePresence">
+		<xs:annotation>
+			<xs:documentation>Percentage of time of staying in a specific space category</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:decimal">
+				<xs:minInclusive value="0"/>
+				<xs:maxInclusive value="100"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="SpaceCategory" type="SpaceCategory">
+		<xs:annotation>
+			<xs:documentation>Space category for random movement events in a building</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="MinimumDuration" type="xs:duration"/>
+	<xs:element name="MeetingDuration" type="xs:duration">
+		<xs:annotation>
+			<xs:documentation>Potential duration of a meeting</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="EarlyOccurTime" type="xs:time">
+		<xs:annotation>
+			<xs:documentation>Earliest occurrence time of a status transition event</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="TypicalOccurTime" type="xs:time">
+		<xs:annotation>
+			<xs:documentation>Typical occurrence time of a status transition event</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="Probability">
+		<xs:annotation>
+			<xs:documentation>Percentage of time of staying in a specific space category</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:decimal">
+				<xs:minInclusive value="0"/>
+				<xs:maxInclusive value="1"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Season">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="StartMonth" type="xs:integer"/>
+				<xs:element name="StartDay" type="xs:integer"/>
+				<xs:element name="EndMonth" type="xs:integer"/>
+				<xs:element name="EndDay" type="xs:integer"/>
+			</xs:all>
+			<xs:attribute name="Type" type="SeasonType" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Country" type="xs:string"/>
+	<xs:element name="ClimateZone" type="ClimateZoneType"/>
+	<xs:element name="CommuteMode" type="CommuteModeType"/>
+	<xs:element name="Policy" type="PolicyType"/>
+	<xs:element name="Infrastructure" type="InfrastructureType"/>
+	<xs:element name="Cost" type="CostType"/>
+	<xs:element name="GeographicLocation">
+		<xs:annotation>
+			<xs:documentation>A specific location can be assigned to each occupant.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Country"/>
+				<xs:element ref="ClimateZone"/>
+				<xs:element ref="CommuteMode"/>
+				<xs:element ref="Policy"/>
+				<xs:element ref="Infrastructure"/>
+				<xs:element ref="Cost"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="StatusTransitionProbability">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Time" type="xs:time"/>
+				<xs:element ref="Probability"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PastExperience" type="SubjectiveValueType"/>
+	<xs:element name="CostConscious" type="SubjectiveValueType"/>
+	<xs:element name="EnvironmentAwareness" type="SubjectiveValueType"/>
+	<xs:element name="BrightnessSensitivity" type="SubjectiveValueType"/>
+	<xs:element name="TechnologyOriented" type="SubjectiveValueType"/>
+	<xs:element name="Accommodating" type="SubjectiveValueType"/>
+	<xs:element name="SocialInfluence" type="SubjectiveValueType"/>
+	<xs:element name="Priority" type="xs:integer"/>
+	<xs:element name="MovementBehaviorID" type="xs:IDREF"/>
+	<xs:element name="BehaviorID" type="xs:IDREF"/>
+	<xs:element name="Occupant">
+		<xs:annotation>
+			<xs:documentation>Attributes to an occupant can be given.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Priority" minOccurs="0"/>
+				<xs:element ref="MovementBehaviorID" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="BehaviorID" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>A specific behavior can be assigned to each occupant.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="SocioEconomic" minOccurs="0"/>
+				<xs:element ref="GeographicLocation" minOccurs="0"/>
+				<xs:element ref="SubjectiveValues" minOccurs="0"/>
+				<xs:element ref="ClothingLevel" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:ID" use="required"/>
+			<xs:attribute name="Name" type="xs:string" use="optional"/>
+			<xs:attribute name="IfcGuid" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SubjectiveValues">
+		<xs:annotation>
+			<xs:documentation>A specific belief can be assigned to each occupant.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="PastExperience" minOccurs="0"/>
+				<xs:element ref="CostConscious" minOccurs="0"/>
+				<xs:element ref="EnvironmentAwareness" minOccurs="0"/>
+				<xs:element ref="TechnologyOriented" minOccurs="0"/>
+				<xs:element ref="Accommodating" minOccurs="0"/>
+				<xs:element ref="SocialInfluence" minOccurs="0"/>
+				<xs:element ref="BrightnessSensitivity" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SocioEconomic">
+		<xs:annotation>
+			<xs:documentation>A specific location can be assigned to each occupant.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Age" minOccurs="0"/>
+				<xs:element ref="Gender" minOccurs="0"/>
+				<xs:element ref="LifeStyle" minOccurs="0"/>
+				<xs:element ref="JobType" minOccurs="0"/>
+				<xs:element ref="MaritalStatus" minOccurs="0"/>
+				<xs:element ref="Education" minOccurs="0"/>
+				<xs:element ref="IncomeGroup" minOccurs="0"/>
+				<xs:element ref="Employment" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Thermal">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="ASHRAEComfortTemperatures"/>
+				<xs:element ref="ASHRAEComfortEnvelope" minOccurs="0"/>
+				<xs:element ref="ASHRAECoolingAdaptiveComfort" minOccurs="0"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Visual">
+		<xs:complexType>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element ref="ParameterRange" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="IAQ">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ParameterRange" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Physical">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Thermal" minOccurs="0"/>
+				<xs:element ref="Visual" minOccurs="0"/>
+				<xs:element ref="IAQ" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ASHRAEComfortTemperatures">
+		<xs:annotation>
+			<xs:documentation>A distribution of comfort cooling and heating temperatures can be given where occupants and therefore, they don't carry out any actions.  </xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="CoolingTemperature" minOccurs="0"/>
+				<xs:element ref="HeatingTemperature" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ASHRAEComfortEnvelope">
+		<xs:annotation>
+			<xs:documentation>Range of indoor air temperatures can be given where occupants do not feel thermal discomfort and therefore, they don't carry out any actions.  </xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ParameterRange" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ASHRAECoolingAdaptiveComfort">
+		<xs:annotation>
+			<xs:documentation>Range of indoor air temperatures can be given where occupants do not feel thermal discomfort and therefore, they don't carry out any actions.  </xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ParameterRange" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CoolingTemperature">
+		<xs:annotation>
+			<xs:documentation>A distribution of comfort cooling temperature can be given where occupants and therefore, they don't carry out any actions.  </xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="TemperatureProbabilityModel" minOccurs="0"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="HeatingTemperature">
+		<xs:annotation>
+			<xs:documentation>A distribution of comfort heating temperature can be given where occupants and therefore, they don't carry out any actions.  </xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="TemperatureProbabilityModel" minOccurs="0"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ClothingLevel" type="ClothingLevelType">
+		<xs:annotation>
+			<xs:documentation>The level of thermal insulation worn by a person</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="Holiday">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Date"/>
+			</xs:sequence>
+			<xs:attribute name="Name"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EventType" type="RoomEventType">
+		<xs:annotation>
+			<xs:documentation>Events can be defined that are possible to happen in the building</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="ParameterType" type="ParameterType">
+		<xs:annotation>
+			<xs:documentation>Parameter type can be simple (integer, flow, boolean, string) or complex (combination of simples or equation).</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="Parameter">
+		<xs:annotation>
+			<xs:documentation>Driving parameters can be set. Units of parameters are SI: degree C, ppm, lux, W/m2.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Description" minOccurs="0"/>
+				<xs:element ref="ParameterType"/>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:ID" use="required"/>
+			<xs:attribute name="Name" type="xs:string" use="optional"/>
+			<xs:attribute name="IfcGuid" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TimeofDay">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="StartHour" minOccurs="0"/>
+				<xs:element ref="StartMinute" minOccurs="0"/>
+				<xs:element ref="EndHour" minOccurs="0"/>
+				<xs:element ref="EndMinute" minOccurs="0"/>
+			</xs:all>
+			<xs:attribute name="Type" type="TimeofDayType" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Time">
+		<xs:annotation>
+			<xs:documentation>A time frame can be set when the specific behavior is expected to happen and when the environmental driver value is needed for simulation.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TimeofDay" minOccurs="0" maxOccurs="7"/>
+				<xs:element ref="DayofWeek" minOccurs="0" maxOccurs="11"/>
+				<xs:element ref="SeasonType" minOccurs="0" maxOccurs="5"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Environment">
+		<xs:annotation>
+			<xs:documentation>Environmental driver parameters can be defined.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Parameter" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OccupantID" type="xs:IDREF">
+		<xs:annotation>
+			<xs:documentation>Predefined occupants can be added to the space.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="NumOccupants" type="xs:integer">
+		<xs:annotation>
+			<xs:documentation>The number of occupants in the space.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="GroupPriority" type="GroupPriority">
+		<xs:annotation>
+			<xs:documentation>A method can be defined how the decision is made if there are multiple people in the space. </xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="MinNumOccupantsPerMeeting" type="xs:integer">
+		<xs:annotation>
+			<xs:documentation>The minimum number of occupants per meeting. Uniform distribution is applied.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="MaxNumOccupantsPerMeeting" type="xs:integer">
+		<xs:annotation>
+			<xs:documentation>The maximum number of occupants per meeting. Uniform distribution is applied.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="MinNumberOfMeetingsPerDay" type="xs:integer">
+		<xs:annotation>
+			<xs:documentation>The minimum number of meetings per day. Uniform distribution is applied.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="MaxNumberOfMeetingsPerDay" type="xs:integer">
+		<xs:annotation>
+			<xs:documentation>The maximum number of meetings per day. Uniform distribution is applied.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="MeetingDurationProbability" type="MeetingDurationProbabilityType"/>
+	<xs:element name="MeetingEvent">
+		<xs:annotation>
+			<xs:documentation>Meeting event occurrence properties</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SeasonType" minOccurs="0" maxOccurs="5"/>
+				<xs:element ref="DayofWeek" minOccurs="0" maxOccurs="11"/>
+				<xs:element ref="MinNumOccupantsPerMeeting"/>
+				<xs:element ref="MaxNumOccupantsPerMeeting"/>
+				<xs:element ref="MinNumberOfMeetingsPerDay"/>
+				<xs:element ref="MaxNumberOfMeetingsPerDay"/>
+				<xs:element ref="MeetingDurationProbability" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Address" type="xs:string"/>
+	<xs:element name="HVACType" type="HVACType"/>
+	<xs:element name="FanType" type="FanType"/>
+	<xs:element name="LightType" type="LightType"/>
+	<xs:element name="WindowType" type="WindowType"/>
+	<xs:element name="DoorType" type="DoorType"/>
+	<xs:element name="PlugLoadType" type="PlugLoadType"/>
+	<xs:element name="ThermostatType" type="ThermostatType"/>
+	<xs:element name="ShadeAndBlindType" type="ShadeAndBlindType"/>
+	<xs:element name="HVAC">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Description" minOccurs="0"/>
+				<xs:element ref="HVACType"/>
+				<xs:element ref="EnergyConsumption" minOccurs="0"/>
+				<xs:element ref="PowerConsumption" minOccurs="0"/>
+				<xs:element ref="OperationTime" minOccurs="0"/>
+				<xs:element ref="OperationSchedule" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:ID" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="optional"/>
+			<xs:attribute name="IfcGuid" type="xs:string" use="optional"/>
+			<xs:attribute name="gbXMLAirLoopEquipmentIdRef" type="xs:IDREF" use="optional">
+				<xs:annotation>
+					<xs:documentation>ID reference to the AirLoopEquipment element from the gbXML file.</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Fans">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Description" minOccurs="0"/>
+				<xs:element ref="FanType"/>
+				<xs:element ref="EnergyConsumption" minOccurs="0"/>
+				<xs:element ref="PowerConsumption" minOccurs="0"/>
+				<xs:element ref="OperationTime" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:ID" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="optional"/>
+			<xs:attribute name="IfcGuid" type="xs:string" use="optional"/>
+			<xs:attribute name="gbXMLFanIdRef" type="xs:IDREF" use="optional">
+				<xs:annotation>
+					<xs:documentation>ID reference to the Fan element from the gbXML file.</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Lights">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Description" minOccurs="0"/>
+				<xs:element ref="LightType"/>
+				<xs:element ref="EnergyConsumption" minOccurs="0"/>
+				<xs:element ref="PowerConsumption" minOccurs="0"/>
+				<xs:element ref="OperationTime" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:ID" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="optional"/>
+			<xs:attribute name="IfcGuid" type="xs:string" use="optional"/>
+			<xs:attribute name="gbXMLLightingSystemIdRef" type="xs:IDREF" use="optional">
+				<xs:annotation>
+					<xs:documentation>ID reference to the LightingSystem element from the gbXML file.</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Windows">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Description" minOccurs="0"/>
+				<xs:element ref="WindowType"/>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:ID" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="optional"/>
+			<xs:attribute name="IfcGuid" type="xs:string" use="optional"/>
+			<xs:attribute name="gbXMLWindowIdRef" type="xs:IDREF" use="optional">
+				<xs:annotation>
+					<xs:documentation>ID reference to the WindowType element from the gbXML file.</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Doors">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Description" minOccurs="0"/>
+				<xs:element ref="DoorType"/>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:ID" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="optional"/>
+			<xs:attribute name="IfcGuid" type="xs:string" use="optional"/>
+			<xs:attribute name="gbXMLDoorIdRef" type="xs:IDREF" use="optional">
+				<xs:annotation>
+					<xs:documentation>ID reference to the Door element from the gbXML file.</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PlugLoad">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Description" minOccurs="0"/>
+				<xs:element ref="PlugLoadType"/>
+				<xs:element ref="EnergyConsumption" minOccurs="0"/>
+				<xs:element ref="PowerConsumption" minOccurs="0"/>
+				<xs:element ref="OperationTime" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:ID" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="optional"/>
+			<xs:attribute name="IfcGuid" type="xs:string" use="optional"/>
+			<xs:attribute name="gbXMLInteriorEquipmentIdRef" type="xs:IDREF" use="optional">
+				<xs:annotation>
+					<xs:documentation>ID reference to the IntEquip element from the gbXML file.</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Thermostats">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Description" minOccurs="0"/>
+				<xs:element ref="ThermostatType"/>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:ID" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="optional"/>
+			<xs:attribute name="IfcGuid" type="xs:string" use="optional"/>
+			<xs:attribute name="gbXMLAirLoopEquipmentIdRef" type="xs:IDREF" use="optional">
+				<xs:annotation>
+					<xs:documentation>ID reference to the TemperatureControl element from the gbXML file.</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ShadesAndBlinds">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Description" minOccurs="0"/>
+				<xs:element ref="ShadeAndBlindType"/>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:ID" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="optional"/>
+			<xs:attribute name="IfcGuid" type="xs:string" use="optional"/>
+			<xs:attribute name="gbXMLBlindIdRef" type="xs:IDREF" use="optional">
+				<xs:annotation>
+					<xs:documentation>ID reference to the Blind element from the gbXML file.</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EnergyConsumption" type="xs:decimal">
+		<xs:annotation>
+			<xs:documentation>The amount of electric energy used by electric equipment</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="PowerConsumption" type="xs:decimal">
+		<xs:annotation>
+			<xs:documentation>The amount of electric energy per unit time supplied to operate the electric equipment</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="OperationTime" type="xs:duration">
+		<xs:annotation>
+			<xs:documentation>The duration during which electric equipment is actively in use within the space</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="ActivityDuration">
+		<xs:annotation>
+			<xs:documentation>Duration properties of an activity. If specify, the event will end after the duration.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="NormalDurationModel"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AbsenceDuration">
+		<xs:annotation>
+			<xs:documentation>Duration properties of an absence. If specify, the event will start after the duration.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="NormalDurationModel"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ActivityOccurModel">
+		<xs:annotation>
+			<xs:documentation>The event occur model</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="CustomProbabilityModel"/>
+				<xs:element ref="NormalProbabilityModel"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TimeFrequencyType" type="TimeFrequencyType">
+		<xs:annotation>
+			<xs:documentation>The event type, e.g. start and end</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="StatusOfActivity">
+		<xs:annotation>
+			<xs:documentation>Activity status in space level</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TimeFrequencyType"/>
+				<xs:element ref="ActivityOccurModel"/>
+				<xs:element ref="ActivityDuration" minOccurs="0"/>
+				<xs:element ref="AbsenceDuration" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="StatusTransitionEventType" type="StatusTransitionEventType">
+		<xs:annotation>
+			<xs:documentation>The event type, e.g. arrival or departure</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="CustomProbabilityModel" type="CustomProbabilityModelType"/>
+	<xs:element name="MarkovChainModel" type="MarkovChainModelType"/>
+	<xs:element name="NormalProbabilityModel" type="NormalProbabilityModelType"/>
+	<xs:element name="NormalDurationModel" type="NormalDurationModelType"/>
+	<xs:element name="IsSpecialBehavior" type="xs:boolean" default="false">
+		<xs:annotation>
+			<xs:documentation>Set to true when this is a special behavior. When the special behavior is triggered, other behaviors are ignored.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="EventOccurModel">
+		<xs:annotation>
+			<xs:documentation>The event occur model</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="CustomProbabilityModel"/>
+				<xs:element ref="MarkovChainModel"/>
+				<xs:element ref="NormalProbabilityModel"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EventDuration">
+		<xs:annotation>
+			<xs:documentation>Duration properties of an event. If specify, the event will end after the duration.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="NormalDurationModel"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SpaceOccupancy" type="SpaceOccupancyType">
+		<xs:annotation>
+			<xs:documentation>Occupancy percentage of staying in a specific category in a building</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="RandomMovementEvent">
+		<xs:annotation>
+			<xs:documentation>Occupant location change events inside a building</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SpaceOccupancy" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="StatusTransitionEvent">
+		<xs:annotation>
+			<xs:documentation>Occupancy status and location change events in building level</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="StatusTransitionEventType"/>
+				<xs:element ref="EventOccurModel"/>
+				<xs:element ref="EventDuration" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Formula">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="ConstantValue" minOccurs="0"/>
+				<xs:element ref="Linear1D" minOccurs="0"/>
+				<xs:element ref="Linear2D" minOccurs="0"/>
+				<xs:element ref="Linear3D" minOccurs="0"/>
+				<xs:element ref="Linear4D" minOccurs="0"/>
+				<xs:element ref="Linear5D" minOccurs="0"/>
+				<xs:element ref="Linear6D" minOccurs="0"/>
+				<xs:element ref="Linear7D" minOccurs="0"/>
+				<xs:element ref="Linear8D" minOccurs="0"/>
+				<xs:element ref="Linear9D" minOccurs="0"/>
+				<xs:element ref="Custom9D" minOccurs="0"/>
+				<xs:element ref="Quadratic1D" minOccurs="0"/>
+				<xs:element ref="Quadratic2D" minOccurs="0"/>
+				<xs:element ref="Cubic1D" minOccurs="0"/>
+				<xs:element ref="Logit1D" minOccurs="0"/>
+				<xs:element ref="Logit2D" minOccurs="0"/>
+				<xs:element ref="Logit3D" minOccurs="0"/>
+				<xs:element ref="Logit4D" minOccurs="0"/>
+				<xs:element ref="Logit5D" minOccurs="0"/>
+				<xs:element ref="Logit6D" minOccurs="0"/>
+				<xs:element ref="Logit7D" minOccurs="0"/>
+				<xs:element ref="Logit8D" minOccurs="0"/>
+				<xs:element ref="Logit9D" minOccurs="0"/>
+				<xs:element ref="Logit9DCustom" minOccurs="0"/>
+				<xs:element ref="Weibull1D" minOccurs="0"/>
+				<xs:element ref="Logit1DQuadratic" minOccurs="0"/>
+				<xs:element ref="Logit2DQuadratic" minOccurs="0"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Interaction">
+		<xs:annotation>
+			<xs:documentation>Interaction type and its probability model can be specified.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="InteractionType"/>
+				<xs:element ref="Formula"/>
+				<xs:element ref="ControlValue" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ClothingChange" type="ClothingChangeType"/>
+	<xs:element name="Actions">
+		<xs:annotation>
+			<xs:documentation>Occupants can conduct an action in order to satisfy their needs. The action may be an interaction with a system or movement to another location. </xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="ClothingChange" minOccurs="0"/>
+				<xs:element ref="Interaction" minOccurs="0"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ModelDescription">
+		<xs:annotation>
+			<xs:documentation>Detailed description of the occupant behavior model including information representation</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ModelDevelopment" minOccurs="0"/>
+				<xs:element ref="ModelEvaluation" minOccurs="0"/>
+				<xs:element ref="ModelImplementation" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="AppliedBuildingType" type="BuildingType" use="optional"/>
+			<xs:attribute name="BuildingTypeComment" type="xs:string" use="optional"/>
+			<xs:attribute name="ActionType" type="InteractionType" use="optional"/>
+			<xs:attribute name="SystemType" type="SystemType" use="optional"/>
+			<xs:attribute name="DataCollectionCountry" type="xs:string" use="optional"/>
+			<xs:attribute name="DataCollectionCity" type="xs:string" use="optional"/>
+			<xs:attribute name="DataCollectionClimateZone" type="xs:string" use="optional">
+				<xs:annotation>
+					<xs:documentation>Climate zone based on Köppen–geiger classification system where the data was collected</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="StartDateOfDataCollection" type="xs:date" use="optional"/>
+			<xs:attribute name="EndDateOfDataCollection" type="xs:date" use="optional"/>
+			<xs:attribute name="DurationOfDataCollection" type="xs:string" use="optional">
+				<xs:annotation>
+					<xs:documentation>Number of months or days over which the data was collected</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="TypesDataCollected1" type="TypesDataCollectedList" use="optional"/>
+			<xs:attribute name="TypesDataCollected2" type="TypesDataCollectedList" use="optional"/>
+			<xs:attribute name="TypesDataCollected3" type="TypesDataCollectedList" use="optional"/>
+			<xs:attribute name="TypesDataCollected4" type="TypesDataCollectedList" use="optional"/>
+			<xs:attribute name="TypesDataCollected5" type="TypesDataCollectedList" use="optional"/>
+			<xs:attribute name="TypesDataCollected6" type="TypesDataCollectedList" use="optional"/>
+			<xs:attribute name="TypesDataCollectedOther" type="xs:string" use="optional"/>
+			<xs:attribute name="SampleSize" type="xs:string" use="optional"/>
+			<xs:attribute name="TimeGranularity" type="TimeGranularityType" use="optional"/>
+			<xs:attribute name="PredictiveHorizon" type="PredictiveHorizonType" use="optional"/>
+			<xs:attribute name="ControlHorizon" type="ControlHorizonType" use="optional"/>
+			<xs:attribute name="SpaceGranularity" type="SpaceGranularityType" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ModelDevelopment">
+		<xs:annotation>
+			<xs:documentation>Description of data preparation and modeling methods used to develop the occupant behavior model</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="DataPreparation" minOccurs="0"/>
+				<xs:element ref="ModelingCategory" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DataPreparation">
+		<xs:annotation>
+			<xs:documentation>Preprocessing technique applied to prepare the dataset</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="DataCleaning" minOccurs="0"/>
+				<xs:element ref="DimensionReduction" minOccurs="0"/>
+				<xs:element ref="DataScaling" minOccurs="0"/>
+				<xs:element ref="FeatureCreation" minOccurs="0"/>
+				<xs:element ref="DataPartitioning" minOccurs="0"/>
+				<xs:element ref="DataMerging" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DataCleaning" type="xs:string"/>
+	<xs:element name="DimensionReduction" type="xs:string"/>
+	<xs:element name="DataScaling" type="xs:string"/>
+	<xs:element name="FeatureCreation" type="xs:string"/>
+	<xs:element name="DataPartitioning" type="xs:string"/>
+	<xs:element name="DataMerging" type="xs:string"/>
+	<xs:element name="ModelingCategory">
+		<xs:annotation>
+			<xs:documentation>Method for developing occupant behavior models</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="RuleBasedModel" minOccurs="0"/>
+				<xs:element ref="StatisticalStochasticModel" minOccurs="0"/>
+				<xs:element ref="DataDrivenModel" minOccurs="0"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RuleBasedModel" type="RuleBasedModelType"/>
+	<xs:element name="StatisticalStochasticModel" type="StatisticalStochasticModelType"/>
+	<xs:element name="DataDrivenModel" type="DataDrivenModelType"/>
+	<xs:element name="ModelEvaluation">
+		<xs:annotation>
+			<xs:documentation>Description of the model performance based on quantitative metrics</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="PerformanceMetric" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PerformanceMetric">
+		<xs:annotation>
+			<xs:documentation>Quantiative measure to assess the competence of the developed model</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="AbsoluteMetric" minOccurs="0"/>
+				<xs:element ref="DomainMetric" minOccurs="0"/>
+				<xs:element ref="IndirectPerformanceMetric" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AbsoluteMetric">
+		<xs:annotation>
+			<xs:documentation>Metric that are based on the absolute error calculation</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="AbsoluteMetricType" minOccurs="0"/>
+				<xs:element ref="PerformanceMetricValue" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DomainMetric">
+		<xs:annotation>
+			<xs:documentation>Fit-for-purpose metric that evaluates the competence of the model considering the stochasticity and results</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="AggregatedDomainMetric" minOccurs="0"/>
+				<xs:element ref="IntervalByIntervalMetric" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="IndirectPerformanceMetric">
+		<xs:annotation>
+			<xs:documentation>Metric that evaluates to which extent the model contributes to fulfilling the control goal, such as reducing energy consumption or improving thermal comfort</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ComfortRelatedIndirectMetric" minOccurs="0"/>
+				<xs:element ref="EnergyRelatedIndirectMetric" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AbsoluteMetricType" type="AbsoluteMetricType"/>
+	<xs:element name="AggregatedDomainMetric">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="AggregatedDomainMetricType" minOccurs="0"/>
+				<xs:element ref="PerformanceMetricValue" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="IntervalByIntervalMetric">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="AggregatedDomainMetricType" minOccurs="0"/>
+				<xs:element ref="PerformanceMetricValue" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ComfortRelatedIndirectMetric">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ComfortRelatedIndirectMetricType" minOccurs="0"/>
+				<xs:element ref="PerformanceMetricValue" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EnergyRelatedIndirectMetric">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="EnergyRelatedIndirectMetricType" minOccurs="0"/>
+				<xs:element ref="PerformanceMetricValue" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AggregatedDomainMetricType" type="xs:string"/>
+	<xs:element name="IntervalByIntervalMetricType" type="xs:string"/>
+	<xs:element name="ComfortRelatedIndirectMetricType" type="xs:string"/>
+	<xs:element name="EnergyRelatedIndirectMetricType" type="xs:string"/>
+	<xs:element name="PerformanceMetricValue" type="xs:decimal"/>
+	<xs:element name="ModelImplementation">
+		<xs:annotation>
+			<xs:documentation>Description of computational environment and experimental settings used for testing the model</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ComputationalEnvironment" minOccurs="0"/>
+				<xs:element ref="ComputationTime" minOccurs="0"/>
+				<xs:element ref="ExperimentSetup" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ComputationalEnvironment">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ProgrammingLanguage" minOccurs="0"/>
+				<xs:element ref="SoftwarePackagesTools" minOccurs="0"/>
+				<xs:element ref="OperatingSystem" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ProgrammingLanguage" type="xs:string"/>
+	<xs:element name="SoftwarePackagesTools" type="xs:string"/>
+	<xs:element name="OperatingSystem" type="xs:string"/>
+	<xs:element name="ComputationTime">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="InferenceRuntime" minOccurs="0"/>
+				<xs:element ref="InferenceMemoryRequirement" minOccurs="0"/>
+				<xs:element ref="TotalRequiredTrainingRuntime" minOccurs="0"/>
+				<xs:element ref="ModelScalability" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="InferenceRuntime" type="xs:duration"/>
+	<xs:element name="InferenceMemoryRequirement" type="xs:string"/>
+	<xs:element name="TotalRequiredTrainingRuntime" type="xs:duration"/>
+	<xs:element name="ModelScalability" type="xs:string"/>
+	<xs:element name="ExperimentSetup">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Sensors" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Sensors">
+		<xs:annotation>
+			<xs:documentation>Devices that collect data on indoor or outdoor environmental condition, building system, or occupant behavior</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SensorType" minOccurs="0"/>
+				<xs:element ref="SensorLocation" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SensorType" type="SensorType"/>
+	<xs:element name="SensorLocation">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SpaceLevelofSensorLocation" minOccurs="0"/>
+				<xs:element ref="BuildingLevelofSensorLocation" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SpaceLevelofSensorLocation" type="SpaceLevelofSensorLocationType"/>
+	<xs:element name="BuildingLevelofSensorLocation" type="BuildingLevelofSensorLocationType"/>
+	<xs:element name="MovementBehavior">
+		<xs:annotation>
+			<xs:documentation>Behavior regarding location change of an occupant </xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Description" minOccurs="0"/>
+				<xs:element ref="ModelDescription" minOccurs="0"/>
+				<xs:element ref="SeasonType" minOccurs="0" maxOccurs="5"/>
+				<xs:element ref="DayofWeek" minOccurs="0" maxOccurs="11"/>
+				<xs:element ref="RandomMovementEvent"/>
+				<xs:element ref="StatusTransitionEvent" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:ID" use="required"/>
+			<xs:attribute name="Name" type="xs:string" use="optional"/>
+			<xs:attribute name="IfcGuid" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Activity">
+		<xs:annotation>
+			<xs:documentation>Regarding the types of activities of an occupant </xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Name" minOccurs="0"/>
+				<xs:element ref="Description" minOccurs="0"/>
+				<xs:element ref="ModelDescription" minOccurs="0"/>
+				<xs:element ref="StatusOfActivity" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:ID" use="required"/>
+			<xs:attribute name="Name" type="xs:string" use="optional"/>
+			<xs:attribute name="IfcGuid" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Behavior">
+		<xs:annotation>
+			<xs:documentation>Behavior related to the interaction with buildings</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Description" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Description of the specific behavior defined in this branch can be given.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="ModelDescription" minOccurs="0"/>
+				<xs:element ref="Drivers" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Drivers represent the environmental factors from the outside world that stimulate occupants in their inside world to fulfill a physical, physiological or psychological need.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="Needs" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Needs represent the physical and non-physical requirements of the occupant's inside world that must be met in order to ensure the satisfaction of the occupant with their environment.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="Actions">
+					<xs:annotation>
+						<xs:documentation>Actions are the interactions with systems or activities that an occupant can conduct to achieve environmental comfort. Actions connect occupants' inside-world needs with the environmental outside world.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="Systems" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Systems refer to the equipment or mechanisms within the building outside world with which an occupant may interact to restore or maintain environmental comfort. Systems are not described in a detailed way, only control types (other parameters of a system can be mapped to building information models).</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="IsSpecialBehavior" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:ID" use="required">
+				<xs:annotation>
+					<xs:documentation>Identification of the specific behavior defined in this branch can be given.</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="Name" type="xs:string" use="optional"/>
+			<xs:attribute name="IfcGuid" type="xs:string" use="optional"/>
+			<xs:attribute name="PaperAuthors" type="xs:string" use="optional"/>
+			<xs:attribute name="PaperYear" type="xs:string" use="optional"/>
+			<xs:attribute name="PaperTitle" type="xs:string" use="optional"/>
+			<xs:attribute name="PaperDOI" type="xs:string" use="optional"/>
+			<xs:attribute name="PaperCitation" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Space">
+		<xs:annotation>
+			<xs:documentation>High level data (occupancy and systems) can be defined for spaces in the building. Other properties of spaces can be mapped to building information models. </xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Description" minOccurs="0"/>
+				<xs:element ref="SpaceType"/>
+				<xs:element ref="HVACConditionType"/>
+				<xs:element ref="GroupPriority" minOccurs="0"/>
+				<xs:element ref="Systems" minOccurs="0"/>
+				<xs:element ref="NumOccupants" minOccurs="0"/>
+				<xs:element ref="Area" minOccurs="0"/>
+				<xs:element ref="MeetingEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="OccupantID" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:ID" use="required"/>
+			<xs:attribute name="Name" type="xs:string" use="optional"/>
+			<xs:attribute name="IfcGuid" type="xs:string" use="optional"/>
+			<xs:attribute name="ZoneIdRef" type="xs:IDREF">
+				<xs:annotation>
+					<xs:documentation>Reference ID of the associated zone element</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="LightScheduleIdRef" type="xs:IDREF">
+				<xs:annotation>
+					<xs:documentation>Reference ID of the schedule for lights contained in this space</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="PlugLoadScheduleIdRef" type="xs:IDREF">
+				<xs:annotation>
+					<xs:documentation>Reference ID of the schedule for electric plugs contained in this space</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="BuildingStoreyIdRef" type="xs:IDREF">
+				<xs:annotation>
+					<xs:documentation>Reference ID for the building storey where this space is.</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Spaces">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Space" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:ID" use="required"/>
+			<xs:attribute name="Name" type="xs:string" use="optional"/>
+			<xs:attribute name="IfcGuid" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Building">
+		<xs:annotation>
+			<xs:documentation>The physical building can be mapped to other building information models (e.g. gbXML, ifc).</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Description" minOccurs="0"/>
+				<xs:element ref="BuildingType"/>
+				<xs:element ref="Address" minOccurs="0"/>
+				<xs:element ref="Area" minOccurs="0"/>
+				<xs:element ref="Spaces" maxOccurs="unbounded"/>
+				<xs:element ref="BuildingStorey" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:ID" use="required"/>
+			<xs:attribute name="Name" type="xs:string" use="optional"/>
+			<xs:attribute name="IfcGuid" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Behaviors">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="MovementBehavior" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Behavior" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Activity" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Buildings">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Building"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BuildingStorey">
+		<xs:annotation>
+			<xs:documentation>Building stories where spaces are located</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Description" minOccurs="0"/>
+				<xs:element ref="StoreyLevel"/>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:ID" use="required"/>
+			<xs:attribute name="Name" type="xs:string" use="optional"/>
+			<xs:attribute name="IfcGuid" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Area">
+		<xs:annotation>
+			<xs:documentation>The area of the space or building, which is equal to the area enclosed by the physical boundaries defined by the intersection of the horizontal plane at the highest floor height and the volumetric model's vertical interior surface planes. Building area represents the sum of space areas.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:decimal">
+					<xs:attribute name="AreaUnit" type="AreaUnitType" use="optional"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="StoreyLevel">
+		<xs:annotation>
+			<xs:documentation>Local placement Z coordinate of the building storey.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:decimal">
+					<xs:attribute name="LengthUnit" type="LengthUnitType" use="optional"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Drivers">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Time" minOccurs="0"/>
+				<xs:element ref="Environment" minOccurs="0"/>
+				<xs:element ref="EventType" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="OtherConstraint" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Holidays">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Holiday" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Needs">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Physical" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Occupants">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Occupant" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Zones">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Zone" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Schedules">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Schedule" maxOccurs="unbounded"/>
+				<xs:element ref="WeekSchedule" maxOccurs="unbounded"/>
+				<xs:element ref="DaySchedule" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OccupantBehavior">
+		<xs:annotation>
+			<xs:documentation>The occupancy behavior root node</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Buildings" minOccurs="0"/>
+				<xs:element ref="Occupants" minOccurs="0"/>
+				<xs:element ref="Behaviors"/>
+				<xs:element ref="Seasons" minOccurs="0"/>
+				<xs:element ref="TimeofDays" minOccurs="0"/>
+				<xs:element ref="Holidays" minOccurs="0"/>
+				<xs:element ref="Zones" minOccurs="0"/>
+				<xs:element ref="Schedules" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="ID" use="required"/>
+			<xs:attribute name="Version" use="required"/>
+			<xs:attribute name="Name" type="xs:string" use="optional"/>
+			<xs:attribute name="IfcProjectGuid" type="xs:string"/>
+			<xs:attribute name="IfcFilename" type="xs:string" use="optional"/>
+			<xs:attribute name="IfcOriginatingSystem" type="xs:string" use="optional"/>
+			<xs:attribute name="IfcCreationDate" type="xs:date" use="optional"/>
+			<xs:attribute name="IfcAuthor" type="xs:string" use="optional"/>
+			<xs:attribute name="gbXMLProjectGuid" type="xs:IDREF">
+				<xs:annotation>
+					<xs:documentation>Reference to the GUID element from the gbXML file.</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="gbXMLFilename" type="xs:string" use="optional">
+				<xs:annotation>
+					<xs:documentation>Reference to the FileName element from the gbXML file.</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="gbXMLOriginatingSystem" type="xs:string" use="optional">
+				<xs:annotation>
+					<xs:documentation>Reference to the PersonInfo element from the gbXML file.</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="gbXMLCreationDate" type="xs:date" use="optional">
+				<xs:annotation>
+					<xs:documentation>Reference to the CreatedBy element from the gbXML file.</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="gbXMLAuthor" type="xs:IDREF" use="optional">
+				<xs:annotation>
+					<xs:documentation>ID reference to the PersonInfo element from the gbXML file.</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Seasons">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Season" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Systems">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="HVAC"/>
+				<xs:element ref="Fans"/>
+				<xs:element ref="Lights"/>
+				<xs:element ref="Windows"/>
+				<xs:element ref="Doors"/>
+				<xs:element ref="PlugLoad"/>
+				<xs:element ref="Thermostats"/>
+				<xs:element ref="ShadesAndBlinds"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TimeofDays">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TimeofDay" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Zone">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="Description" minOccurs="0"/>
+				<xs:element ref="DesignHeatT" minOccurs="0"/>
+				<xs:element ref="DesignCoolT" minOccurs="0"/>
+				<xs:element ref="DesignHeatRH" minOccurs="0"/>
+				<xs:element ref="DesignCoolRH" minOccurs="0"/>
+			</xs:choice>
+			<xs:attribute name="ID" type="xs:ID" use="required"/>
+			<xs:attribute name="Name" type="xs:string" use="optional"/>			
+			<xs:attribute name="IfcGuid" type="xs:string"/>
+			<xs:attribute name="HeatScheduleIdRef" type="xs:IDREF"/>
+			<xs:attribute name="CoolScheduleIdRef" type="xs:IDREF"/>
+			<xs:attribute name="FanScheduleIdRef" type="xs:IDREF"/>	
+			<xs:attribute name="FanTempScheduleIdRef" type="xs:IDREF"/>			
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DesignHeatT">
+		<xs:annotation>
+			<xs:documentation>Design temperature for heating</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:decimal">
+					<xs:attribute name="TempUnit" type="TempUnitType" use="optional"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DesignCoolT">
+		<xs:annotation>
+			<xs:documentation>Design temperature for cooling</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:decimal">
+					<xs:attribute name="TempUnit" type="TempUnitType" use="optional"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>	
+	</xs:element>
+	<xs:element name="DesignHeatRH">
+		<xs:annotation>
+			<xs:documentation>Relative humidity set point for heating</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:decimal"/>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DesignCoolRH">
+		<xs:annotation>
+			<xs:documentation>Relative humidity set point for cooling</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:decimal"/>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Schedule">
+		<xs:annotation>
+			<xs:documentation>List of year schedules, from the gbXML file, that make up an entire calendar year.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="Description" minOccurs="0"/>
+				<xs:element ref="YearSchedule" maxOccurs="unbounded"/>
+			</xs:choice>
+			<xs:attribute name="ID" type="xs:ID" use="required"/>
+			<xs:attribute name="Name" type="xs:string" use="optional"/>
+			<xs:attribute name="ScheduleType" type="ScheduleType" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="YearSchedule">
+		<xs:annotation>
+			<xs:documentation>Set of week schedules, from the gbXML file, all assigned for a particular time period during the year. These must not span more than one calendar year.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="Description" minOccurs="0"/>
+				<xs:element ref="BeginDate"/>
+				<xs:element ref="EndDate"/>
+				<xs:element ref="WeekScheduleId"/>
+			</xs:choice>
+			<xs:attribute name="ID" type="xs:ID" use="required"/>
+			<xs:attribute name="Name" type="xs:string" use="optional"/>
+			<xs:attribute name="ScheduleTypeLimitsId" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="WeekSchedule">
+		<xs:annotation>
+			<xs:documentation>Set of day schedules, from the gbXML file, all assigned to a unique particular period of the week using the day type attribute. Do not schedule conflicting day types to the same week schedule.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="Description" minOccurs="0"/>
+				<xs:element ref="DayScheduleId" maxOccurs="unbounded"/>
+			</xs:choice>
+			<xs:attribute name="ID" type="xs:ID" use="required"/>
+			<xs:attribute name="Name" type="xs:string" use="optional"/>
+			<xs:attribute name="ScheduleType" type="ScheduleType" use="required"/>
+			<xs:attribute name="ScheduleTypeLimitsId" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="WeekScheduleId">
+		<xs:complexType>
+			<xs:attribute name="WeekScheduleIdRef" type="xs:IDREF" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BeginDate" type="xs:date">
+		<xs:annotation>
+			<xs:documentation>Month and day year schedule begins</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="EndDate" type="xs:date">
+		<xs:annotation>
+			<xs:documentation>Month and day year schedule ends</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="ScheduleTypeLimits">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="LowerBound" minOccurs="0" maxOccurs="1"/>
+				<xs:element ref="UpperBound" minOccurs="0" maxOccurs="1"/>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:ID" use="required"/>
+			<xs:attribute name="Type" type="ScheduleTypeLimits" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DayScheduleId">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="DayScheduleIdRef" type="xs:IDREF" use="required">
+						<xs:annotation>
+							<xs:documentation>ID for operation schedules from the gbXML file</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="DayofWeek" type="DayofWeekType" use="required"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DaySchedule">
+		<xs:annotation>
+			<xs:documentation>Set of values that define the profile of one 24 hour period divided equally to the number of values entered.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="Description" minOccurs="0"/>
+				<xs:element ref="ScheduleValue" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:choice>
+			<xs:attribute name="ID" type="xs:ID" use="required"/>
+			<xs:attribute name="Name" type="xs:string" use="optional"/>
+			<xs:attribute name="ScheduleType" type="ScheduleType" use="required"/>
+			<xs:attribute name="ScheduleTypeLimitsId" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ScheduleValue">
+		<xs:annotation>
+			<xs:documentation>Value for one block of time. Divides a day evenly into number of ScheduleValue elements defined in DaySchedule. Example: If 12 ScheduleValue elements are defined, each will represent two hours.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+			  <xs:extension base="xs:decimal">
+				<xs:attribute name="OutsideHighReset" type="xs:decimal" use="optional">
+					<xs:annotation>
+						<xs:documentation>Value of the outside drybulb temperature for when defining HVAC system lower supply reset temperature</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="OutsideLowReset" type="xs:decimal" use="optional">
+					<xs:annotation>
+						<xs:documentation>Value of the outside drybulb temperature for when defining HVAC system upper supply reset temperature</xs:documentation>
+					</xs:annotation>			
+				</xs:attribute>
+				<xs:attribute name="SupplyHighReset" type="xs:decimal" use="optional">
+					<xs:annotation>
+						<xs:documentation>Value of the upper supply air setpoint temperature for reset of cooling air or heating air temperature</xs:documentation>
+					</xs:annotation>			
+				</xs:attribute>
+				<xs:attribute name="SupplyLowReset" type="xs:decimal" use="optional">
+					<xs:annotation>
+						<xs:documentation>Value of the lower supply air setpoint temperature for reset of cooling air or heating air temperature</xs:documentation>
+					</xs:annotation>			
+				</xs:attribute>
+			  </xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OperationSchedule">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="OperationRange" type="OperationRange" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:choice>
+			<xs:attribute name="ScheduleIdRef" type="xs:IDREF">
+				<xs:annotation>
+					<xs:documentation>Schedule of operation for a piece of equipment. For heating and cooling equipment (such as a boiler or chiller) this is the availability schedule, the schedule of temperatures that, when reached, the piece of equipment will be available.</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="OperationRange">
+		<xs:choice>
+			<xs:element name="ParameterID"/>
+			<xs:element name="Min" minOccurs="0"/>
+			<xs:element name="Max" minOccurs="0"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="CustomProbabilityModelType">
+		<xs:sequence>
+			<xs:element ref="StatusTransitionProbability" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="eqConstantValueType">
+		<xs:sequence>
+			<xs:element name="Description" type="xs:string" default="p=A" minOccurs="0"/>
+			<xs:element ref="CoefficientA"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="eqLinear1DType">
+		<xs:sequence>
+			<xs:element name="Description" type="xs:string" default="p=A*P1+B" minOccurs="0"/>
+			<xs:element ref="CoefficientA"/>
+			<xs:element ref="CoefficientB"/>
+			<xs:element ref="Parameter1ID"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="eqLinear2DType">
+		<xs:sequence>
+			<xs:element name="Description" type="xs:string" default="p=A*P1+B*P2+C" minOccurs="0"/>
+			<xs:element ref="CoefficientA"/>
+			<xs:element ref="CoefficientB"/>
+			<xs:element ref="CoefficientC"/>
+			<xs:element ref="Parameter1ID"/>
+			<xs:element ref="Parameter2ID"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="eqLinear3DType">
+		<xs:sequence>
+			<xs:element name="Description" type="xs:string" default="p=A*P1+B*P2+C*P3+D" minOccurs="0"/>
+			<xs:element ref="CoefficientA"/>
+			<xs:element ref="CoefficientB"/>
+			<xs:element ref="CoefficientC"/>
+			<xs:element ref="CoefficientD"/>
+			<xs:element ref="Parameter1ID"/>
+			<xs:element ref="Parameter2ID"/>
+			<xs:element ref="Parameter3ID"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="eqLinear4DType">
+		<xs:sequence>
+			<xs:element name="Description" type="xs:string" default="p=A*P1+B*P2+C*P3+D*P4+E" minOccurs="0"/>
+			<xs:element ref="CoefficientA"/>
+			<xs:element ref="CoefficientB"/>
+			<xs:element ref="CoefficientC"/>
+			<xs:element ref="CoefficientD"/>
+			<xs:element ref="CoefficientE"/>
+			<xs:element ref="Parameter1ID"/>
+			<xs:element ref="Parameter2ID"/>
+			<xs:element ref="Parameter3ID"/>
+			<xs:element ref="Parameter4ID"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="eqLinear5DType">
+		<xs:sequence>
+			<xs:element name="Description" type="xs:string" default="p=A*P1+B*P2+C*P3+D*P4+E*P5+F" minOccurs="0"/>
+			<xs:element ref="CoefficientA"/>
+			<xs:element ref="CoefficientB"/>
+			<xs:element ref="CoefficientC"/>
+			<xs:element ref="CoefficientD"/>
+			<xs:element ref="CoefficientE"/>
+			<xs:element ref="CoefficientF"/>
+			<xs:element ref="Parameter1ID"/>
+			<xs:element ref="Parameter2ID"/>
+			<xs:element ref="Parameter3ID"/>
+			<xs:element ref="Parameter4ID"/>
+			<xs:element ref="Parameter5ID"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="eqLinear6DType">
+		<xs:sequence>
+			<xs:element name="Description" type="xs:string" default="p=A*P1+B*P2+C*P3+D*P4+E*P5+F*P6+G" minOccurs="0"/>
+			<xs:element ref="CoefficientA"/>
+			<xs:element ref="CoefficientB"/>
+			<xs:element ref="CoefficientC"/>
+			<xs:element ref="CoefficientD"/>
+			<xs:element ref="CoefficientE"/>
+			<xs:element ref="CoefficientF"/>
+			<xs:element ref="CoefficientG"/>
+			<xs:element ref="Parameter1ID"/>
+			<xs:element ref="Parameter2ID"/>
+			<xs:element ref="Parameter3ID"/>
+			<xs:element ref="Parameter4ID"/>
+			<xs:element ref="Parameter5ID"/>
+			<xs:element ref="Parameter6ID"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="eqLinear7DType">
+		<xs:sequence>
+			<xs:element name="Description" type="xs:string" default="p=A*P1+B*P2+C*P3+D*P4+E*P5+F*P6+G*P7+H" minOccurs="0"/>
+			<xs:element ref="CoefficientA"/>
+			<xs:element ref="CoefficientB"/>
+			<xs:element ref="CoefficientC"/>
+			<xs:element ref="CoefficientD"/>
+			<xs:element ref="CoefficientE"/>
+			<xs:element ref="CoefficientF"/>
+			<xs:element ref="CoefficientG"/>
+			<xs:element ref="CoefficientH"/>
+			<xs:element ref="Parameter1ID"/>
+			<xs:element ref="Parameter2ID"/>
+			<xs:element ref="Parameter3ID"/>
+			<xs:element ref="Parameter4ID"/>
+			<xs:element ref="Parameter5ID"/>
+			<xs:element ref="Parameter6ID"/>
+			<xs:element ref="Parameter7ID"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="eqLinear8DType">
+		<xs:sequence>
+			<xs:element name="Description" type="xs:string" default="p=A*P1+B*P2+C*P3+D*P4+E*P5+F*P6+G*P7+H*P8+I" minOccurs="0"/>
+			<xs:element ref="CoefficientA"/>
+			<xs:element ref="CoefficientB"/>
+			<xs:element ref="CoefficientC"/>
+			<xs:element ref="CoefficientD"/>
+			<xs:element ref="CoefficientE"/>
+			<xs:element ref="CoefficientF"/>
+			<xs:element ref="CoefficientG"/>
+			<xs:element ref="CoefficientH"/>
+			<xs:element ref="CoefficientI"/>
+			<xs:element ref="Parameter1ID"/>
+			<xs:element ref="Parameter2ID"/>
+			<xs:element ref="Parameter3ID"/>
+			<xs:element ref="Parameter4ID"/>
+			<xs:element ref="Parameter5ID"/>
+			<xs:element ref="Parameter6ID"/>
+			<xs:element ref="Parameter7ID"/>
+			<xs:element ref="Parameter8ID"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="eqLinear9DType">
+		<xs:sequence>
+			<xs:element name="Description" type="xs:string" default="p=A*P1+B*P2+C*P3+D*P4+E*P5+F*P6+G*P7+H*P8+I*P9+J" minOccurs="0"/>
+			<xs:element ref="CoefficientA"/>
+			<xs:element ref="CoefficientB"/>
+			<xs:element ref="CoefficientC"/>
+			<xs:element ref="CoefficientD"/>
+			<xs:element ref="CoefficientE"/>
+			<xs:element ref="CoefficientF"/>
+			<xs:element ref="CoefficientG"/>
+			<xs:element ref="CoefficientH"/>
+			<xs:element ref="CoefficientI"/>
+			<xs:element ref="CoefficientJ"/>
+			<xs:element ref="Parameter1ID"/>
+			<xs:element ref="Parameter2ID"/>
+			<xs:element ref="Parameter3ID"/>
+			<xs:element ref="Parameter4ID"/>
+			<xs:element ref="Parameter5ID"/>
+			<xs:element ref="Parameter6ID"/>
+			<xs:element ref="Parameter7ID"/>
+			<xs:element ref="Parameter8ID"/>
+			<xs:element ref="Parameter9ID"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="eqCustom9DType">
+		<xs:sequence>
+			<xs:element name="Description" type="xs:string" minOccurs="0"/>
+			<xs:element name="CustomEquation" type="xs:string"/>
+			<xs:element ref="CoefficientA" minOccurs="0"/>
+			<xs:element ref="CoefficientB" minOccurs="0"/>
+			<xs:element ref="CoefficientC" minOccurs="0"/>
+			<xs:element ref="CoefficientD" minOccurs="0"/>
+			<xs:element ref="CoefficientE" minOccurs="0"/>
+			<xs:element ref="CoefficientF" minOccurs="0"/>
+			<xs:element ref="CoefficientG" minOccurs="0"/>
+			<xs:element ref="CoefficientH" minOccurs="0"/>
+			<xs:element ref="CoefficientI" minOccurs="0"/>
+			<xs:element ref="CoefficientJ" minOccurs="0"/>
+			<xs:element ref="Parameter1ID" minOccurs="0"/>
+			<xs:element ref="Parameter2ID" minOccurs="0"/>
+			<xs:element ref="Parameter3ID" minOccurs="0"/>
+			<xs:element ref="Parameter4ID" minOccurs="0"/>
+			<xs:element ref="Parameter5ID" minOccurs="0"/>
+			<xs:element ref="Parameter6ID" minOccurs="0"/>
+			<xs:element ref="Parameter7ID" minOccurs="0"/>
+			<xs:element ref="Parameter8ID" minOccurs="0"/>
+			<xs:element ref="Parameter9ID" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="eqLogit1DLinearType">
+		<xs:sequence>
+			<xs:element name="Description" default="log(p/(1-p)) = A*P1+B or p = exp(A*P1+B) / { exp(A*P1+B) + 1}" minOccurs="0"/>
+			<xs:element ref="CoefficientA"/>
+			<xs:element ref="CoefficientB"/>
+			<xs:element ref="Parameter1ID"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="eqLogit2DLinearType">
+		<xs:sequence>
+			<xs:element name="Description" default="log(p/(1-p)) = A*P1+B*P2+C or p = exp(A*P1+B*P2+C) / { exp(A*P1+B*P2+C) + 1}" minOccurs="0"/>
+			<xs:element ref="CoefficientA"/>
+			<xs:element ref="CoefficientB"/>
+			<xs:element ref="CoefficientC"/>
+			<xs:element ref="Parameter1ID"/>
+			<xs:element ref="Parameter2ID"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="eqLogit3DLinearType">
+		<xs:sequence>
+			<xs:element name="Description" default="log(p/(1-p)) = A*P1+B*P2+C*P3+D or p = exp(A*P1+B*P2+C*P3+D) / { exp(A*P1+B*P2+C*P3+D) + 1}" minOccurs="0"/>
+			<xs:element ref="CoefficientA"/>
+			<xs:element ref="CoefficientB"/>
+			<xs:element ref="CoefficientC"/>
+			<xs:element ref="CoefficientD"/>
+			<xs:element ref="Parameter1ID"/>
+			<xs:element ref="Parameter2ID"/>
+			<xs:element ref="Parameter3ID"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="eqLogit4DLinearType">
+		<xs:sequence>
+			<xs:element name="Description" default="log(p/(1-p)) = A*P1+B*P2+C*P3+D*P4+E or p = exp(A*P1+B*P2+C*P3+D*P4+E) / { exp(A*P1+B*P2+C*P3+D*P4+E) + 1}" minOccurs="0"/>
+			<xs:element ref="CoefficientA"/>
+			<xs:element ref="CoefficientB"/>
+			<xs:element ref="CoefficientC"/>
+			<xs:element ref="CoefficientD"/>
+			<xs:element ref="CoefficientE"/>
+			<xs:element ref="Parameter1ID"/>
+			<xs:element ref="Parameter2ID"/>
+			<xs:element ref="Parameter3ID"/>
+			<xs:element ref="Parameter4ID"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="eqLogit5DLinearType">
+		<xs:sequence>
+			<xs:element name="Description" default="log(p/(1-p)) = A*P1+B*P2+C*P3+D*P4+E*P5+F or p = exp(A*P1+B*P2+C*P3+D*P4+E*P5+F) / { exp(A*P1+B*P2+C*P3+D*P4+E*P5+F) + 1}" minOccurs="0"/>
+			<xs:element ref="CoefficientA"/>
+			<xs:element ref="CoefficientB"/>
+			<xs:element ref="CoefficientC"/>
+			<xs:element ref="CoefficientD"/>
+			<xs:element ref="CoefficientE"/>
+			<xs:element ref="CoefficientF"/>
+			<xs:element ref="Parameter1ID"/>
+			<xs:element ref="Parameter2ID"/>
+			<xs:element ref="Parameter3ID"/>
+			<xs:element ref="Parameter4ID"/>
+			<xs:element ref="Parameter5ID"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="eqLogit6DLinearType">
+		<xs:sequence>
+			<xs:element name="Description" default="log(p/(1-p)) = A*P1+B*P2+C*P3+D*P4+E*P5+F*P6+G or p = exp(A*P1+B*P2+C*P3+D*P4+E*P5+F*P6+G) / { exp(A*P1+B*P2+C*P3+D*P4+E*P5+F*P6+G) + 1}" minOccurs="0"/>
+			<xs:element ref="CoefficientA"/>
+			<xs:element ref="CoefficientB"/>
+			<xs:element ref="CoefficientC"/>
+			<xs:element ref="CoefficientD"/>
+			<xs:element ref="CoefficientE"/>
+			<xs:element ref="CoefficientF"/>
+			<xs:element ref="CoefficientG"/>
+			<xs:element ref="Parameter1ID"/>
+			<xs:element ref="Parameter2ID"/>
+			<xs:element ref="Parameter3ID"/>
+			<xs:element ref="Parameter4ID"/>
+			<xs:element ref="Parameter5ID"/>
+			<xs:element ref="Parameter6ID"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="eqLogit7DLinearType">
+		<xs:sequence>
+			<xs:element name="Description" default="log(p/(1-p)) = A*P1+B*P2+C*P3+D*P4+E*P5+F*P6+G*P7+H or p = exp(A*P1+B*P2+C*P3+D*P4+E*P5+F*P6+G*P7+H) / { exp(A*P1+B*P2+C*P3+D*P4+E*P5+F*P6+G*P7+H) + 1}" minOccurs="0"/>
+			<xs:element ref="CoefficientA"/>
+			<xs:element ref="CoefficientB"/>
+			<xs:element ref="CoefficientC"/>
+			<xs:element ref="CoefficientD"/>
+			<xs:element ref="CoefficientE"/>
+			<xs:element ref="CoefficientF"/>
+			<xs:element ref="CoefficientG"/>
+			<xs:element ref="CoefficientH"/>
+			<xs:element ref="Parameter1ID"/>
+			<xs:element ref="Parameter2ID"/>
+			<xs:element ref="Parameter3ID"/>
+			<xs:element ref="Parameter4ID"/>
+			<xs:element ref="Parameter5ID"/>
+			<xs:element ref="Parameter6ID"/>
+			<xs:element ref="Parameter7ID"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="eqLogit8DLinearType">
+		<xs:sequence>
+			<xs:element name="Description" default="log(p/(1-p)) = A*P1+B*P2+C*P3+D*P4+E*P5+F*P6+G*P7+H*P8+I or p = exp(A*P1+B*P2+C*P3+D*P4+E*P5+F*P6+G*P7+H*P8+I) / { exp(A*P1+B*P2+C*P3+D*P4+E*P5+F*P6+G*P7+H*P8+I) + 1}" minOccurs="0"/>
+			<xs:element ref="CoefficientA"/>
+			<xs:element ref="CoefficientB"/>
+			<xs:element ref="CoefficientC"/>
+			<xs:element ref="CoefficientD"/>
+			<xs:element ref="CoefficientE"/>
+			<xs:element ref="CoefficientF"/>
+			<xs:element ref="CoefficientG"/>
+			<xs:element ref="CoefficientH"/>
+			<xs:element ref="CoefficientI"/>
+			<xs:element ref="Parameter1ID"/>
+			<xs:element ref="Parameter2ID"/>
+			<xs:element ref="Parameter3ID"/>
+			<xs:element ref="Parameter4ID"/>
+			<xs:element ref="Parameter5ID"/>
+			<xs:element ref="Parameter6ID"/>
+			<xs:element ref="Parameter7ID"/>
+			<xs:element ref="Parameter8ID"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="eqLogit9DLinearType">
+		<xs:sequence>
+			<xs:element name="Description" default="log(p/(1-p)) = A*P1+B*P2+C*P3+D*P4+E*P5+F*P6+G*P7+H*P8+I*P9+J or p = exp(A*P1+B*P2+C*P3+D*P4+E*P5+F*P6+G*P7+H*P8+I*P9+J) / { exp(A*P1+B*P2+C*P3+D*P4+E*P5+F*P6+G*P7+H*P8+I*P9+J) + 1}" minOccurs="0"/>
+			<xs:element ref="CoefficientA"/>
+			<xs:element ref="CoefficientB"/>
+			<xs:element ref="CoefficientC"/>
+			<xs:element ref="CoefficientD"/>
+			<xs:element ref="CoefficientE"/>
+			<xs:element ref="CoefficientF"/>
+			<xs:element ref="CoefficientG"/>
+			<xs:element ref="CoefficientH"/>
+			<xs:element ref="CoefficientI"/>
+			<xs:element ref="CoefficientJ"/>
+			<xs:element ref="Parameter1ID"/>
+			<xs:element ref="Parameter2ID"/>
+			<xs:element ref="Parameter3ID"/>
+			<xs:element ref="Parameter4ID"/>
+			<xs:element ref="Parameter5ID"/>
+			<xs:element ref="Parameter6ID"/>
+			<xs:element ref="Parameter7ID"/>
+			<xs:element ref="Parameter8ID"/>
+			<xs:element ref="Parameter9ID"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="eqLogit9DCustomType">
+		<xs:sequence>
+			<xs:element name="Description" type="xs:string" minOccurs="0"/>
+			<xs:element name="CustomEquation" type="xs:string"/>
+			<xs:element ref="CoefficientA" minOccurs="0"/>
+			<xs:element ref="CoefficientB" minOccurs="0"/>
+			<xs:element ref="CoefficientC" minOccurs="0"/>
+			<xs:element ref="CoefficientD" minOccurs="0"/>
+			<xs:element ref="CoefficientE" minOccurs="0"/>
+			<xs:element ref="CoefficientF" minOccurs="0"/>
+			<xs:element ref="CoefficientG" minOccurs="0"/>
+			<xs:element ref="CoefficientH" minOccurs="0"/>
+			<xs:element ref="CoefficientI" minOccurs="0"/>
+			<xs:element ref="CoefficientJ" minOccurs="0"/>
+			<xs:element ref="Parameter1ID" minOccurs="0"/>
+			<xs:element ref="Parameter2ID" minOccurs="0"/>
+			<xs:element ref="Parameter3ID" minOccurs="0"/>
+			<xs:element ref="Parameter4ID" minOccurs="0"/>
+			<xs:element ref="Parameter5ID" minOccurs="0"/>
+			<xs:element ref="Parameter6ID" minOccurs="0"/>
+			<xs:element ref="Parameter7ID" minOccurs="0"/>
+			<xs:element ref="Parameter8ID" minOccurs="0"/>
+			<xs:element ref="Parameter9ID" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="eqLogit1DQuadraticType">
+		<xs:sequence>
+			<xs:element name="Description" default="log(p/(1-p)) = A*P1*P1+B*P1+C or p = exp(A*P1*P1+B*P1+C) / { exp(A*P1*P1+B*P1+C) + 1}" minOccurs="0"/>
+			<xs:element ref="CoefficientA"/>
+			<xs:element ref="CoefficientB"/>
+			<xs:element ref="CoefficientC"/>
+			<xs:element ref="Parameter1ID"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="eqQuadratic1DType">
+		<xs:sequence>
+			<xs:element name="Description" default="p=A*P1*P1+B*P1+C" minOccurs="0"/>
+			<xs:element ref="CoefficientA"/>
+			<xs:element ref="CoefficientB"/>
+			<xs:element ref="CoefficientC"/>
+			<xs:element ref="Parameter1ID"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="eqLogit2DQuadraticType">
+		<xs:sequence>
+			<xs:element name="Description" default="log(p/(1-p)) = A*P1*P1+B*P1+C*P2*P2+D*P2+E or p = exp(A*P1*P1+B*P1+C*P2*P2+D*P2+E) / { exp(A*P1*P1+B*P1+C*P2*P2+D*P2+E) + 1}" minOccurs="0"/>
+			<xs:element ref="CoefficientA"/>
+			<xs:element ref="CoefficientB"/>
+			<xs:element ref="CoefficientC"/>
+			<xs:element ref="CoefficientD"/>
+			<xs:element ref="CoefficientE"/>
+			<xs:element ref="Parameter1ID"/>
+			<xs:element ref="Parameter2ID"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="eqQuadratic2DType">
+		<xs:sequence>
+			<xs:element name="Description" default="p=A*P1*P1+B*P1+C*P2*P2+D*P2+E" minOccurs="0"/>
+			<xs:element ref="CoefficientA"/>
+			<xs:element ref="CoefficientB"/>
+			<xs:element ref="CoefficientC"/>
+			<xs:element ref="CoefficientD"/>
+			<xs:element ref="CoefficientE"/>
+			<xs:element ref="Parameter1ID"/>
+			<xs:element ref="Parameter2ID"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="eqCubic1DType">
+		<xs:sequence>
+			<xs:element name="Description" default="p=A*P1*P1*P1+B*P1*P1+C*P1+D" minOccurs="0"/>
+			<xs:element ref="CoefficientA"/>
+			<xs:element ref="CoefficientB"/>
+			<xs:element ref="CoefficientC"/>
+			<xs:element ref="CoefficientD"/>
+			<xs:element ref="Parameter1ID"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="eqWeibull1D3P">
+		<xs:sequence>
+			<xs:element name="Description" type="xs:string" default="p=1-exp( - dT * ( (P1-A)/B)^C)) if (P1-A)/B is large than 0; p=0 if (P1-A)/B is less or equals to 0" minOccurs="0"/>
+			<xs:element ref="CoefficientA"/>
+			<xs:element ref="CoefficientB"/>
+			<xs:element ref="CoefficientC"/>
+			<xs:element ref="Parameter1ID"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="eqGaussianNormal1DType">
+		<xs:sequence>
+			<xs:element name="Description" type="xs:string" default="p=(1/sqrt(2*pi*StDev^2))^exp((-(x-Mean)^2)/(2*StDev^2)); where x is greater than the LowerBound and lower than the UpperBound" minOccurs="0"/>
+			<xs:element ref="Mean"/>
+			<xs:element ref="StDev"/>
+			<xs:element ref="LowerBound"/>
+			<xs:element ref="UpperBound"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MarkovChainModelType">
+		<xs:sequence>
+			<xs:element ref="EarlyOccurTime"/>
+			<xs:element ref="TypicalOccurTime"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MeetingDurationProbabilityType">
+		<xs:sequence>
+			<xs:element ref="MeetingDuration"/>
+			<xs:element ref="Probability"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="NormalDurationModelType">
+		<xs:sequence>
+			<xs:element ref="TypicalDuration"/>
+			<xs:element ref="MinimumDuration"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="NormalProbabilityModelType">
+		<xs:sequence>
+			<xs:element ref="EarlyOccurTime"/>
+			<xs:element ref="TypicalOccurTime"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ParameterRange">
+		<xs:sequence>
+			<xs:element name="ParameterID"/>
+			<xs:element name="Min" minOccurs="0"/>
+			<xs:element name="Max" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SpaceOccupancyType">
+		<xs:all>
+			<xs:element ref="SpaceCategory"/>
+			<xs:element ref="PercentTimePresence"/>
+			<xs:element ref="OccupancyDuration"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:simpleType name="BuildingType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="AutomotiveFacility"/>
+			<xs:enumeration value="ConventionCenter"/>			
+			<xs:enumeration value="Courthouse"/>
+			<xs:enumeration value="DataCenter"/>
+			<xs:enumeration value="DiningBarLoungeOrLeisure"/>
+			<xs:enumeration value="DiningCafeteriaFastFood"/>
+			<xs:enumeration value="DiningFamily"/>
+			<xs:enumeration value="Dormitory"/>
+			<xs:enumeration value="ExerciseCenter"/>
+			<xs:enumeration value="Firestation"/>
+			<xs:enumeration value="Gymnasium"/>
+			<xs:enumeration value="HospitalOrHealthcare"/>
+			<xs:enumeration value="Hotel"/>
+			<xs:enumeration value="Laboratory"/>
+			<xs:enumeration value="Library"/>
+			<xs:enumeration value="Manufacturing"/>
+			<xs:enumeration value="Motel"/>
+			<xs:enumeration value="MotionPictureTheatre"/>
+			<xs:enumeration value="MultiFamily"/>
+			<xs:enumeration value="Museum"/>
+			<xs:enumeration value="Office"/>
+			<xs:enumeration value="ParkingGarage"/>
+			<xs:enumeration value="Penitentiary"/>
+			<xs:enumeration value="PerformingArtsTheater"/>
+			<xs:enumeration value="PoliceStation"/>
+			<xs:enumeration value="PostOffice"/>
+			<xs:enumeration value="ReligiousBuilding"/>
+			<xs:enumeration value="Retail"/>
+			<xs:enumeration value="SchoolOrUniversity"/>
+			<xs:enumeration value="SingleFamilyHome"/>
+			<xs:enumeration value="ResidentialOwn"/>
+			<xs:enumeration value="ResidentialRent"/>
+			<xs:enumeration value="SportsArea"/>
+			<xs:enumeration value="TownHall"/>
+			<xs:enumeration value="Transportation"/>
+			<xs:enumeration value="Unknown"/>
+			<xs:enumeration value="Warehouse"/>
+			<xs:enumeration value="Workshop"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DayofWeekType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Monday"/>
+			<xs:enumeration value="Tuesday"/>
+			<xs:enumeration value="Wednesday"/>
+			<xs:enumeration value="Thursday"/>
+			<xs:enumeration value="Friday"/>
+			<xs:enumeration value="Saturday"/>
+			<xs:enumeration value="Sunday"/>
+			<xs:enumeration value="Weekdays"/>
+			<xs:enumeration value="Weekends"/>
+			<xs:enumeration value="Holiday"/>
+			<xs:enumeration value="PersonalHoliday"/>
+			<xs:enumeration value="HeatingDesignDay"/>
+			<xs:enumeration value="CoolingDesignDay"/>
+			<xs:enumeration value="All"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EventDurationCalculationMethod">
+		<xs:annotation>
+			<xs:documentation> Theoretical model to calculate the duration of an event</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NormalProbabilityModel"/>
+			<xs:enumeration value="GeometricProbabilityModel"/>
+			<xs:enumeration value="ExtremeProbabilityModel"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EventOccurCalculationMethod">
+		<xs:annotation>
+			<xs:documentation> Theoretical model to calculate the occurrence time of an event</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="MarkovChainModel"/>
+			<xs:enumeration value="NormalProbabilityModel"/>
+			<xs:enumeration value="GeometricProbabilityModel"/>
+			<xs:enumeration value="ExtremeProbabilityModel"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="GenderType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Male"/>
+			<xs:enumeration value="Female"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="GroupPriority">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Majority">
+				<xs:annotation>
+					<xs:documentation>If 50% or higher proportion of occupants would like to take the same action, then the action is trigerred.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SubjectiveValueType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="High"/>
+			<xs:enumeration value="Medium"/>
+			<xs:enumeration value="Low"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="HVACType">
+		<xs:annotation>
+			<xs:documentation>HVAC can be controlled in a continuous scale or on/off (1/0).</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ZoneOnOff"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FanType">
+		<xs:annotation>
+			<xs:documentation>Ceiling fans can be controlled in a discrete scale or on/off (1/0). In addition, HVAC fan can be VAV or CAV system</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="CeilingOnOff"/>
+			<xs:enumeration value="CeilingDiscreteControl"/>
+			<xs:enumeration value="HVACVariableVolume"/>
+			<xs:enumeration value="HVACConstantVolume"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="InteractionType">
+		<xs:annotation>
+			<xs:documentation>There are three types of interactions: TurnOn: set the value of a parameter to 1; TurnOff: set the value of a parameter to 0; and SetToControlValue: set the value of a parameter to a desired value.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="TurnOn">
+				<xs:annotation>
+					<xs:documentation>Set the value of a parameter to 1.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TurnOff">
+				<xs:annotation>
+					<xs:documentation>Set the value of a parameter to 0.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SetToControlValue">
+				<xs:annotation>
+					<xs:documentation>Set the value of a parameter to a desired value when event occurs.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ClothingChangeType">
+		<xs:annotation>
+			<xs:documentation>There are three types of clothing change: PutOn: increase the level of clothing level; TurnOff: decrease the level of clothing level.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="PutOn">
+				<xs:annotation>
+					<xs:documentation>Increase the level of clothing level</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="PutOff">
+				<xs:annotation>
+					<xs:documentation>Decrease the level of clothing level</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="JobType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Regular staff"/>
+			<xs:enumeration value="Researcher"/>
+			<xs:enumeration value="Administrator"/>
+			<xs:enumeration value="Manager"/>
+			<xs:enumeration value="Visitor"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="MaritalStatusType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Single"/>
+			<xs:enumeration value="Married"/>
+			<xs:enumeration value="Partner"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EducationType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="High school"/>
+			<xs:enumeration value="Bachelors"/>
+			<xs:enumeration value="Post-graduate"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="IncomeGroupType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="30,000 USD-50,000 USD"/>
+			<xs:enumeration value="51,000 USD-60,000 USD"/>
+			<xs:enumeration value="61,000 USD-80,000 USD"/>
+			<xs:enumeration value="Greater than 80,000 USD"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EmploymentType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Unemployed"/>
+			<xs:enumeration value="Employed"/>
+			<xs:enumeration value="Self-employed"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ClimateZoneType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+			<xs:enumeration value="3"/>
+			<xs:enumeration value="4"/>
+			<xs:enumeration value="5"/>
+			<xs:enumeration value="6"/>
+			<xs:enumeration value="7"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CommuteModeType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Walk"/>
+			<xs:enumeration value="Cycle"/>
+			<xs:enumeration value="Car"/>
+			<xs:enumeration value="Transit"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PolicyType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Subsidies"/>
+			<xs:enumeration value="Tax-cuts"/>
+			<xs:enumeration value="Codes compliance"/>
+			<xs:enumeration value="Insurance mandate"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="InfrastructureType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="EV charging"/>
+			<xs:enumeration value="Micro grid"/>
+			<xs:enumeration value="Grid buyback"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CostType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Installation"/>
+			<xs:enumeration value="Operational"/>
+			<xs:enumeration value="Service fees"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="LifeStyleType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Austerity"/>
+			<xs:enumeration value="Luxury"/>
+			<xs:enumeration value="Norm"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ClothingLevelType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Heavy"/>
+			<xs:enumeration value="Medium"/>
+			<xs:enumeration value="Light"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="LightType">
+		<xs:annotation>
+			<xs:documentation>Lights can be controlled in a continuous scale or on/off (1/0).</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="OnOff"/>
+			<xs:enumeration value="ContinuousControl"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="OtherConstraintType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NoOccupantsInRoom">
+				<xs:annotation>
+					<xs:documentation>The action happens only when there is no occupant in the room. (Typically combined with leaving room events.)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ParameterType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="RoomAcousticLevel"/>
+			<xs:enumeration value="RoomAirTemperature"/>
+			<xs:enumeration value="RoomCO2Concentration"/>
+			<xs:enumeration value="RoomDirectSolarIrradiance"/>
+			<xs:enumeration value="RoomTransmittedSolarIrradiance"/>
+			<xs:enumeration value="RoomWorkPlaneDaylightIlluminance"/>
+			<xs:enumeration value="RoomCeilingDaylightIlluminance"/>
+			<xs:enumeration value="RoomLightsPowerDensity"/>
+			<xs:enumeration value="RoomOperativeTemperature"/>
+			<xs:enumeration value="RoomParticulateMatter"/>
+			<xs:enumeration value="RoomRelativeHumidity"/>
+			<xs:enumeration value="RoomVolatileOrganicCompounds"/>
+			<xs:enumeration value="RoomWindSpeed"/>
+			<xs:enumeration value="OutdoorDryBulbTemperature"/>
+			<xs:enumeration value="OutdoorCO2Concentration"/>
+			<xs:enumeration value="OutdoorParticulateMatter"/>
+			<xs:enumeration value="OutdoorRainIndicator"/>
+			<xs:enumeration value="OutdoorPrecipitationDepth"/>
+			<xs:enumeration value="OutdoorPrecipitationRate"/>
+			<xs:enumeration value="OutdoorRelativeHumidity"/>
+			<xs:enumeration value="OutdoorSolarAltitudeAngle"/>
+			<xs:enumeration value="OutdoorDirectSolarIrradiance"/>
+			<xs:enumeration value="OutdoorDiffuseSolarIrradiance"/>
+			<xs:enumeration value="OutdoorWindDirection"/>
+			<xs:enumeration value="OutdoorWindSpeed"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PlugLoadType">
+		<xs:annotation>
+			<xs:documentation>Plug loads can be controlled in a continuous scale or on/off (1/0).</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="OnOff"/>
+			<xs:enumeration value="ContinuousControl"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="RoomEventType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="LeavingRoom">
+				<xs:annotation>
+					<xs:documentation>The occupant is in the space in the previous time-step and not in the current one.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="LeavingRoomMoreThan1Hour"/>
+			<xs:enumeration value="LeavingRoomMoreThan6Hours"/>
+			<xs:enumeration value="EnteringRoom">
+				<xs:annotation>
+					<xs:documentation>The occupant is not in the space in the previous time-step and is in the current one.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="StayingInRoom"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SeasonType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Spring">
+				<xs:annotation>
+					<xs:documentation>March 1 to May 31</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Summer">
+				<xs:annotation>
+					<xs:documentation>June 1 to August 31</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Fall">
+				<xs:annotation>
+					<xs:documentation>September 1 to November 30</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Winter">
+				<xs:annotation>
+					<xs:documentation>December 1 to February 28</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="All"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ShadeAndBlindType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Operable"/>
+			<xs:enumeration value="Fixed"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SpaceCategory">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="OwnOffice"/>
+			<xs:enumeration value="OtherOffice"/>
+			<xs:enumeration value="MeetingRoom"/>
+			<xs:enumeration value="AuxRoom">
+				<xs:annotation>
+					<xs:documentation>All other rooms</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Outdoor"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TimeFrequencyType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Daily"/>
+			<xs:enumeration value="Weekly"/>
+			<xs:enumeration value="Monthly"/>
+			<xs:enumeration value="Yearly"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SpaceOccupancyCalculationMethod">
+		<xs:annotation>
+			<xs:documentation> The space occupancy calculation method.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="MarkovChainModel"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SpaceType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="MeetingRoom"/>
+			<xs:enumeration value="Corridor"/>
+			<xs:enumeration value="Outdoor"/>
+			<xs:enumeration value="Office"/>
+			<xs:enumeration value="ResidentialOwn"/>
+			<xs:enumeration value="ResidentialRent"/>
+			<xs:enumeration value="OfficeShared"/>
+			<xs:enumeration value="OfficePrivate"/>
+			<xs:enumeration value="Other"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="HVACConditionType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Heated"/>
+			<xs:enumeration value="Cooled"/>
+			<xs:enumeration value="HeatedAndCooled"/>
+			<xs:enumeration value="Unconditioned"/>
+			<xs:enumeration value="Vented"/>
+			<xs:enumeration value="NaturallyVentedOnly"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="StatusTransitionEventType">
+		<xs:annotation>
+			<xs:documentation> One time event involving occupancy status transition in  building level</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Arrival"/>
+			<xs:enumeration value="Departure"/>
+			<xs:enumeration value="ShortTermLeaving"/>
+			<xs:enumeration value="ShortTermVisiting"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SystemType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="HVAC"/>
+			<xs:enumeration value="Fans"/>
+			<xs:enumeration value="Lights"/>
+			<xs:enumeration value="Windows"/>
+			<xs:enumeration value="Doors"/>
+			<xs:enumeration value="PlugLoad"/>
+			<xs:enumeration value="Thermostats"/>
+			<xs:enumeration value="ShadesAndBlinds"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ThermostatType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Adjustable"/>
+			<xs:enumeration value="Fixed"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="WindowType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Operable"/>
+			<xs:enumeration value="ContinuousControl"/>
+			<xs:enumeration value="Fixed"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DoorType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Operable"/>
+			<xs:enumeration value="Fixed"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TimeofDayType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Morning">
+				<xs:annotation>
+					<xs:documentation>6am to 12pm</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Noon">
+				<xs:annotation>
+					<xs:documentation>12pm</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Afternoon">
+				<xs:annotation>
+					<xs:documentation>12pm to 6pm</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Evening">
+				<xs:annotation>
+					<xs:documentation>6pm to 12am</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Day">
+				<xs:annotation>
+					<xs:documentation>6am to 12am</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Night">
+				<xs:annotation>
+					<xs:documentation>12am to 6am</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="All"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ScheduleType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Temp"/>
+			<xs:enumeration value="Fraction"/>
+			<xs:enumeration value="OnOff"/>
+			<xs:enumeration value="ResetTemp"/>
+			<xs:enumeration value="ActivityLevel"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ScheduleTypeLimits">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Continuous"/>
+			<xs:enumeration value="Discrete"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TypesDataCollectedList">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="CrossSectionSurvey"/>
+			<xs:enumeration value="LongitudinalSurvey"/>
+			<xs:enumeration value="IEQmeasurements"/>
+			<xs:enumeration value="ElectricityMeter"/>
+			<xs:enumeration value="FieldVisit"/>
+			<xs:enumeration value="Interview"/>
+			<xs:enumeration value="Occupancy"/>
+			<xs:enumeration value="WeatherStation"/>
+			<xs:enumeration value="SubjectObservation"/>
+			<xs:enumeration value="WindowStateLog"/>
+			<xs:enumeration value="BlindStateLog"/>
+			<xs:enumeration value="LightStateLog"/>
+			<xs:enumeration value="ThermostatControlLog"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TimeGranularityType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="LessThan1"/>
+			<xs:enumeration value="1to9"/>
+			<xs:enumeration value="10to19"/>
+			<xs:enumeration value="30andMoreThan59"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PredictiveHorizonType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="LessThan1"/>
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="3"/>
+			<xs:enumeration value="5"/>
+			<xs:enumeration value="15"/>
+			<xs:enumeration value="24"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ControlHorizonType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="LessThan1"/>
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="3"/>
+			<xs:enumeration value="5"/>
+			<xs:enumeration value="15"/>
+			<xs:enumeration value="24"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SpaceGranularityType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="LabBased"/>
+			<xs:enumeration value="Room"/>
+			<xs:enumeration value="Floor"/>
+			<xs:enumeration value="Building"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="RuleBasedModelType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ScheduleBased"/>
+			<xs:enumeration value="GenericRuleBased"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="StatisticalStochasticModelType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Regression"/>
+			<xs:enumeration value="GenericProbability"/>
+			<xs:enumeration value="Weibull"/>
+			<xs:enumeration value="Bernoulli"/>
+			<xs:enumeration value="BayesianNetwork"/>
+			<xs:enumeration value="MarkovChain"/>
+			<xs:enumeration value="MonteCarlo"/>
+			<xs:enumeration value="MarkovChainMonteCarlo"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DataDrivenModelType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="SupportVectorMachine"/>
+			<xs:enumeration value="RandomForest"/>
+			<xs:enumeration value="LongShortTermMemory"/>
+			<xs:enumeration value="LinearRegression"/>
+			<xs:enumeration value="HiddenMarkov"/>
+			<xs:enumeration value="GaussianMixture"/>
+			<xs:enumeration value="ControlLogic"/>
+			<xs:enumeration value="Clustering"/>
+			<xs:enumeration value="ArtificialNeuralNetwork"/>
+			<xs:enumeration value="FuzzyLogic"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="AbsoluteMetricType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Accuracy"/>
+			<xs:enumeration value="BalancedAccuracy"/>
+			<xs:enumeration value="ConfusionMatrix"/>
+			<xs:enumeration value="F1"/>
+			<xs:enumeration value="FBeta"/>
+			<xs:enumeration value="MeanAverageError"/>
+			<xs:enumeration value="MeanSquaredError"/>
+			<xs:enumeration value="RootMeanSquaredError"/>
+			<xs:enumeration value="NormalizedMeanSquaredError"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SensorType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ACState"/>
+			<xs:enumeration value="AirPressureSensor"/>
+			<xs:enumeration value="AirSpeedSensor"/>
+			<xs:enumeration value="Camera"/>
+			<xs:enumeration value="CO2Sensor"/>
+			<xs:enumeration value="COSensor"/>
+			<xs:enumeration value="ElectricSensor"/>
+			<xs:enumeration value="DoorSensor"/>
+			<xs:enumeration value="LightSensor"/>
+			<xs:enumeration value="LightSwitch"/>
+			<xs:enumeration value="MotionSensor"/>
+			<xs:enumeration value="RelativeHumiditySensor"/>
+			<xs:enumeration value="SmartMeter"/>
+			<xs:enumeration value="SmartPlug"/>
+			<xs:enumeration value="SolarIrradianceSensor"/>
+			<xs:enumeration value="SoundSensor"/>
+			<xs:enumeration value="AirTemperatureSensor"/>
+			<xs:enumeration value="WiFiProbeSensor"/>
+			<xs:enumeration value="VolatileOrganicCompoundsSensor"/>
+			<xs:enumeration value="ParticulateMatterSensor"/>
+			<xs:enumeration value="WindowSensor"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SpaceLevelofSensorLocationType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Ceiling"/>
+			<xs:enumeration value="Chair"/>
+			<xs:enumeration value="Desk"/>
+			<xs:enumeration value="DoorFrame"/>
+			<xs:enumeration value="Wall"/>
+			<xs:enumeration value="WindowFrame"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="BuildingLevelofSensorLocationType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ElectricalPanel"/>
+			<xs:enumeration value="HVACEquipment"/>
+			<xs:enumeration value="MainEntrance"/>
+			<xs:enumeration value="RoofTop"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="AreaUnitType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="SquareKilometers"/>
+			<xs:enumeration value="SquareMeters"/>
+			<xs:enumeration value="SquareCentimeters"/>
+			<xs:enumeration value="SquareMillimeters"/>
+			<xs:enumeration value="SquareMiles"/>
+			<xs:enumeration value="SquareYards"/>
+			<xs:enumeration value="SquareFeet"/>
+			<xs:enumeration value="SquareInches"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="LengthUnitType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Kilometers"/>
+			<xs:enumeration value="Meters"/>
+			<xs:enumeration value="Centimeters"/>
+			<xs:enumeration value="Millimeters"/>
+			<xs:enumeration value="Miles"/>
+			<xs:enumeration value="Yards"/>
+			<xs:enumeration value="Feet"/>
+			<xs:enumeration value="Inches"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TempUnitType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="F"/>
+			<xs:enumeration value="C"/>
+			<xs:enumeration value="K"/>
+			<xs:enumeration value="R"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

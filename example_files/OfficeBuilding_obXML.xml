@@ -1,0 +1,303 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<OccupantBehavior xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gb="http://www.gbxml.org/schema" ID="OS001" xsi:noNamespaceSchemaLocation="obXML_v1.4.xsd" Version="1.4">
+  <Buildings>
+    <Building ID="bldg-1" Name="Office Buildng">
+      <BuildingType>Office</BuildingType>
+      <Address>Boston, MA</Address>
+      <Area AreaUnit="SquareFeet">15811.390974</Area>
+      <Spaces ID="All_Spaces">
+        <Space ID="sp-1-Open" Name="1 Open" ZoneIdRef="zone-open" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+          <SpaceType>Other</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">3997.489662</Area>
+          <Systems/>
+        </Space>
+        <Space ID="sp-2-Open" Name="2 Open" ZoneIdRef="zone-open" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+          <SpaceType>Other</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">3818.100773</Area>
+        </Space>
+        <Space ID="sp-3-Office" Name="3 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+          <SpaceType>Office</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">231.311415</Area>
+        </Space>
+        <Space ID="sp-4-Office" Name="4 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+          <SpaceType>Office</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">233.181858</Area>
+        </Space>
+        <Space ID="sp-5-Office" Name="5 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+          <SpaceType>Office</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">231.311415</Area>
+        </Space>
+        <Space ID="sp-6-Office" Name="6 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+          <SpaceType>Office</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">201.244141</Area>
+        </Space>
+        <Space ID="sp-7-Office" Name="7 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+          <SpaceType>Office</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">292.832031</Area>
+        </Space>
+        <Space ID="sp-8-Office" Name="8 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+          <SpaceType>Office</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">201.244141</Area>
+        </Space>
+        <Space ID="sp-9-Office" Name="9 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+          <SpaceType>Office</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">192.342014</Area>
+        </Space>
+        <Space ID="sp-10-Office" Name="10 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+          <SpaceType>Office</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">189.538194</Area>
+        </Space>
+        <Space ID="sp-11-Office" Name="11 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+          <SpaceType>Office</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">234.186849</Area>
+        </Space>
+        <Space ID="sp-12-Office" Name="12 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+          <SpaceType>Office</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">244.290365</Area>
+        </Space>
+        <Space ID="sp-13-Office" Name="13 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+          <SpaceType>Office</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">210.538194</Area>
+        </Space>
+        <Space ID="sp-14-Office" Name="14 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+          <SpaceType>Office</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">259.392361</Area>
+        </Space>
+        <Space ID="sp-15-Stairwell" Name="15 Stairwell" ZoneIdRef="zone-stairewell" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+          <SpaceType>Other</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">253.350694</Area>
+        </Space>
+        <Space ID="sp-16-Office" Name="16 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+          <SpaceType>Office</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">231.230903</Area>
+        </Space>
+        <Space ID="sp-17-Office" Name="17 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+          <SpaceType>Office</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">233.100694</Area>
+        </Space>
+        <Space ID="sp-18-Office" Name="18 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+          <SpaceType>Office</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">231.230903</Area>
+        </Space>
+        <Space ID="sp-19-Mens_Room" Name="19 Mens Room" ZoneIdRef="zone-restroom" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+          <SpaceType>Other</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">225.256944</Area>
+        </Space>
+        <Space ID="sp-20-Ladies_Room" Name="20 Ladies Room" ZoneIdRef="zone-restroom" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+          <SpaceType>Other</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">223.184028</Area>
+        </Space>
+        <Space ID="sp-21-MechanicalElectrical" Name="21 Mechanical/Electrical" ZoneIdRef="zone-mechanicalElectrical" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+          <SpaceType>Other</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">158.923611</Area>
+        </Space>
+        <Space ID="sp-22-Mens_Room" Name="22 Mens Room" ZoneIdRef="zone-restroom" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+          <SpaceType>Other</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">225.256944</Area>
+        </Space>
+        <Space ID="sp-23-Ladies_Room" Name="23 Ladies Room" ZoneIdRef="zone-restroom" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+          <SpaceType>Other</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">223.184028</Area>
+        </Space>
+        <Space ID="sp-24-MechanicalElectrical" Name="24 Mechanical/Electrical" ZoneIdRef="zone-mechanicalElectrical" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+          <SpaceType>Other</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">158.923611</Area>
+        </Space>
+        <Space ID="sp-25-Lounge" Name="25 Lounge" ZoneIdRef="zone-lounge" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+          <SpaceType>Other</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">474.751736</Area>
+        </Space>
+        <Space ID="sp-26-Office" Name="26 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+          <SpaceType>Office</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">370.807292</Area>
+        </Space>
+        <Space ID="sp-27-Office" Name="27 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+          <SpaceType>Office</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">180.295139</Area>
+        </Space>
+        <Space ID="sp-28-Office" Name="28 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+          <SpaceType>Office</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">182.621528</Area>
+        </Space>
+        <Space ID="sp-29-Office" Name="29 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+          <SpaceType>Office</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">259.392361</Area>
+        </Space>
+        <Space ID="sp-30-Stairwell" Name="30 Stairwell" ZoneIdRef="zone-stairewell" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+          <SpaceType>Other</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">225.434028</Area>
+        </Space>
+        <Space ID="sp-31-Conference_Room" Name="31 Conference Room" ZoneIdRef="zone-conferenceroom" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+          <SpaceType>MeetingRoom</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">308.522569</Area>
+        </Space>
+        <Space ID="sp-32-Office" Name="32 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+          <SpaceType>Office</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">233.100694</Area>
+        </Space>
+        <Space ID="sp-33-Office" Name="33 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+          <SpaceType>Office</SpaceType>
+          <HVACConditionType>HeatedAndCooled</HVACConditionType>
+          <Area AreaUnit="SquareFeet">231.230903</Area>
+        </Space>
+      </Spaces>
+      <BuildingStorey ID="story-1" Name="L1">
+        <StoreyLevel LengthUnit="Feet">0</StoreyLevel>
+      </BuildingStorey>
+      <BuildingStorey ID="story-2" Name="L2">
+        <StoreyLevel LengthUnit="Feet">12</StoreyLevel>
+      </BuildingStorey>
+    </Building>
+  </Buildings>
+  <Behaviors/>
+  <Zones>
+    <Zone ID="zone-open" Name="Entrance">
+      <DesignHeatT TempUnit="F">70</DesignHeatT>
+      <DesignCoolT TempUnit="F">75</DesignCoolT>
+      <DesignHeatRH>0</DesignHeatRH>
+      <DesignCoolRH>0.7</DesignCoolRH>
+    </Zone>
+    <Zone ID="zone-office" Name="Office">
+      <DesignHeatT TempUnit="F">70</DesignHeatT>
+      <DesignCoolT TempUnit="F">75</DesignCoolT>
+      <DesignHeatRH>0</DesignHeatRH>
+      <DesignCoolRH>0.7</DesignCoolRH>
+    </Zone>
+    <Zone ID="zone-restroom" Name="Restroom">
+      <DesignHeatT TempUnit="F">70</DesignHeatT>
+      <DesignCoolT TempUnit="F">75</DesignCoolT>
+      <DesignHeatRH>0</DesignHeatRH>
+      <DesignCoolRH>0.7</DesignCoolRH>
+    </Zone>
+    <Zone ID="zone-mechanicalElectrical" Name="Mechanical/Electrical Facilities">
+      <DesignHeatT TempUnit="F">70</DesignHeatT>
+      <DesignCoolT TempUnit="F">75</DesignCoolT>
+      <DesignHeatRH>0</DesignHeatRH>
+      <DesignCoolRH>0.7</DesignCoolRH>
+    </Zone>
+    <Zone ID="zone-lounge" Name="Lounge">
+      <DesignHeatT TempUnit="F">70</DesignHeatT>
+      <DesignCoolT TempUnit="F">75</DesignCoolT>
+      <DesignHeatRH>0</DesignHeatRH>
+      <DesignCoolRH>0.7</DesignCoolRH>
+    </Zone>
+    <Zone ID="zone-stairewell" Name="stairewell">
+      <DesignHeatT TempUnit="F">70</DesignHeatT>
+      <DesignCoolT TempUnit="F">75</DesignCoolT>
+      <DesignHeatRH>0</DesignHeatRH>
+      <DesignCoolRH>0.7</DesignCoolRH>
+    </Zone>
+    <Zone ID="zone-conferenceroom" Name="Conference Room">
+      <DesignHeatT TempUnit="F">70</DesignHeatT>
+      <DesignCoolT TempUnit="F">75</DesignCoolT>
+      <DesignHeatRH>0</DesignHeatRH>
+      <DesignCoolRH>0.7</DesignCoolRH>
+    </Zone>
+  </Zones>
+  <Schedules>
+    <Schedule ID="schLightEquip" ScheduleType="Fraction">
+      <YearSchedule ID="schLightEquipYear">
+        <BeginDate>2024-01-01</BeginDate>
+        <EndDate>2024-12-31</EndDate>
+        <WeekScheduleId WeekScheduleIdRef="schLightEquipWeek"/>
+      </YearSchedule>
+    </Schedule>
+    <Schedule ID="schOccupancy" ScheduleType="Fraction">
+      <YearSchedule ID="schOccupancyYear">
+        <BeginDate>2024-01-01</BeginDate>
+        <EndDate>2024-12-31</EndDate>
+        <WeekScheduleId WeekScheduleIdRef="schOccupancyWeek"/>
+      </YearSchedule>
+    </Schedule>
+    <WeekSchedule ID="schLightEquipWeek" ScheduleType="Fraction" Name="Office Lighting - 6 AM to 11 PM">
+      <DayScheduleId DayScheduleIdRef="schLightEquipDay" DayofWeek="Monday"/>
+    </WeekSchedule>
+    <WeekSchedule ID="schOccupancyWeek" ScheduleType="Fraction" Name="Common Office Occupancy - 8 AM to 5 PM">
+      <DayScheduleId DayScheduleIdRef="schOccupancyDay" DayofWeek="Weekends"/>
+    </WeekSchedule>
+    <DaySchedule ID="schLightEquipDay" ScheduleType="Fraction" Name="Office Lighting - 6 AM to 11 PM">
+      <ScheduleValue>0</ScheduleValue>
+      <ScheduleValue>0</ScheduleValue>
+      <ScheduleValue>0</ScheduleValue>
+      <ScheduleValue>0</ScheduleValue>
+      <ScheduleValue>0</ScheduleValue>
+      <ScheduleValue>0</ScheduleValue>
+      <ScheduleValue>0.1</ScheduleValue>
+      <ScheduleValue>0.3</ScheduleValue>
+      <ScheduleValue>0.9</ScheduleValue>
+      <ScheduleValue>0.9</ScheduleValue>
+      <ScheduleValue>0.9</ScheduleValue>
+      <ScheduleValue>0.9</ScheduleValue>
+      <ScheduleValue>0.8</ScheduleValue>
+      <ScheduleValue>0.9</ScheduleValue>
+      <ScheduleValue>0.9</ScheduleValue>
+      <ScheduleValue>0.9</ScheduleValue>
+      <ScheduleValue>0.9</ScheduleValue>
+      <ScheduleValue>0.5</ScheduleValue>
+      <ScheduleValue>0.3</ScheduleValue>
+      <ScheduleValue>0.3</ScheduleValue>
+      <ScheduleValue>0.2</ScheduleValue>
+      <ScheduleValue>0.2</ScheduleValue>
+      <ScheduleValue>0</ScheduleValue>
+      <ScheduleValue>0</ScheduleValue>
+    </DaySchedule>
+    <DaySchedule ID="schOccupancyDay" ScheduleType="Fraction" Name="Common Office Occupancy - 8 AM to 5 PM">
+      <ScheduleValue>0</ScheduleValue>
+      <ScheduleValue>0</ScheduleValue>
+      <ScheduleValue>0</ScheduleValue>
+      <ScheduleValue>0</ScheduleValue>
+      <ScheduleValue>0</ScheduleValue>
+      <ScheduleValue>0</ScheduleValue>
+      <ScheduleValue>0</ScheduleValue>
+      <ScheduleValue>0.1</ScheduleValue>
+      <ScheduleValue>0.2</ScheduleValue>
+      <ScheduleValue>0.95</ScheduleValue>
+      <ScheduleValue>0.95</ScheduleValue>
+      <ScheduleValue>0.45</ScheduleValue>
+      <ScheduleValue>0.45</ScheduleValue>
+      <ScheduleValue>0.95</ScheduleValue>
+      <ScheduleValue>0.95</ScheduleValue>
+      <ScheduleValue>0.95</ScheduleValue>
+      <ScheduleValue>0.95</ScheduleValue>
+      <ScheduleValue>0.95</ScheduleValue>
+      <ScheduleValue>0.3</ScheduleValue>
+      <ScheduleValue>0.1</ScheduleValue>
+      <ScheduleValue>0.1</ScheduleValue>
+      <ScheduleValue>0.1</ScheduleValue>
+      <ScheduleValue>0</ScheduleValue>
+      <ScheduleValue>0</ScheduleValue>
+    </DaySchedule>
+  </Schedules>
+</OccupantBehavior>
