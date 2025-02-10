@@ -1,7 +1,7 @@
-# XSLT-based gb-to-obXML Schema Converter
+gbXML-to-obXML Schema Converter
 
 ## Project Objective
-- Convert gbXML schema into obXML schema using XSLT approach
+- Convert gbXML schema into obXML schema to reuse building information from BIM models
 - Seamlessly deliver building information in the gbXML to the obXML file for enhancing interoperability between Building information modeling (BIM) and Building Energy Modeling (BEM)
 - Develop practical applications for Architecture, Engineering, Construction, and Operaiton (AECO) experts to adopt this BIM-OBM-BEM simulation workflow in their industrial projects
 
