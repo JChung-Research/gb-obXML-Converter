@@ -1,4 +1,4 @@
-gbXML-to-obXML Schema Converter
+# gbXML-to-obXML Schema Converter
 
 ## Project Objective
 - Transform building information from gbXML (Green Building XML) schema to obXML (Occupant Behavior XML) schema, ensuring data integrity through comprehensive schema validation against both specifications
@@ -51,11 +51,11 @@ python gb-to-obXML_converter.py -i example_files/OfficeBuilding_gbXML_v.7.04.xml
 ```
 gb-obXML-converter/
 ├── resources/
-│   ├── gbXML-to-obXML.xsl        # XSLT transformation rules
+│   ├── gbXML-to-obXML.xsl            # XSLT transformation rules
 │   ├── GreenBuildingXML_Ver7.04.xsd  # gbXML schema
-│   └── obXML_v1.4.xsd            # obXML schema
-├── example_files/                 # Example input/output files
-└── gb-to-obXML_converter.py      # Main converter script
+│   └── obXML_v1.4.xsd                # obXML schema
+├── example_files/                    # Example input/output files
+└── gb-to-obXML_converter.py          # Main converter script
 ```
 
 ## Contact
