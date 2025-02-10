@@ -1,45 +1,66 @@
 gbXML-to-obXML Schema Converter
 
 ## Project Objective
-- Convert gbXML schema into obXML schema to reuse building information from BIM models
-- Seamlessly deliver building information in the gbXML to the obXML file for enhancing interoperability between Building information modeling (BIM) and Building Energy Modeling (BEM)
-- Develop practical applications for Architecture, Engineering, Construction, and Operaiton (AECO) experts to adopt this BIM-OBM-BEM simulation workflow in their industrial projects
+- Transform building information from gbXML (Green Building XML) schema to obXML (Occupant Behavior XML) schema, ensuring data integrity through comprehensive schema validation against both specifications
+- Enable seamless integration of BIM data into occupant behavior simulation by automating the conversion of spatial, system, and schedule information between schemas while supporting the latest versions of both schemas (gbXML v7.04 and obXML v1.4)
+- Provide a robust, command-line tool for Architecture, Engineering, Construction, and Operation (AECO) professionals to incorporate occupant behavior modeling into their BIM-to-BEM workflows, facilitating practical implementation of human-centric building performance simulation
 
 ## Installation libraries using Conda
-1. Download the Conda installer for your OS setup. https://docs.conda.io/en/latest/miniconda.html
-2. After installing Conda, create a virtual environment for the gb-obXML converter with:
+1. Download and install Miniconda from https://docs.conda.io/en/latest/miniconda.html
+2. Create a new conda environment:
 ```
 conda create --name gbXMLtoobXML
 ```
-3. Then activate the new virtual environment:
+3. Activate the environment:
 ```
 conda activate gbXMLtoobXML
 ```
-4. Install lxml and xmlschema package:
+4. Install required packages:
 ```
 pip install lxml xmlschema
 ```
 
-
 ## Usage
-- Install lxml and xmlschema library on your environment
-- Download the Github repository and unzip the Zip file
-- Run the 'gb-to-obXML_converter.py' Python file, as follows:
+1. Clone or download this repository:
 ```
-python gb-to-obXML_converter.py -i example_files/OfficeBuilding_gbXML_v.7.04.xml -o example_files/OfficeBuilding_obXML_v.1.4.xml
+git clone https://github.com/username/gb-obXML-converter.git
+cd gb-obXML-converter
 ```
+2. Run the converter:
+```
+python gb-to-obXML_converter.py -i input.xml -o output.xml
+```
+
+## Command Line Arguments
 ```
 optional arguments:
   -h, --help  show this help message and exit
-  -i I        gbXML input file path
-  -o O        obXML output file path
-  -xsl XSL    XSL file path
-  -gb GB      gbXML XSD file path
-  -ob OB      obXML XSD file path
+  -i I        Input gbXML file path (required)
+  -o O        Output obXML file path (optional, defaults to input_obXML.xml)
+  -xsl XSL    XSL file path (optional, defaults to resources/gbXML-to-obXML.xsl)
+  -gb GB      gbXML schema file path (optional, defaults to resources/GreenBuildingXML_Ver7.04.xsd)
+  -ob OB      obXML schema file path (optional, defaults to resources/obXML_v1.4.xsd)
+```
+
+## Example
+```
+python gb-to-obXML_converter.py -i example_files/OfficeBuilding_gbXML_v.7.04.xml -o example_files/OfficeBuilding_obXML_v.1.4.xml
+```
+
+## File Structure
+```
+gb-obXML-converter/
+├── resources/
+│   ├── gbXML-to-obXML.xsl        # XSLT transformation rules
+│   ├── GreenBuildingXML_Ver7.04.xsd  # gbXML schema
+│   └── obXML_v1.4.xsd            # obXML schema
+├── example_files/                 # Example input/output files
+└── gb-to-obXML_converter.py      # Main converter script
 ```
 
 ## Contact
-If you have any questions on this code, feel free to reach out to Jihoon Chung (jihoonchung.research@gmail.com)
+If you have any questions about this code, please reach out to Jihoon Chung (jihoonchung.research@gmail.com)
 
 ## References
 - Green Building XML (gbXML) Schema, available at https://www.gbxml.org/
+- Occupant Behavior XML (obXML) Schema, available at https://behavior.lbl.gov/
