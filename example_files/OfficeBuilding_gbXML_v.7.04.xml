@@ -13,16 +13,14 @@
 			<Name>Office Buildng</Name>
 			<StreetAddress>Boston, MA</StreetAddress>
 			<Area unit="SquareFeet">15811.390974</Area>
-			<Space id="sp-1-Open" spaceType="Lobby" zoneIdRef="zone-open" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
-				<BuildingSystems>
-
-				</BuildingSystems>
+			<Space id="sp-1-Open" spaceType="Lobby" zoneIdRef="zone-open" lightScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
 				<PeopleNumber unit="NumberOfPeople">15</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-1" lightingSystemIdRef="LightSys-1" />
 				<Name>1 Open</Name>
 				<Area unit="SquareFeet">3997.489662</Area>
 				<Volume>44055.813852</Volume>
@@ -1484,13 +1482,14 @@
 				</ShellGeometry>
 				<CADObjectId>149179</CADObjectId>
 			</Space>
-			<Space id="sp-2-Open" spaceType="Lobby" zoneIdRef="zone-open" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
+			<Space id="sp-2-Open" spaceType="Lobby" zoneIdRef="zone-open" lightScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
 				<PeopleNumber unit="NumberOfPeople">15</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-2" lightingSystemIdRef="LightSys-1" />
 				<Name>2 Open</Name>
 				<Area unit="SquareFeet">3818.100773</Area>
 				<Volume>45817.384446</Volume>
@@ -2760,13 +2759,15 @@
 				</ShellGeometry>
 				<CADObjectId>149180</CADObjectId>
 			</Space>
-			<Space id="sp-3-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
+			<Space id="sp-3-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="EquipSched-1" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
 				<PeopleNumber unit="NumberOfPeople">2</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-3" lightingSystemIdRef="LightSys-1" />
+				<IntEquipId intEquipIdRef="Equip-1"/>
 				<Name>3 Office</Name>
 				<Area unit="SquareFeet">231.311415</Area>
 				<Volume>2544.425564</Volume>
@@ -2906,15 +2907,17 @@
 						</PolyLoop>
 					</ClosedShell>
 				</ShellGeometry>
-				<CADObjectId>149181</CADObjectId>
+				<CADObjectId>149282</CADObjectId>
 			</Space>
-			<Space id="sp-4-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
+			<Space id="sp-4-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="EquipSched-1" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
 				<PeopleNumber unit="NumberOfPeople">2</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
-				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>		
+				<Lighting id="light-sp-4" lightingSystemIdRef="LightSys-1" />		
+				<IntEquipId intEquipIdRef="Equip-1"/>
 				<Name>4 Office</Name>
 				<Area unit="SquareFeet">233.181858</Area>
 				<Volume>2565.000434</Volume>
@@ -3056,13 +3059,15 @@
 				</ShellGeometry>
 				<CADObjectId>149182</CADObjectId>
 			</Space>
-			<Space id="sp-5-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
+			<Space id="sp-5-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="EquipSched-1" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
 				<PeopleNumber unit="NumberOfPeople">2</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-5" lightingSystemIdRef="LightSys-1" />
+				<IntEquipId intEquipIdRef="Equip-1"/>
 				<Name>5 Office</Name>
 				<Area unit="SquareFeet">231.311415</Area>
 				<Volume>2544.425564</Volume>
@@ -3204,13 +3209,15 @@
 				</ShellGeometry>
 				<CADObjectId>149183</CADObjectId>
 			</Space>
-			<Space id="sp-6-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
+			<Space id="sp-6-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="EquipSched-1" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
 				<PeopleNumber unit="NumberOfPeople">2</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-6" lightingSystemIdRef="LightSys-1" />
+				<IntEquipId intEquipIdRef="Equip-1"/>
 				<Name>6 Office</Name>
 				<Area unit="SquareFeet">201.244141</Area>
 				<Volume>2414.929687</Volume>
@@ -3335,7 +3342,7 @@
 							<CartesianPoint>
 								<Coordinate>-1.604888</Coordinate>
 								<Coordinate>49.252519</Coordinate>
-								<Coordinate>12.000000</Coordinate>
+						gbXMLtoolXML_gb-obXML.xsl		<Coordinate>12.000000</Coordinate>
 							</CartesianPoint>
 							<CartesianPoint>
 								<Coordinate>-1.604888</Coordinate>
@@ -3352,13 +3359,15 @@
 				</ShellGeometry>
 				<CADObjectId>149184</CADObjectId>
 			</Space>
-			<Space id="sp-7-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
+			<Space id="sp-7-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="EquipSched-1" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
 				<PeopleNumber unit="NumberOfPeople">2</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-7" lightingSystemIdRef="LightSys-1" />
+				<IntEquipId intEquipIdRef="Equip-1"/>
 				<Name>7 Office</Name>
 				<Area unit="SquareFeet">292.832031</Area>
 				<Volume>3513.984375</Volume>
@@ -3500,13 +3509,15 @@
 				</ShellGeometry>
 				<CADObjectId>149185</CADObjectId>
 			</Space>
-			<Space id="sp-8-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
+			<Space id="sp-8-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="EquipSched-1" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
 				<PeopleNumber unit="NumberOfPeople">2</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-8" lightingSystemIdRef="LightSys-1" />
+				<IntEquipId intEquipIdRef="Equip-1"/>
 				<Name>8 Office</Name>
 				<Area unit="SquareFeet">201.244141</Area>
 				<Volume>2414.929688</Volume>
@@ -3648,13 +3659,15 @@
 				</ShellGeometry>
 				<CADObjectId>149186</CADObjectId>
 			</Space>
-			<Space id="sp-9-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
+			<Space id="sp-9-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="EquipSched-1" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
 				<PeopleNumber unit="NumberOfPeople">2</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-9" lightingSystemIdRef="LightSys-1" />
+				<IntEquipId intEquipIdRef="Equip-1"/>
 				<Name>9 Office</Name>
 				<Area unit="SquareFeet">192.342014</Area>
 				<Volume>2115.762153</Volume>
@@ -3818,13 +3831,15 @@
 				</ShellGeometry>
 				<CADObjectId>149187</CADObjectId>
 			</Space>
-			<Space id="sp-10-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
+			<Space id="sp-10-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="EquipSched-1" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
 				<PeopleNumber unit="NumberOfPeople">2</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-10" lightingSystemIdRef="LightSys-1" />
+				<IntEquipId intEquipIdRef="Equip-1"/>
 				<Name>10 Office</Name>
 				<Area unit="SquareFeet">189.538194</Area>
 				<Volume>2084.920139</Volume>
@@ -3966,13 +3981,15 @@
 				</ShellGeometry>
 				<CADObjectId>149188</CADObjectId>
 			</Space>
-			<Space id="sp-11-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
+			<Space id="sp-11-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="EquipSched-1" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
 				<PeopleNumber unit="NumberOfPeople">2</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-11" lightingSystemIdRef="LightSys-1" />
+				<IntEquipId intEquipIdRef="Equip-1"/>
 				<Name>11 Office</Name>
 				<Area unit="SquareFeet">234.186849</Area>
 				<Volume>2576.055339</Volume>
@@ -4178,13 +4195,15 @@
 				</ShellGeometry>
 				<CADObjectId>149189</CADObjectId>
 			</Space>
-			<Space id="sp-12-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
+			<Space id="sp-12-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="EquipSched-1" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
 				<PeopleNumber unit="NumberOfPeople">2</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-12" lightingSystemIdRef="LightSys-1" />
+				<IntEquipId intEquipIdRef="Equip-1"/>
 				<Name>12 Office</Name>
 				<Area unit="SquareFeet">244.290365</Area>
 				<Volume>2687.194010</Volume>
@@ -4390,13 +4409,15 @@
 				</ShellGeometry>
 				<CADObjectId>149190</CADObjectId>
 			</Space>
-			<Space id="sp-13-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
+			<Space id="sp-13-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="EquipSched-1" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
 				<PeopleNumber unit="NumberOfPeople">2</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-13" lightingSystemIdRef="LightSys-1" />
+				<IntEquipId intEquipIdRef="Equip-1"/>
 				<Name>13 Office</Name>
 				<Area unit="SquareFeet">210.538194</Area>
 				<Volume>2315.920139</Volume>
@@ -4538,13 +4559,15 @@
 				</ShellGeometry>
 				<CADObjectId>149191</CADObjectId>
 			</Space>
-			<Space id="sp-14-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
+			<Space id="sp-14-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="EquipSched-1" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
 				<PeopleNumber unit="NumberOfPeople">2</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-14" lightingSystemIdRef="LightSys-1" />
+				<IntEquipId intEquipIdRef="Equip-1"/>
 				<Name>14 Office</Name>
 				<Area unit="SquareFeet">259.392361</Area>
 				<Volume>2853.315972</Volume>
@@ -4686,13 +4709,14 @@
 				</ShellGeometry>
 				<CADObjectId>149192</CADObjectId>
 			</Space>
-			<Space id="sp-15-Stairwell" spaceType="Stairway" zoneIdRef="zone-stairewell" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
+			<Space id="sp-15-Stairwell" spaceType="Stairway" zoneIdRef="zone-stairewell" lightScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
 				<PeopleNumber unit="NumberOfPeople">2</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-15" lightingSystemIdRef="LightSys-1" />
 				<Name>15 Stairwell</Name>
 				<Area unit="SquareFeet">253.350694</Area>
 				<Volume>2824.871961</Volume>
@@ -5058,13 +5082,15 @@
 				</ShellGeometry>
 				<CADObjectId>149193</CADObjectId>
 			</Space>
-			<Space id="sp-16-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
+			<Space id="sp-16-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="EquipSched-1" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
 				<PeopleNumber unit="NumberOfPeople">2</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-16" lightingSystemIdRef="LightSys-1" />
+				<IntEquipId intEquipIdRef="Equip-1"/>
 				<Name>16 Office</Name>
 				<Area unit="SquareFeet">231.230903</Area>
 				<Volume>2543.539931</Volume>
@@ -5206,13 +5232,15 @@
 				</ShellGeometry>
 				<CADObjectId>149194</CADObjectId>
 			</Space>
-			<Space id="sp-17-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
+			<Space id="sp-17-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="EquipSched-1" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
 				<PeopleNumber unit="NumberOfPeople">2</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-17" lightingSystemIdRef="LightSys-1" />
+				<IntEquipId intEquipIdRef="Equip-1"/>
 				<Name>17 Office</Name>
 				<Area unit="SquareFeet">233.100694</Area>
 				<Volume>2564.107639</Volume>
@@ -5354,13 +5382,15 @@
 				</ShellGeometry>
 				<CADObjectId>149195</CADObjectId>
 			</Space>
-			<Space id="sp-18-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
+			<Space id="sp-18-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="EquipSched-1" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
 				<PeopleNumber unit="NumberOfPeople">2</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-18" lightingSystemIdRef="LightSys-1" />
+				<IntEquipId intEquipIdRef="Equip-1"/>
 				<Name>18 Office</Name>
 				<Area unit="SquareFeet">231.230903</Area>
 				<Volume>2543.539931</Volume>
@@ -5502,13 +5532,14 @@
 				</ShellGeometry>
 				<CADObjectId>149196</CADObjectId>
 			</Space>
-			<Space id="sp-19-Mens_Room" spaceType="Restrooms" zoneIdRef="zone-restroom" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
+			<Space id="sp-19-Mens_Room" spaceType="Restrooms" zoneIdRef="zone-restroom" lightScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
 				<PeopleNumber unit="NumberOfPeople">2</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-19" lightingSystemIdRef="LightSys-1" />
 				<Name>19 Mens Room</Name>
 				<Area unit="SquareFeet">225.256944</Area>
 				<Volume>2477.826389</Volume>
@@ -5650,13 +5681,14 @@
 				</ShellGeometry>
 				<CADObjectId>149197</CADObjectId>
 			</Space>
-			<Space id="sp-20-Ladies_Room" spaceType="Restrooms" zoneIdRef="zone-restroom" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
+			<Space id="sp-20-Ladies_Room" spaceType="Restrooms" zoneIdRef="zone-restroom" lightScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
 				<PeopleNumber unit="NumberOfPeople">2</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-20" lightingSystemIdRef="LightSys-1" />
 				<Name>20 Ladies Room</Name>
 				<Area unit="SquareFeet">223.184028</Area>
 				<Volume>2455.024306</Volume>
@@ -5798,13 +5830,15 @@
 				</ShellGeometry>
 				<CADObjectId>149198</CADObjectId>
 			</Space>
-			<Space id="sp-21-MechanicalElectrical" spaceType="ElectricalOrMechanical" zoneIdRef="zone-mechanicalElectrical" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
+			<Space id="sp-21-MechanicalElectrical" spaceType="ElectricalOrMechanical" zoneIdRef="zone-mechanicalElectrical" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="EquipSched-1" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-1">
 				<PeopleNumber unit="NumberOfPeople">2</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-21" lightingSystemIdRef="LightSys-1" />
+				<IntEquipId intEquipIdRef="Equip-1"/>
 				<Name>21 Mechanical/Electrical</Name>
 				<Area unit="SquareFeet">158.923611</Area>
 				<Volume>1748.159722</Volume>
@@ -5968,13 +6002,14 @@
 				</ShellGeometry>
 				<CADObjectId>149199</CADObjectId>
 			</Space>
-			<Space id="sp-22-Mens_Room" spaceType="Restrooms" zoneIdRef="zone-restroom" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
+			<Space id="sp-22-Mens_Room" spaceType="Restrooms" zoneIdRef="zone-restroom" lightScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
 				<PeopleNumber unit="NumberOfPeople">2</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-22" lightingSystemIdRef="LightSys-1" />
 				<Name>22 Mens Room</Name>
 				<Area unit="SquareFeet">225.256944</Area>
 				<Volume>2703.083333</Volume>
@@ -6116,13 +6151,14 @@
 				</ShellGeometry>
 				<CADObjectId>149200</CADObjectId>
 			</Space>
-			<Space id="sp-23-Ladies_Room" spaceType="Restrooms" zoneIdRef="zone-restroom" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
+			<Space id="sp-23-Ladies_Room" spaceType="Restrooms" zoneIdRef="zone-restroom" lightScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
 				<PeopleNumber unit="NumberOfPeople">2</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-23" lightingSystemIdRef="LightSys-1" />
 				<Name>23 Ladies Room</Name>
 				<Area unit="SquareFeet">223.184028</Area>
 				<Volume>2678.208333</Volume>
@@ -6264,13 +6300,15 @@
 				</ShellGeometry>
 				<CADObjectId>149201</CADObjectId>
 			</Space>
-			<Space id="sp-24-MechanicalElectrical" spaceType="ElectricalOrMechanical" zoneIdRef="zone-mechanicalElectrical" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
+			<Space id="sp-24-MechanicalElectrical" spaceType="ElectricalOrMechanical" zoneIdRef="zone-mechanicalElectrical" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="EquipSched-1" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
         		<PeopleNumber unit="NumberOfPeople">2</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-24" lightingSystemIdRef="LightSys-1" />
+				<IntEquipId intEquipIdRef="Equip-1"/>
 				<Name>24 Mechanical/Electrical</Name>
 				<Area unit="SquareFeet">158.923611</Area>
 				<Volume>1907.083333</Volume>
@@ -6412,13 +6450,14 @@
 				</ShellGeometry>
 				<CADObjectId>149202</CADObjectId>
 			</Space>
-			<Space id="sp-25-Lounge" spaceType="LoungeOrRecreation" zoneIdRef="zone-lounge" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
+			<Space id="sp-25-Lounge" spaceType="LoungeOrRecreation" zoneIdRef="zone-lounge" lightScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
         		<PeopleNumber unit="NumberOfPeople">7</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-25" lightingSystemIdRef="LightSys-1" />
 				<Name>25 Lounge</Name>
 				<Area unit="SquareFeet">474.751736</Area>
 				<Volume>5697.020833</Volume>
@@ -6624,13 +6663,15 @@
 				</ShellGeometry>
 				<CADObjectId>149203</CADObjectId>
 			</Space>
-			<Space id="sp-26-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
+			<Space id="sp-26-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="EquipSched-1" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
         		<PeopleNumber unit="NumberOfPeople">2</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-26" lightingSystemIdRef="LightSys-1" />
+				<IntEquipId intEquipIdRef="Equip-1"/>
 				<Name>26 Office</Name>
 				<Area unit="SquareFeet">370.807292</Area>
 				<Volume>4449.687500</Volume>
@@ -6772,13 +6813,15 @@
 				</ShellGeometry>
 				<CADObjectId>149204</CADObjectId>
 			</Space>
-			<Space id="sp-27-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
+			<Space id="sp-27-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="EquipSched-1" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
         		<PeopleNumber unit="NumberOfPeople">2</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-27" lightingSystemIdRef="LightSys-1" />
+				<IntEquipId intEquipIdRef="Equip-1"/>
 				<Name>27 Office</Name>
 				<Area unit="SquareFeet">180.295139</Area>
 				<Volume>2163.541667</Volume>
@@ -6920,13 +6963,15 @@
 				</ShellGeometry>
 				<CADObjectId>149205</CADObjectId>
 			</Space>
-			<Space id="sp-28-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
+			<Space id="sp-28-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="EquipSched-1" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
         		<PeopleNumber unit="NumberOfPeople">2</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-28" lightingSystemIdRef="LightSys-1" />
+				<IntEquipId intEquipIdRef="Equip-1"/>
 				<Name>28 Office</Name>
 				<Area unit="SquareFeet">182.621528</Area>
 				<Volume>2191.458333</Volume>
@@ -7068,13 +7113,15 @@
 				</ShellGeometry>
 				<CADObjectId>149206</CADObjectId>
 			</Space>
-			<Space id="sp-29-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
+			<Space id="sp-29-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="EquipSched-1" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
 				<PeopleNumber unit="NumberOfPeople">2</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-29" lightingSystemIdRef="LightSys-1" />
+				<IntEquipId intEquipIdRef="Equip-1"/>
 				<Name>29 Office</Name>
 				<Area unit="SquareFeet">259.392361</Area>
 				<Volume>3112.708333</Volume>
@@ -7216,13 +7263,14 @@
 				</ShellGeometry>
 				<CADObjectId>149207</CADObjectId>
 			</Space>
-			<Space id="sp-30-Stairwell" spaceType="Stairway" zoneIdRef="zone-stairewell" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
+			<Space id="sp-30-Stairwell" spaceType="Stairway" zoneIdRef="zone-stairewell" lightScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
 				<PeopleNumber unit="NumberOfPeople">2</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-30" lightingSystemIdRef="LightSys-1" />
 				<Name>30 Stairwell</Name>
 				<Area unit="SquareFeet">225.434028</Area>
 				<Volume>2705.208333</Volume>
@@ -7364,13 +7412,15 @@
 				</ShellGeometry>
 				<CADObjectId>149208</CADObjectId>
 			</Space>
-			<Space id="sp-31-Conference_Room" spaceType="ConferenceMeetingOrMultipurpose" zoneIdRef="zone-conferenceroom" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
+			<Space id="sp-31-Conference_Room" spaceType="ConferenceMeetingOrMultipurpose" zoneIdRef="zone-conferenceroom" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="EquipSched-1" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
 				<PeopleNumber unit="NumberOfPeople">7</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-31" lightingSystemIdRef="LightSys-1" />
+				<IntEquipId intEquipIdRef="Equip-1"/>
 				<Name>31 Conference Room</Name>
 				<Area unit="SquareFeet">308.522569</Area>
 				<Volume>3702.270833</Volume>
@@ -7512,13 +7562,15 @@
 				</ShellGeometry>
 				<CADObjectId>149209</CADObjectId>
 			</Space>
-			<Space id="sp-32-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
+			<Space id="sp-32-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="EquipSched-1" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
 				<PeopleNumber unit="NumberOfPeople">2</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-32" lightingSystemIdRef="LightSys-1" />
+				<IntEquipId intEquipIdRef="Equip-1"/>
 				<Name>32 Office</Name>
 				<Area unit="SquareFeet">233.100694</Area>
 				<Volume>2797.208333</Volume>
@@ -7660,13 +7712,15 @@
 				</ShellGeometry>
 				<CADObjectId>149210</CADObjectId>
 			</Space>
-			<Space id="sp-33-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="schLightEquip" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
+			<Space id="sp-33-Office" spaceType="OfficeEnclosed" zoneIdRef="zone-office" lightScheduleIdRef="schLightEquip" equipmentScheduleIdRef="EquipSched-1" peopleScheduleIdRef="schOccupancy" conditionType="HeatedAndCooled" buildingStoreyIdRef="story-2">
 				<PeopleNumber unit="NumberOfPeople">2</PeopleNumber>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Total">450</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Latent">200</PeopleHeatGain>
 				<PeopleHeatGain unit="BtuPerHourPerson" heatGainType="Sensible">250</PeopleHeatGain>
 				<LightPowerPerArea unit="WattPerSquareFoot">1</LightPowerPerArea>
 				<EquipPowerPerArea unit="WattPerSquareFoot">1.3</EquipPowerPerArea>
+				<Lighting id="light-sp-33" lightingSystemIdRef="LightSys-1" />
+				<IntEquipId intEquipIdRef="Equip-1"/>
 				<Name>33 Office</Name>
 				<Area unit="SquareFeet">231.230903</Area>
 				<Volume>2774.770833</Volume>
@@ -23768,23 +23822,25 @@
 			<CADObjectId>44536</CADObjectId>
 		</Surface>
 	</Campus>
-	<Zone id="zone-open">
+	<Zone id="zone-open" coolSchedIdRef="coolSched-1" fanSchedIdRef="fanSched-1">
 		<OAFlowPerPerson unit="CFM">15</OAFlowPerPerson>
 		<DesignHeatT unit="F">70</DesignHeatT>
 		<DesignCoolT unit="F">75</DesignCoolT>
 		<DesignHeatRH>0</DesignHeatRH>
 		<DesignCoolRH>0.7</DesignCoolRH>
 		<Name>Entrance</Name>
+		<ZoneHVACEquipmentId zoneHVACEquipmentIdRef="HVACEquip-1"/>
 		<CADObjectId>149032</CADObjectId>
-		<ZoneHVACEquipmentId zoneHVACEquipmentIdRef="aaa"/>
 	</Zone>
-	<Zone id="zone-office">
+	<Zone id="zone-office" coolSchedIdRef="coolSched-1" fanSchedIdRef="fanSched-1">
 		<OAFlowPerPerson unit="CFM">15</OAFlowPerPerson>
 		<DesignHeatT unit="F">70</DesignHeatT>
 		<DesignCoolT unit="F">75</DesignCoolT>
 		<DesignHeatRH>0</DesignHeatRH>
 		<DesignCoolRH>0.7</DesignCoolRH>
-		<Name>Office</Name>
+		<Name>Office zone</Name>
+		<ZoneHVACEquipmentId zoneHVACEquipmentIdRef="HVACEquip-1"/>
+		<AirLoopId airLoopIdRef="airLoop-1"/>
 		<CADObjectId>149033</CADObjectId>
 	</Zone>
 	<Zone id="zone-restroom">
@@ -23805,13 +23861,14 @@
 		<Name>Mechanical/Electrical Facilities</Name>
 		<CADObjectId>149035</CADObjectId>
 	</Zone>
-	<Zone id="zone-lounge">
+	<Zone id="zone-lounge" coolSchedIdRef="coolSched-1" fanSchedIdRef="fanSched-1">
 		<OAFlowPerPerson unit="CFM">15</OAFlowPerPerson>
 		<DesignHeatT unit="F">70</DesignHeatT>
 		<DesignCoolT unit="F">75</DesignCoolT>
 		<DesignHeatRH>0</DesignHeatRH>
 		<DesignCoolRH>0.7</DesignCoolRH>
 		<Name>Lounge</Name>
+		<ZoneHVACEquipmentId zoneHVACEquipmentIdRef="HVACEquip-1"/>
 		<CADObjectId>149036</CADObjectId>
 	</Zone>
 	<Zone id="zone-stairewell">
@@ -23823,15 +23880,30 @@
 		<Name>stairewell</Name>
 		<CADObjectId>149037</CADObjectId>
 	</Zone>
-	<Zone id="zone-conferenceroom">
+	<Zone id="zone-conferenceroom" coolSchedIdRef="coolSched-1" fanSchedIdRef="fanSched-1">
 		<OAFlowPerPerson unit="CFM">15</OAFlowPerPerson>
 		<DesignHeatT unit="F">70</DesignHeatT>
 		<DesignCoolT unit="F">75</DesignCoolT>
 		<DesignHeatRH>0</DesignHeatRH>
 		<DesignCoolRH>0.7</DesignCoolRH>
 		<Name>Conference Room</Name>
+		<ZoneHVACEquipmentId zoneHVACEquipmentIdRef="HVACEquip-1"/>
 		<CADObjectId>149038</CADObjectId>
 	</Zone>
+	<ZoneHVACEquipment id="HVACEquip-1" zoneHVACEquipmentType="CAVBox" heatingCoilType="HotWater" coolingCoilType="ChilledWater">
+		<CADObjectId>149181</CADObjectId>
+		<AirSystemId airSystemIdRef="airSystem-1"/>
+	</ZoneHVACEquipment>
+	<AirSystem id="airSystem-1">
+		<Fan fanType="ConstantVolume"/>
+	</AirSystem>
+	<AirLoop id="airLoop-1" systemType="ConstantVolumeFixedOA" controlZoneIdRef="zone-office">
+		<Name>Air loop</Name>
+		<TemperatureControl>
+			<MinTemp unit="F">52</MinTemp>
+			<MaxTemp unit="F">120</MaxTemp>
+		</TemperatureControl>
+	</AirLoop>
 	<WindowType id="simpleWindow">
 		<Name>Pilkington RW33 double glazing (1/4 in + 1/4 in)</Name>
 		<Description>Pilkington RW33 double glazing (1/4 in + 1/4 in)</Description>
@@ -23844,6 +23916,7 @@
 		<SolarHeatGainCoeff unit="Fraction" solarIncidentAngle="80">0.26</SolarHeatGainCoeff>
 		<SolarHeatGainCoeff unit="Fraction">0.66</SolarHeatGainCoeff>
 		<Transmittance unit="Fraction" type="Visible" surfaceType="Both">0.81</Transmittance>
+		<Blind id="simpleBlind"/>
 	</WindowType>
 	<Construction id="constExteriorWall">
 		<U-value unit="WPerSquareMeterK">0.486858</U-value>
@@ -24024,13 +24097,53 @@
 		</YearSchedule>
 		<Name>Common Office Occupancy - 8 AM to 5 PM</Name>
 	</Schedule>
+	<Schedule id="Coolsched-1" type="Temp">
+		<Name>Common-Office-Temperature</Name>
+		<YearSchedule id="schCoolYear">
+			<BeginDate>2024-01-01</BeginDate>
+			<EndDate>2024-12-31</EndDate>
+			<WeekScheduleId weekScheduleIdRef="schCoolWeek" />
+		</YearSchedule>
+	</Schedule>
+	<Schedule id="fanSched-1" type="Fraction">
+		<Name>Office Fan - 6 AM to 11 PM</Name>
+		<YearSchedule id="schFanYear">
+			<BeginDate>2024-01-01</BeginDate>
+			<EndDate>2024-12-31</EndDate>
+			<WeekScheduleId weekScheduleIdRef="schFanWeek" />
+		</YearSchedule>
+	</Schedule>
+	<IntEquip id="Equip-1" type="GeneralPlugload" scheduleIdRef="EquipSched-1">
+		<Name>Loads 12.03 W/area</Name>
+		<Description>Receptacle Loads 12.06 W/area</Description>
+	</IntEquip>
+	<Schedule id="EquipSched-1" type="Fraction">
+		<Name>LtgEquip - Office/Lab</Name>
+		<YearSchedule id="schEquipYear">
+			<BeginDate>2024-01-01</BeginDate>
+			<EndDate>2024-12-31</EndDate>
+			<WeekScheduleId weekScheduleIdRef="schEquipWeek" />
+		</YearSchedule>
+	</Schedule>
+	<WeekSchedule id="schCoolWeek" scheduleType="Temp">
+		<Name>Common-Office-Temperature</Name>
+		<Day dayType="Weekday" dayScheduleIdRef="schCoolDay" />
+	</WeekSchedule>
+	<WeekSchedule id="schFanWeek" scheduleType="OnOff">
+		<Name>Office Fan - 6 AM to 11 PM</Name>
+		<Day dayType="Weekday" dayScheduleIdRef="schFanDay" />
+	</WeekSchedule>
 	<WeekSchedule scheduleType="Fraction" id="schLightEquipWeek">
-		<Day dayScheduleIdRef="schLightEquipDay" dayType="Mon" />
+		<Day dayScheduleIdRef="schLightEquipDay" dayType="Weekday" />
 		<Name>Office Lighting - 6 AM to 11 PM</Name>
 	</WeekSchedule>
 	<WeekSchedule scheduleType="Fraction" id="schOccupancyWeek">
-		<Day dayScheduleIdRef="schOccupancyDay" dayType="Weekend" />
+		<Day dayScheduleIdRef="schOccupancyDay" dayType="Weekday" />
 		<Name>Common Office Occupancy - 8 AM to 5 PM</Name>
+	</WeekSchedule>
+	<WeekSchedule id="schEquipWeek" scheduleType="Fraction">
+		<Name>7DayWeek - Office/Lab</Name>
+		<Day dayType="Weekday" dayScheduleIdRef="schEquipDay" />
 	</WeekSchedule>
 	<DaySchedule scheduleType="Fraction" id="schLightEquipDay">
 		<ScheduleValue>0</ScheduleValue>
@@ -24085,5 +24198,86 @@
 		<ScheduleValue>0</ScheduleValue>
 		<ScheduleValue>0</ScheduleValue>
 		<Name>Common Office Occupancy - 8 AM to 5 PM</Name>
+	</DaySchedule>
+	<DaySchedule id="schCoolDay" scheduleType="Temp">
+		<ScheduleValue>85</ScheduleValue>
+		<ScheduleValue>85</ScheduleValue>
+		<ScheduleValue>85</ScheduleValue>
+		<ScheduleValue>85</ScheduleValue>
+		<ScheduleValue>85</ScheduleValue>
+		<ScheduleValue>75</ScheduleValue>
+		<ScheduleValue>75</ScheduleValue>
+		<ScheduleValue>75</ScheduleValue>
+		<ScheduleValue>75</ScheduleValue>
+		<ScheduleValue>75</ScheduleValue>
+		<ScheduleValue>75</ScheduleValue>
+		<ScheduleValue>75</ScheduleValue>
+		<ScheduleValue>75</ScheduleValue>
+		<ScheduleValue>75</ScheduleValue>
+		<ScheduleValue>75</ScheduleValue>
+		<ScheduleValue>75</ScheduleValue>
+		<ScheduleValue>75</ScheduleValue>
+		<ScheduleValue>75</ScheduleValue>
+		<ScheduleValue>75</ScheduleValue>
+		<ScheduleValue>75</ScheduleValue>
+		<ScheduleValue>75</ScheduleValue>
+		<ScheduleValue>75</ScheduleValue>
+		<ScheduleValue>85</ScheduleValue>
+		<ScheduleValue>85</ScheduleValue>
+		<Name>Common-Office-Temperature</Name>
+	</DaySchedule>
+	<DaySchedule id="schFanDay" scheduleType="OnOff">
+		<ScheduleValue>0</ScheduleValue>
+		<ScheduleValue>0</ScheduleValue>
+		<ScheduleValue>0</ScheduleValue>
+		<ScheduleValue>0</ScheduleValue>
+		<ScheduleValue>0</ScheduleValue>
+		<ScheduleValue>1</ScheduleValue>
+		<ScheduleValue>1</ScheduleValue>
+		<ScheduleValue>1</ScheduleValue>
+		<ScheduleValue>1</ScheduleValue>
+		<ScheduleValue>1</ScheduleValue>
+		<ScheduleValue>1</ScheduleValue>
+		<ScheduleValue>1</ScheduleValue>
+		<ScheduleValue>1</ScheduleValue>
+		<ScheduleValue>1</ScheduleValue>
+		<ScheduleValue>1</ScheduleValue>
+		<ScheduleValue>1</ScheduleValue>
+		<ScheduleValue>1</ScheduleValue>
+		<ScheduleValue>1</ScheduleValue>
+		<ScheduleValue>1</ScheduleValue>
+		<ScheduleValue>1</ScheduleValue>
+		<ScheduleValue>1</ScheduleValue>
+		<ScheduleValue>1</ScheduleValue>
+		<ScheduleValue>0</ScheduleValue>
+		<ScheduleValue>0</ScheduleValue>
+		<Name>Office Fan - 6 AM to 11 PM</Name>
+	</DaySchedule>
+	<DaySchedule id="schEquipDay" scheduleType="Fraction">
+		<ScheduleValue>0.210979924</ScheduleValue>
+		<ScheduleValue>0.210979924</ScheduleValue>
+		<ScheduleValue>0.210979924</ScheduleValue>
+		<ScheduleValue>0.210979924</ScheduleValue>
+		<ScheduleValue>0.210979924</ScheduleValue>
+		<ScheduleValue>0.210979924</ScheduleValue>
+		<ScheduleValue>0.210979924</ScheduleValue>
+		<ScheduleValue>0.3</ScheduleValue>
+		<ScheduleValue>0.9</ScheduleValue>
+		<ScheduleValue>0.9</ScheduleValue>
+		<ScheduleValue>0.9</ScheduleValue>
+		<ScheduleValue>0.9</ScheduleValue>
+		<ScheduleValue>0.8</ScheduleValue>
+		<ScheduleValue>0.9</ScheduleValue>
+		<ScheduleValue>0.9</ScheduleValue>
+		<ScheduleValue>0.9</ScheduleValue>
+		<ScheduleValue>0.9</ScheduleValue>
+		<ScheduleValue>0.5</ScheduleValue>
+		<ScheduleValue>0.3</ScheduleValue>
+		<ScheduleValue>0.3</ScheduleValue>
+		<ScheduleValue>0.2</ScheduleValue>
+		<ScheduleValue>0.2</ScheduleValue>
+		<ScheduleValue>0.210979924</ScheduleValue>
+		<ScheduleValue>0.210979924</ScheduleValue>
+		<Name>Office Equipment - 6 AM to 11 PM</Name>
 	</DaySchedule>
 </gbXML>

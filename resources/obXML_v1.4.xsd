@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2025 (x64) (https://www.altova.com) by jason wang (New York University) -->
+<!-- edited with XMLSpy v2025 (x64) (https://www.altova.com) by Jhi (Jang) -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:altova="http://www.altova.com/xml-schema-extensions" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:annotation>
 		<xs:documentation>Change Log: 
@@ -134,11 +134,11 @@ v.1.4
 7/2024
 1. Added ClothingLevel element and simpleType to Occupant element
 2. Added ClothingChangeType element and simpleType to Action element
-4. Added PersonalHoliday value to DayofWeekType simpleType
-5. Added Visitor value to JobType simpleType
-6. Added ElectricityMeter, FieldVisit, Interview, Occupancy, SubjectObservation, WindowStateLog, and BlindStateLog values to TypesDataCollectedList simpleType
-7. Added BrightnessSensitivity element to SubjectiveValues element
-8. Added AbsenceDuration element to StatusOfActivity element
+3. Added PersonalHoliday value to DayofWeekType simpleType
+4. Added Visitor value to JobType simpleType
+5. Added ElectricityMeter, FieldVisit, Interview, Occupancy, SubjectObservation, WindowStateLog, and BlindStateLog values to TypesDataCollectedList simpleType
+6. Added BrightnessSensitivity element to SubjectiveValues element
+7. Added AbsenceDuration element to StatusOfActivity element
 8. Added Linear4D, Linear5D, Linear6D, Linear7D, Linear8D, Linear9D, Logit4D, Logit5D, Logit6D, Logit7D, Logit8D, and Logit9D elements to Formula element
 9. Added Quadratic2D, Logit2DQuadratic elements to Formula element
 10. Added eqLinear4DType simpleType to Linear4D element; added eqLogit4DLinearType simpleType to Logit4D element
@@ -152,141 +152,132 @@ v.1.4
 18. Added Cubic1D elements with eqCubic1DType complexType to Formula element
 19. Added Custom9D and Logit9DCustom elements to Formula element
 20. Added eqCustom9DType to Custom9D and added eqLogit9DCustomType to Logit9DCustom
-21. Added Fans and Doors elements to Systems element
-22. Added FanType simpleType to Fans element; added DoorType simpleType to Doors element
-23. Added element ‘NumOccupants’ with ‘xs:integer’ to element ‘Space’
-24. Added enumeration ‘RoomRelativeHumidity’ to simpleType ‘ParameterType’ 
-25. Added enumeration ‘OutdoorRelativeHumidity’ to simpleType ‘ParameterType’ 
-26. Added enumeration ‘RoomVolatileOrganicCompounds’ to simpleType ‘ParameterType’ 
-27. Added enumeration ‘RoomWindSpeed’ to simpleType ‘ParameterType’ 
-28. Added enumeration ‘OutdoorWindSpeed’ to simpleType ‘ParameterType’ 
-29. Added enumeration ‘OutdoorWindDirection’ to simpleType ‘ParameterType’ 
-30. Added enumeration ‘RoomAcousticLevel' to simpleType ‘ParameterType’ 
-31. Added enumeration ‘OutdoorPrecipitationRate’ to simpleType ‘ParameterType’
-32. Added enumeration ‘OutdoorPrecipitationDepth’ to simpleType ‘ParameterType’
-33. Added enumeration ‘OutdoorParticulateMatter’ to simpleType ‘ParameterType’ 
-34. Added enumeration ‘OutdoorCO2Concentration’ to simpleType ‘ParameterType’
-35. Added enumeration ‘RoomParticulateMatter’ to simpleType ‘ParameterType’ 
-36. Added enumeration ‘OutdoorDirectSolarIrradiance’ to simpleType ‘ParameterType’ 
-37. Added enumeration ‘OutdoorDiffuseSolarIrradiance’ to simpleType ‘ParameterType’ 
-38. Added enumeration ‘OutdoorSolarAltitudeAngle’ to simpleType ‘ParameterType’ 
-39. Added enumeration ‘RoomDirectSolarIrradiance’ to simpleType ‘ParameterType’ 
-40. Added enumeration ‘RoomCeilingDaylightIlluminance’ to simpleType ‘ParameterType’ 
-41. Added enumeration ‘RoomTransmittedSolarIrradiance’ to simpleType ‘ParameterType’ 
-42. Added enumeration ‘RoomOperativeTemperature’ to simpleType ‘ParameterType’ 
-43. Changed attribute DataCollectionRegion to attributes DataCollectionCountry and DataCollectionCity
-44. Added element ‘EnergyConsumption’ with ‘xs:decimal  to element ‘HVAC’, ‘Fans’, ‘Lights’, and ‘PlugLoad’ 
-45. Added element ‘PowerConsumption’ with ‘xs:decimal’  to element ‘HVAC’, ‘Fans’, ‘Lights’, and ‘PlugLoad’ 
-46. Added element ‘OperationTime’ with ‘xs:duration’ to element ‘HVAC’, ‘Fans’, ‘Lights’, and ‘PlugLoad’
-47. Added element ‘ModelDescription’ to element ‘Behavior’, ‘MovementBehavior’, and ‘Activity’
-48. Moved ‘AppliedBuildingType’, ‘BuildingTypeComment’, ‘ActionType’, ‘SystemType’, 'DataCollectionCountry', 'DataCollectionCity', ‘TypesDataCollected1’, ‘TypesDataCollected2’, ‘TypesDataCollected3’, ‘TypesDataCollected4’, ‘TypesDataCollected5’, ‘TypesDataCollected6’, ‘TypesDataCollectedOther’, and ‘SampleSize’ under element ‘ModelDescription’ 
-49. Added attribute 'DataCollectionClimateZone' to element ‘ModelDescription’ with simpleType ‘xs:string’ 
-50. Added attribute 'StartDateOfDataCollection' to element ‘ModelDescription’ with simpleType ‘xs:date’ 
-51. Added attribute 'EndDateOfDataCollection' to element ‘ModelDescription’ with simpleType ‘xs:date’ 
-52. Added attribute 'DurationOfDataCollection' to element ‘ModelDescription’ with simpleType ‘xs:string’ 
-53. Added attribute ‘TimeGranularity’ to element ‘ModelDescription’ with simpleType ‘TimeGranularityType’ 
-54. Added enumeration ‘LessThan1, ‘1to9’, ‘10to19’, ‘30andMoreThan59’ to simpleType ‘TimeGranularityType’ 
-55. Added attribute ‘PredictiveHorizon’ to element ‘ModelDescription’ with simpleType ‘PredictiveHorizonType’ 
-56. Added enumeration ‘LessThan1, ‘1’, ‘3’, ‘5’, ‘15’, and ‘24’ to simpleType ‘PredictiveHorizonType’
-57. Added attribute ‘ControlHorizon’ to element ‘ModelDescription’ with simpleType ‘ControlHorizonType’
-58. Added enumeration ‘LessThan1, ‘1’, ‘3’, ‘5’, ‘15’, and ‘24’ to simpleType ‘ControlHorizonType’
-59. Added attribute ‘SpaceGranularity’ to element ‘ModelDescription’ with simpleType ‘SpaceGranularityType’
-60. Added enumeration ‘LabBased’, ‘Room’, ‘Floor’, and ‘Building’ to simpleType ‘SpaceGranularityType’
-61. Added ‘Laboratory’ to element ‘BuildingType’ and simpleType ‘BuildingType’
-62. Added element ‘ModelDevelopment’ to element ‘ModelDescription’
-63. Added element ‘DataPreparation’ and ‘ModelingCategory’ to element ‘ModelDevelopment’
-64. Added element ‘DataCleaning ’ with type ‘xs:string’ to element ‘DataPreparation’
-65. Added element ‘DimensionReduction’ with type ‘xs:string’ to element ‘DataPreparation’
-66. Added element ‘DataScaling’ with type ‘xs:string’ to element ‘DataPreparation’
-67. Added element ‘FeatureCreation’ with type ‘xs:string’ to element ‘DataPreparation’
-68. Added element ‘DataPartitioning’ with type ‘xs:string’ to element ‘DataPreparation’
-69. Added element ‘DataMerging’ with type ‘xs:string’ to element ‘DataPreparation’
-70. Added element ‘RuleBasedModel’ with simpleType ‘RuleBasedModelType’ to element ‘ModelingCategory’
-71. Added attribute ‘ScheduleBased’ and ‘GenericRuleBased’ to simpleType ‘RuleBasedModelType’
-72. Added element ‘StatisticalStochasticModel’ with simpleType ‘StatisticalStochasticModelType’ to element ‘ModelingCategory’
-73. Added attribute ‘Regression’, ‘GenericProbability’, ‘Weibull’, ‘Bernoulli’, ‘BayesianNetwork’, ‘MarkovChain’, ‘MonteCarlo’, and ‘MarkoveChainMonteCarlo’ to simpleType ‘StatisticalStochasticModelType’
-74. Added element ‘DataDrivenModel’ with simpleType ‘DataDrivenModelType’ to element ‘ModelingCategory’ 
-75. Added attribute ‘SupportVectorMachine’, ‘RandomForest’, ‘LongShortTermMemory’, ‘LinearRegression’, ‘HiddenMarkov’, ‘GaussianMixture’, ‘ControlLogic’, ‘Clustering’, ‘ArtificialNeuralNetwork’, and ‘FuzzyLogic’ to element ‘DataDrivenModelType’
-76. Added element ‘ModelEvaluation’ to element ‘ModelDescription’ 
-77. Added element ‘PerformanceMetric’ to element 'ModelEvaluation’
-78. Added element ‘AbsoluteMetric’, ‘DomainMetric’, and ‘IndirectPerformanceMetric’ to ‘PerformanceMetric’
-79. Added element ‘AbsoluteMetricType’ with simpleType ‘AbsoluteMetricType’ and ‘PerformanceMetricValue’ with type ‘xs:decimal’ to element ‘AbsoluteMetric’
-80. Added enumeration ‘Accuracy’, ‘BalancedAccuracy’, ‘ConfusionMatrix’, ‘F1’, ‘FBeta’, ‘MeanAverageError’, ‘MeanSquaredError’, ‘RootMeanSquaredError’, and ‘NormalizedMeanSquaredError’ to simpleType ‘AbsoluteMetricType’
-81. Added element ‘AggregatedDomainMetric’ and ‘IntervalByIntervalMetric’ to element ‘DomainMetric’
-82. Added element ‘AggregatedDomainMetricType’ with type ‘xs:string’ and ‘PerformanceMetricValue’ with type ‘xs:decimal’ to element ‘AggregatedDomainMetric’
-83. Added element ‘IntervalByIntervalMetricType’ with type ‘xs:string’ and ‘PerformanceMetricValue’ with type ‘xs:decimal’ to element ‘IntervalByIntervalMetric’ 
-84. Added element ‘ComfortRelatedIndirectMetric’ and ‘EnergyRelatedIndirectMetric’ to element’ IndirectPerformanceMetric’ 
-85. Added element ‘ComfortRelatedIndirectMetricType’ with type ‘xs:string’ and ‘PerformanceMetricValue’ with type ‘xs:decimal’ to element ‘ComfortRelatedIndirectMetric’
-86. Added element ‘EnergyRelatedIndirectMetricType’ with type ‘xs:string’ and ‘PerformanceMetricValue’ with type ‘xs:decimal’ to element ‘EnergyRelatedIndirectMetric’
-87. Added element ‘ModelImplementation’ to element ‘ModelDescription’ 
-88. Added element ‘ComputationalEnvironment’ to element ‘ModelImplementation’ 
-89. Added attribute ‘ProgrammingLanguage’ with ‘xs:string’ to element ‘ComputationalEnvironment’ 
-90. Added attribute ‘SoftwarePackagesTools’ with ‘xs:string’ to element ‘ComputationalEnvironment’
-91. Added attribute ‘OperatingSystem’ with ‘xs:string’ to element ‘ComputationalEnvironment’
-92. Added element ‘ComputationTime’ to element ‘ModelImplementation’
-93. Added attribute ‘InferenceRuntime’ with ‘xs:duration’ to element ‘ComputationTime’
-94. Added attribute ‘InferenceMemoryRequirement’ with ‘xs:string’ to element ‘ComputationTime’
-95. Added attribute ‘TotalRequiredTrainingRuntime’ with ‘xs:duration’ to element ‘ComputationTime’
-96. Added attribute ‘ModelScalability’ with ‘xs:string’ to element ‘ComputationTime’
-97. Added element ‘ExperimentSetup’ to element ‘ModelImplementation’
-98. Added element ‘Sensors’ to element ‘ExperimentSetup’
-99. Added element ‘SensorType’ with simpleType 'SensorType' and 'SensorLocation' to element ‘Sensors’
-100. Added enumeration ‘ACState’, ‘AirPressureSensor’, ‘AirSpeedSensor’, ‘Camera’, ‘CO2Sensor’ , ‘COSensor’, ‘ElectricSensor’, ‘DoorSensor’, ‘LightSensor’, ‘LightSwitch’, ‘MotionSensor’, ‘RelativeHumiditySensor’, ‘SmartMeter’, ‘SmartPlug’, ‘SolarIrradianceSensor’, ‘SoundSensor’, ‘AirTemperatureSensor’, ‘WiFiProbeSensor’, ‘VolatileOrganicCompoundsSensor’ , ‘ParticulateMatterSensor’, and ‘WindowSensor’ to simpleType ‘SensorType’ 
-101. Added element ‘SpaceLevelofSensorLocation’ with simpleType ‘SpaceLevelofSensorLocationType’ and ‘BuildingLevelofSensorLocation’ with simpleType ‘BuildingLevelofSensorLocationType’ to element ‘SensorLocation’ 
-102. Added enumeration ‘Ceiling’, ‘Chair’, ‘Desk’, ‘DoorFrame’, ‘Wall’, and ‘WindowFrame’ to simpleType ‘SpaceLevelofSensorLocationType’ 
-103. Added enumeration ‘ElectricalPanel’, ‘HVACEquipment’, ‘MainEntrance’, and ‘RoofTop’ to simpleType ‘BuildingLevelofSensorLocationType’
-104. Added attribute ‘PaperCitation’ to element ‘Behavior’
-105. Changed the name of the element ‘Duration’ to ‘OccupancyDuration’ 
-106. Changed the name of the element ‘Weather’ to 'WeatherStation'
-107. Added enumeration ‘LightStateLog’, 'ThermostatControlLog' and 'WeatherStation' to simpleType ‘TypesDataCollectedList’
-108. Updated the equation of eqLogit1DQuadraticType from “p = A + C / {1 + exp(-B*[log10(P1)-D]}“ to “log(p/(1-p)) = A*P1*P1+B*P1+C"
-109. Added ZoneIdRef attribute of type xs:IDREF to element Space
-110. Added LightScheduleIdRef attribute of type xs:IDREF to element Space
-111. Added PlugLoadScheduleIdRef attribute of type xs:IDREF to element Space
-112. Added BuildingStoreyIdRef attribute of type xs:IDREF to element Space
-000. Added element Zones to element OccupantBehavior
-113. Added element Zone with complex type including Description element
-114. Added HeatScheduleIdRef, CoolScheduleIdRef, FanScheduleIdRef, FanTempScheduleIdRef attribute of type xs:IDREF to element Zone
-115. Added element DesignHeatT and DesignCoolTe with attribute TempUnit to element Zone
-116. Added element DesignHeatRH and DesignCoolRH to element Zone
-117. Added gbXMLAirLoopEquipmentIdRef attribute of type xs:IDREF to element HVAC
-118. Added gbXMLFanIdRef attribute of type xs:IDREF to element Fans
-119. Added gbXMLLightingSystemIdRef attribute of type xs:IDREF to element Lights
-120. Added gbXMLWindowIdRef attribute of type xs:IDREF to element Windows
-121. Added gbXMLDoorIdRef attribute of type xs:IDREF to element Doors
-122. Added gbXMLInteriorEquipmentIdRef attribute of type xs:IDREF to element PlugLoad
-123. Added gbXMLAirLoopEquipmentIdRef attribute of type xs:IDREF to element Thermostats
-124. Added gbXMLBlindIdRef attribute of type xs:IDREF to element ShadesAndBlinds
-125. Added gbXMLProjectGuid attribute of type xs:IDREF to element OccupantBehavior
-126. Added gbXMLFilename attribute of type xs:string to element OccupantBehavior
-127. Added gbXMLOriginatingSystem attribute of type xs:string to element OccupantBehavior
-128. Added gbXMLCreationDate attribute of type xs:date to element OccupantBehavior
-129. Added gbXMLAuthor attribute of type xs:IDREF to element OccupantBehavior
-000. Added element Schedules to element OccupantBehavior
-130. Added element Schedule with complex type including Description and YearSchedule elements
-131. Added element YearSchedule with complex type including Description, BeginDate, EndDate, and WeekScheduleId elements
-132. Added element WeekSchedule with complex type including Description and DayScheduleId elements
-133. Added element DaySchedule with complex type including Description and ScheduleValue elements
-134. Added attributes OutsideHighReset, OutsideLowReset, SupplyHighReset, and SupplyLowReset to ScheduleValue element
-135. Added element OperationSchedule with complex type including OperationRange elements to element ‘HVAC’
-136. Added element BuildingStorey with complex type including Description and StoreyLevel elements
-137. Added element Area with attribute AreaUnit of type AreaUnitType
-138. Added element StoreyLevel with attribute LengthUnit of type LengthUnitType
-139. Added simpleType AreaUnitType with enumerations SquareKilometers, SquareMeters, SquareCentimeters, SquareMillimeters, SquareMiles, SquareYards, SquareFeet, and SquareInches
-140. Added simpleType LengthUnitType with enumerations Kilometers, Meters, Centimeters, Millimeters, Miles, Yards, Feet, and Inches
-141. Added simpleType ScheduleType with enumerations Temp, Fraction, OnOff, ResetTemp, and ActivitiyLevel
-142. Added simpleType ScheduleTypeLimits with enumerations Continuous and Discrete
-143. Added enumeration HeatingDesignDay and CoolingDesignDay to simpleType DayofWeekType
-144. Added enumeration Laboratory to simpleType BuildingType
-145. Added elements Schedule, WeekSchedule, DaySchedule to element OccupantBehavior
-146. Added elements LowerBound and UpperBound to element ScheduleTypeLimits
-147. Added element ParameterID, Min, Max to compelxType OperationRange
-148. Changed simpleType FanType to rename OnOff to CeilingOnOff and DiscreteControl to CeilingDiscreteControl
-149. Added enumeration HVACVariableVolume and HVACConstantVolume to simpleType FanType
-150. Added element and simpleType HVACConditionType to element Space
-151. Added enumeration Heated, Cooled, HeatedAndCooled, Unconditioned, Vented, and NaturallyVentedOnly to simpleType HVACConditionType
-152. Added element BuildingStorey to element Building
-153. Added element Area to elements Space and Building
+21. Added Fans element to Systems elemen; added FanType simpleType to Fans element
+22. Added Doors element to Systems element; added DoorType simpleType to Doors element
+23. Added element NumOccupants with xs:integer to element Space
+24. Added enumeration 'RoomRelativeHumidity' to simpleType 'ParameterType'
+25. Added enumeration 'RoomCeilingDaylightIlluminance' to simpleType 'ParameterType'
+26. Added enumeration 'RoomOperativeTemperature' to simpleType 'ParameterType'
+27. Added enumeration 'RoomVolatileOrganicCompounds' to simpleType 'ParameterType'
+28. Added enumeration 'RoomWindSpeed' to simpleType 'ParameterType'
+29. Added enumeration 'RoomSoundPressureLevel' to simpleType 'ParameterType'
+30. Added enumeration 'RoomParticulateMatter' to simpleType 'ParameterType'
+31. Added enumeration 'OutdoorRelativeHumidity' to simpleType 'ParameterType'
+32. Added enumeration 'OutdoorWindSpeed' to simpleType 'ParameterType'
+33. Added enumeration 'OutdoorWindDirection' to simpleType 'ParameterType'
+34. Added enumeration 'OutdoorPrecipitationDepth' to simpleType 'ParameterType'
+35. Added enumeration 'OutdoorParticulateMatter' to simpleType 'ParameterType'
+36. Added enumeration 'OutdoorCO2Concentration' to simpleType 'ParameterType'
+37. Added enumeration 'OutdoorSolarIrradiance' to simpleType 'ParameterType'
+38. Added enumeration 'OutdoorSolarAltitudeAngle' to simpleType 'ParameterType'
+39. Changed attribute 'DataCollectionRegion' to attributes 'DataCollectionCountry' and 'DataCollectionCity'
+40. Added element ‘ModelDescription’ to element ‘Behavior’, ‘MovementBehavior’, and ‘Activity’
+41. Moved ‘AppliedBuildingType’, ‘BuildingTypeComment’, ‘ActionType’, ‘SystemType’, 'DataCollectionCountry', 'DataCollectionCity', ‘TypesDataCollected1’, ‘TypesDataCollected2’, ‘TypesDataCollected3’, ‘TypesDataCollected4’, ‘TypesDataCollected5’, ‘TypesDataCollected6’, ‘TypesDataCollectedOther’, and ‘SampleSize’ under element ‘ModelDescription’ 
+42. Added attribute 'DataCollectionClimateZone' to element ‘ModelDescription’ with simpleType ‘xs:string’ 
+43. Added attribute 'StartDateOfDataCollection' to element ‘ModelDescription’ with simpleType ‘xs:date’ 
+44. Added attribute 'EndDateOfDataCollection' to element ‘ModelDescription’ with simpleType ‘xs:date’ 
+45. Added attribute 'DurationOfDataCollection' to element ‘ModelDescription’ with simpleType ‘xs:string’ 
+46. Added attribute ‘TimeGranularity’ to element ‘ModelDescription’ with simpleType ‘TimeGranularityType’ 
+47. Added enumeration ‘LessThan1, ‘1to9’, ‘10to19’, ‘30andMoreThan59’ to simpleType ‘TimeGranularityType’ 
+48. Added attribute ‘PredictiveHorizon’ to element ‘ModelDescription’ with simpleType ‘PredictiveHorizonType’ 
+49. Added enumeration ‘LessThan1, ‘1’, ‘3’, ‘5’, ‘15’, and ‘24’ to simpleType ‘PredictiveHorizonType’
+50. Added attribute ‘ControlHorizon’ to element ‘ModelDescription’ with simpleType ‘ControlHorizonType’
+51. Added enumeration ‘LessThan1, ‘1’, ‘3’, ‘5’, ‘15’, and ‘24’ to simpleType ‘ControlHorizonType’
+52. Added attribute ‘SpaceGranularity’ to element ‘ModelDescription’ with simpleType ‘SpaceGranularityType’
+53. Added enumeration ‘LabBased’, ‘Room’, ‘Floor’, and ‘Building’ to simpleType ‘SpaceGranularityType’
+54. Added ‘Laboratory’ to element ‘BuildingType’ and simpleType ‘BuildingType’
+55. Added element ‘ModelDevelopment’ to element ‘ModelDescription’
+56. Added element ‘DataPreparation’ and ‘ModelingCategory’ to element ‘ModelDevelopment’
+57. Added element ‘DataCleaning ’ with type ‘xs:string’ to element ‘DataPreparation’
+58. Added element ‘DimensionReduction’ with type ‘xs:string’ to element ‘DataPreparation’
+59. Added element ‘DataScaling’ with type ‘xs:string’ to element ‘DataPreparation’
+60. Added element ‘FeatureCreation’ with type ‘xs:string’ to element ‘DataPreparation’
+61. Added element ‘DataPartitioning’ with type ‘xs:string’ to element ‘DataPreparation’
+62. Added element ‘DataMerging’ with type ‘xs:string’ to element ‘DataPreparation’
+63. Added element ‘RuleBasedModel’ with simpleType ‘RuleBasedModelType’ to element ‘ModelingCategory’
+64. Added attribute ‘ScheduleBased’ and ‘GenericRuleBased’ to simpleType ‘RuleBasedModelType’
+65. Added element ‘StatisticalStochasticModel’ with simpleType ‘StatisticalStochasticModelType’ to element ‘ModelingCategory’
+66. Added attribute ‘Regression’, ‘GenericProbability’, ‘Weibull’, ‘Bernoulli’, ‘BayesianNetwork’, ‘MarkovChain’, ‘MonteCarlo’, and ‘MarkoveChainMonteCarlo’ to simpleType ‘StatisticalStochasticModelType’
+67. Added element ‘DataDrivenModel’ with simpleType ‘DataDrivenModelType’ to element ‘ModelingCategory’ 
+68. Added attribute ‘SupportVectorMachine’, ‘RandomForest’, ‘LongShortTermMemory’, ‘LinearRegression’, ‘HiddenMarkov’, ‘GaussianMixture’, ‘ControlLogic’, ‘Clustering’, ‘ArtificialNeuralNetwork’, and ‘FuzzyLogic’ to element ‘DataDrivenModelType’
+69. Added element ‘ModelEvaluation’ to element ‘ModelDescription’ 
+70. Added element ‘PerformanceMetric’ to element 'ModelEvaluation’
+71. Added element ‘AbsoluteMetric’, ‘DomainMetric’, and ‘IndirectPerformanceMetric’ to ‘PerformanceMetric’
+72. Added element ‘AbsoluteMetricType’ with simpleType ‘AbsoluteMetricType’, ‘Description’ and ‘PerformanceMetricValue’ with type ‘xs:decimal’ to element ‘AbsoluteMetric’
+73. Added element ‘DomainMetricType’ with simpleType ‘DomainMetricType’, ‘Description’ and ‘PerformanceMetricValue’ with type ‘xs:decimal’ to element ‘DomainMetric’
+74. Added element ‘IndirectPerformanceMetricType’ with simpleType ‘IndirectPerformanceMetricType’, ‘Description’ and ‘PerformanceMetricValue’ with type ‘xs:decimal’ to element ‘IndirectPerformanceMetric’
+75. Added enumeration ‘Accuracy’, ‘BalancedAccuracy’, ‘ConfusionMatrix’, ‘F1’, ‘FBeta’, ‘MeanAverageError’, ‘MeanSquaredError’, ‘RootMeanSquaredError’, and ‘NormalizedMeanSquaredError’ to simpleType ‘AbsoluteMetricType’
+76. Added enumeration ‘AggregatedMetric’, and ‘IntervalByIntervalMetric’ to simpleType ‘DomainMetricType’
+77. Added enumeration ‘ComfortRelatedMetric’, and ‘EnergyRelatedMetric’ to simpleType ‘IndirectPerformanceMetricType’
+78. Added element ‘ModelImplementation’ to element ‘ModelDescription’ 
+79. Added element ‘ComputationalEnvironment’ to element ‘ModelImplementation’ 
+90. Added attribute ‘ProgrammingLanguage’ with ‘xs:string’ to element ‘ComputationalEnvironment’ 
+91. Added attribute ‘SoftwarePackagesTool’ with ‘xs:string’ to element ‘ComputationalEnvironment’
+92. Added attribute ‘OperatingSystem’ with ‘xs:string’ to element ‘ComputationalEnvironment’
+93. Added element ‘ComputationTime’ to element ‘ModelImplementation’
+94. Added attribute ‘InferenceRuntime’ with ‘xs:duration’ to element ‘ComputationTime’
+95. Added attribute ‘InferenceMemoryRequirement’ with ‘xs:string’ to element ‘ComputationTime’
+96. Added attribute ‘TotalRequiredTrainingRuntime’ with ‘xs:duration’ to element ‘ComputationTime’
+97. Added attribute ‘ModelScalability’ with ‘xs:string’ to element ‘ComputationTime’
+98. Added element ‘ExperimentSetup’ to element ‘ModelImplementation’
+99. Added element ‘Sensors’ to element ‘ExperimentSetup’
+100. Added element ‘Sensor’ to element ‘Sensors’
+101. Added element ‘SensorType’ with simpleType 'SensorType' and 'SensorLocation' to element ‘Sensor’
+102. Added enumeration ‘ACState’, ‘AirPressureSensor’, ‘AirSpeedSensor’, ‘Camera’, ‘CO2Sensor’ , ‘COSensor’, ‘PowerSensor’, ‘DoorSensor’, ‘LightSensor’, ‘LightSwitch’, ‘MotionSensor’, ‘HumiditySensor’, ‘SmartMeter’, ‘SmartPlug’, ‘SolarIrradianceSensor’, ‘SoundSensor’, ‘TemperatureSensor’, ‘WiFiProbeSensor’, ‘VolatileOrganicCompoundsSensor’ , ‘ParticulateMatterSensor’, and ‘WindowSensor’ to simpleType ‘SensorType’ 
+103. Added element ‘SpaceLevelofSensorLocation’ with simpleType ‘SpaceLevelofSensorLocationType’ and ‘BuildingLevelofSensorLocation’ with simpleType ‘BuildingLevelofSensorLocationType’ to element ‘SensorLocation’ 
+104. Added enumeration ‘Ceiling’, ‘Chair’, ‘Desk’, ‘DoorFrame’, ‘Wall’, and ‘WindowFrame’ to simpleType ‘SpaceLevelofSensorLocationType’ 
+105. Added enumeration ‘ElectricalPanel’, ‘HVACEquipment’, ‘MainEntrance’, and ‘RoofTop’ to simpleType ‘BuildingLevelofSensorLocationType’
+106. Added attribute ‘PaperCitation’ to element ‘Behavior’
+107. Changed the name of the element ‘Duration’ to ‘OccupancyDuration’ 
+108. Changed the name of the element ‘Weather’ to 'WeatherStation'
+109. Added enumeration ‘LightStateLog’, 'ThermostatControlLog' and 'WeatherStation' to simpleType ‘TypesDataCollectedList’
+110. Updated the equation of 'eqLogit1DQuadraticType' from “p = A + C / {1 + exp(-B*[log10(P1)-D]}“ to “log(p/(1-p)) = A*P1*P1+B*P1+C"
+111. Added 'ZoneIdRef' attribute of type 'xs:IDREF' to element 'Space'
+112. Added 'LightScheduleIdRef' attribute of type 'xs:IDREF' to element 'Space'
+113. Added 'PlugLoadScheduleIdRef' attribute of type 'xs:IDREF' to element 'Space'
+114. Added 'BuildingStoreyIdRef' attribute of type 'xs:IDREF' to element 'Space'
+115. Added element 'Zones' to element 'OccupantBehavior'
+116. Added element 'Zone' with complex type including 'Description' element to element 'Zones'
+117. Added 'HeatScheduleIdRef', 'CoolScheduleIdRef', 'FanScheduleIdRef' attribute of type 'xs:IDREF' to element 'Zone'
+118. Added element 'DesignHeatT' and 'DesignCoolT' with attribute 'TempUnit' to element 'Zone'
+119. Added element 'DesignHeatRH' and 'DesignCoolRH' to element 'Zone'
+120. Added 'gbXMLZoneHVACEquipmentIdRef' and 'gbXMLAirLoopIdRef' attributes of type 'xs:string' to element 'HVAC'
+121. Added 'gbXMLFanIdRef' and 'gbXMLAirLoopEquipment' attributes of type 'xs:string' to element 'Fans'
+122. Added 'gbXMLLightingSystemIdRef' attribute of type 'xs:string' to element 'Lights'
+123. Added 'gbXMLWindowIdRef' attribute of type 'xs:string' to element 'Windows'
+124. Added 'gbXMLDoorIdRef' attribute of type 'xs:string' to element 'Doors'
+125. Added 'gbXMLInteriorEquipmentIdRef' attribute of type 'xs:string' to element 'PlugLoad'
+126. Added 'gbXMLZoneHVACEquipmentIdRef' and 'gbXMLAirLoopIdRef' attributes of type 'xs:string' to element 'Thermostats'
+127. Added 'gbXMLBlindIdRef' attribute of type 'xs:string' to element 'ShadesAndBlinds'
+128. Added 'gbXMLProjectGuid' attribute of type 'xs:string' to element 'OccupantBehavior'
+129. Added 'gbXMLFilename' attribute of type 'xs:string' to element 'OccupantBehavior'
+130. Added 'gbXMLOriginatingSystem' attribute of type 'xs:string' to element 'OccupantBehavior'
+131. Added 'gbXMLCreationDate' attribute of type 'xs:date' to element 'OccupantBehavior'
+132. Added 'gbXMLAuthor' attribute of type 'xs:string' to element 'OccupantBehavior'
+133. Added element 'Schedules' to 'element 'OccupantBehavior'
+134. Added elements 'Schedule', 'WeekSchedule', and 'DaySchedule' with complex type to element 'Schedules'
+135. Added 'Description' and 'YearSchedule' elements and 'ScheduleType' attribute to element 'Schedule'
+136. Added elements 'Description', 'BeginDate', 'EndDate', and 'WeekScheduleId' elements to element 'YearSchedule'
+137. Added elements 'Description' and 'DayScheduleId' elements, and 'ScheduleType' attribute to element 'WeekSchedule'
+138. Added attribute 'WeekScheduleIdRef' to element 'WeekScheduleId'
+139. Added elements 'Description' and 'ScheduleValue' and 'ScheduleType' attribute to element 'DaySchedule'
+140. Added simpleType 'ScheduleType' with enumerations 'Temp', 'Fraction', 'OnOff', 'ResetTemp', and 'ActivitiyLevel'
+141. Added attributes 'OutsideHighReset', 'OutsideLowReset', 'SupplyHighReset', and 'SupplyLowReset' to 'ScheduleValue' element
+142. Added element 'BuildingStorey' with complex type including 'Description' and 'StoreyLevel' elements
+143. Added element 'BuildingStorey' to element 'Building'
+144. Added element 'StoreyLevel' with attribute 'LengthUnit' of type 'LengthUnitType'
+145. Added element 'Area' to elements 'Space' and 'Building'
+146. Added element 'Area' with attribute 'AreaUnit' of type 'AreaUnitType'
+147. Added simpleType 'AreaUnitType' with enumerations 'SquareKilometers', 'SquareMeters', 'SquareCentimeters', 'SquareMillimeters', 'SquareMiles', 'SquareYards', 'SquareFeet', and 'SquareInches'
+148. Added simpleType 'LengthUnitType' with enumerations 'Kilometers', 'Meters', 'Centimeters', 'Millimeters', 'Miles', 'Yards', 'Feet', and 'Inches'
+149. Added enumeration 'HeatingDesignDay' and 'CoolingDesignDay' to simpleType 'DayofWeekType'
+150. Added enumeration 'Laboratory' to simpleType 'BuildingType'
+151. Changed simpleType 'FanType' to rename 'OnOff' to 'CeilingOnOff' and 'DiscreteControl' to 'CeilingDiscreteControl'
+152. Added enumeration 'HVACVariableVolume' and 'HVACConstantVolume' to simpleType 'FanType'
+153. Added element and simpleType 'HVACConditionType' to element 'Space'
+154. Added enumeration 'Heated', 'Cooled', 'HeatedAndCooled', 'Unconditioned', 'Vented', and 'NaturallyVentedOnly' to simpleType 'HVACConditionType'
+
+
 
 </xs:documentation>
 	</xs:annotation>
@@ -743,17 +734,15 @@ v.1.4
 			<xs:sequence>
 				<xs:element ref="Description" minOccurs="0"/>
 				<xs:element ref="HVACType"/>
-				<xs:element ref="EnergyConsumption" minOccurs="0"/>
-				<xs:element ref="PowerConsumption" minOccurs="0"/>
-				<xs:element ref="OperationTime" minOccurs="0"/>
-				<xs:element ref="OperationSchedule" minOccurs="0"/>
 			</xs:sequence>
-			<xs:attribute name="ID" type="xs:ID" use="optional"/>
-			<xs:attribute name="Name" type="xs:string" use="optional"/>
-			<xs:attribute name="IfcGuid" type="xs:string" use="optional"/>
-			<xs:attribute name="gbXMLAirLoopEquipmentIdRef" type="xs:IDREF" use="optional">
+			<xs:attribute name="gbXMLZoneHVACEquipmentIdRef" type="xs:string" use="optional">
 				<xs:annotation>
-					<xs:documentation>ID reference to the AirLoopEquipment element from the gbXML file.</xs:documentation>
+					<xs:documentation>ID reference to the ZoneHVACEquipment element from the gbXML file.</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="gbXMLAirLoopIdRef" type="xs:string" use="optional">
+				<xs:annotation>
+					<xs:documentation>ID reference to the AirLoop element from the gbXML file.</xs:documentation>
 				</xs:annotation>
 			</xs:attribute>
 		</xs:complexType>
@@ -763,16 +752,15 @@ v.1.4
 			<xs:sequence>
 				<xs:element ref="Description" minOccurs="0"/>
 				<xs:element ref="FanType"/>
-				<xs:element ref="EnergyConsumption" minOccurs="0"/>
-				<xs:element ref="PowerConsumption" minOccurs="0"/>
-				<xs:element ref="OperationTime" minOccurs="0"/>
 			</xs:sequence>
-			<xs:attribute name="ID" type="xs:ID" use="optional"/>
-			<xs:attribute name="Name" type="xs:string" use="optional"/>
-			<xs:attribute name="IfcGuid" type="xs:string" use="optional"/>
-			<xs:attribute name="gbXMLFanIdRef" type="xs:IDREF" use="optional">
+			<xs:attribute name="gbXMLFanIdRef" type="xs:string" use="optional">
 				<xs:annotation>
 					<xs:documentation>ID reference to the Fan element from the gbXML file.</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="gbXMLAirLoopEquipment" type="xs:string" use="optional">
+				<xs:annotation>
+					<xs:documentation>ID reference to the AirLoopEquipment element with Fan equipmentType from the gbXML file.</xs:documentation>
 				</xs:annotation>
 			</xs:attribute>
 		</xs:complexType>
@@ -782,14 +770,8 @@ v.1.4
 			<xs:sequence>
 				<xs:element ref="Description" minOccurs="0"/>
 				<xs:element ref="LightType"/>
-				<xs:element ref="EnergyConsumption" minOccurs="0"/>
-				<xs:element ref="PowerConsumption" minOccurs="0"/>
-				<xs:element ref="OperationTime" minOccurs="0"/>
 			</xs:sequence>
-			<xs:attribute name="ID" type="xs:ID" use="optional"/>
-			<xs:attribute name="Name" type="xs:string" use="optional"/>
-			<xs:attribute name="IfcGuid" type="xs:string" use="optional"/>
-			<xs:attribute name="gbXMLLightingSystemIdRef" type="xs:IDREF" use="optional">
+			<xs:attribute name="gbXMLLightingSystemIdRef" type="xs:string" use="optional">
 				<xs:annotation>
 					<xs:documentation>ID reference to the LightingSystem element from the gbXML file.</xs:documentation>
 				</xs:annotation>
@@ -802,10 +784,7 @@ v.1.4
 				<xs:element ref="Description" minOccurs="0"/>
 				<xs:element ref="WindowType"/>
 			</xs:sequence>
-			<xs:attribute name="ID" type="xs:ID" use="optional"/>
-			<xs:attribute name="Name" type="xs:string" use="optional"/>
-			<xs:attribute name="IfcGuid" type="xs:string" use="optional"/>
-			<xs:attribute name="gbXMLWindowIdRef" type="xs:IDREF" use="optional">
+			<xs:attribute name="gbXMLWindowIdRef" type="xs:string" use="optional">
 				<xs:annotation>
 					<xs:documentation>ID reference to the WindowType element from the gbXML file.</xs:documentation>
 				</xs:annotation>
@@ -818,10 +797,7 @@ v.1.4
 				<xs:element ref="Description" minOccurs="0"/>
 				<xs:element ref="DoorType"/>
 			</xs:sequence>
-			<xs:attribute name="ID" type="xs:ID" use="optional"/>
-			<xs:attribute name="Name" type="xs:string" use="optional"/>
-			<xs:attribute name="IfcGuid" type="xs:string" use="optional"/>
-			<xs:attribute name="gbXMLDoorIdRef" type="xs:IDREF" use="optional">
+			<xs:attribute name="gbXMLDoorIdRef" type="xs:string" use="optional">
 				<xs:annotation>
 					<xs:documentation>ID reference to the Door element from the gbXML file.</xs:documentation>
 				</xs:annotation>
@@ -833,14 +809,8 @@ v.1.4
 			<xs:sequence>
 				<xs:element ref="Description" minOccurs="0"/>
 				<xs:element ref="PlugLoadType"/>
-				<xs:element ref="EnergyConsumption" minOccurs="0"/>
-				<xs:element ref="PowerConsumption" minOccurs="0"/>
-				<xs:element ref="OperationTime" minOccurs="0"/>
 			</xs:sequence>
-			<xs:attribute name="ID" type="xs:ID" use="optional"/>
-			<xs:attribute name="Name" type="xs:string" use="optional"/>
-			<xs:attribute name="IfcGuid" type="xs:string" use="optional"/>
-			<xs:attribute name="gbXMLInteriorEquipmentIdRef" type="xs:IDREF" use="optional">
+			<xs:attribute name="gbXMLInteriorEquipmentIdRef" type="xs:string" use="optional">
 				<xs:annotation>
 					<xs:documentation>ID reference to the IntEquip element from the gbXML file.</xs:documentation>
 				</xs:annotation>
@@ -853,12 +823,14 @@ v.1.4
 				<xs:element ref="Description" minOccurs="0"/>
 				<xs:element ref="ThermostatType"/>
 			</xs:sequence>
-			<xs:attribute name="ID" type="xs:ID" use="optional"/>
-			<xs:attribute name="Name" type="xs:string" use="optional"/>
-			<xs:attribute name="IfcGuid" type="xs:string" use="optional"/>
-			<xs:attribute name="gbXMLAirLoopEquipmentIdRef" type="xs:IDREF" use="optional">
+			<xs:attribute name="gbXMLZoneHVACEquipmentIdRef" type="xs:string" use="optional">
 				<xs:annotation>
-					<xs:documentation>ID reference to the TemperatureControl element from the gbXML file.</xs:documentation>
+					<xs:documentation>ID reference to the ZoneHVACEquipment element from the gbXML file.</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="gbXMLAirLoopIdRef" type="xs:string" use="optional">
+				<xs:annotation>
+					<xs:documentation>ID reference to the AirLoopEquipment element with VAVBox or Coil equipmentType from the gbXML file.</xs:documentation>
 				</xs:annotation>
 			</xs:attribute>
 		</xs:complexType>
@@ -869,30 +841,12 @@ v.1.4
 				<xs:element ref="Description" minOccurs="0"/>
 				<xs:element ref="ShadeAndBlindType"/>
 			</xs:sequence>
-			<xs:attribute name="ID" type="xs:ID" use="optional"/>
-			<xs:attribute name="Name" type="xs:string" use="optional"/>
-			<xs:attribute name="IfcGuid" type="xs:string" use="optional"/>
-			<xs:attribute name="gbXMLBlindIdRef" type="xs:IDREF" use="optional">
+			<xs:attribute name="gbXMLBlindIdRef" type="xs:string" use="optional">
 				<xs:annotation>
 					<xs:documentation>ID reference to the Blind element from the gbXML file.</xs:documentation>
 				</xs:annotation>
 			</xs:attribute>
 		</xs:complexType>
-	</xs:element>
-	<xs:element name="EnergyConsumption" type="xs:decimal">
-		<xs:annotation>
-			<xs:documentation>The amount of electric energy used by electric equipment</xs:documentation>
-		</xs:annotation>
-	</xs:element>
-	<xs:element name="PowerConsumption" type="xs:decimal">
-		<xs:annotation>
-			<xs:documentation>The amount of electric energy per unit time supplied to operate the electric equipment</xs:documentation>
-		</xs:annotation>
-	</xs:element>
-	<xs:element name="OperationTime" type="xs:duration">
-		<xs:annotation>
-			<xs:documentation>The duration during which electric equipment is actively in use within the space</xs:documentation>
-		</xs:annotation>
 	</xs:element>
 	<xs:element name="ActivityDuration">
 		<xs:annotation>
@@ -1121,14 +1075,14 @@ v.1.4
 			<xs:documentation>Preprocessing technique applied to prepare the dataset</xs:documentation>
 		</xs:annotation>
 		<xs:complexType>
-			<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
 				<xs:element ref="DataCleaning" minOccurs="0"/>
 				<xs:element ref="DimensionReduction" minOccurs="0"/>
 				<xs:element ref="DataScaling" minOccurs="0"/>
 				<xs:element ref="FeatureCreation" minOccurs="0"/>
 				<xs:element ref="DataPartitioning" minOccurs="0"/>
 				<xs:element ref="DataMerging" minOccurs="0"/>
-			</xs:sequence>
+			</xs:choice>
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="DataCleaning" type="xs:string"/>
@@ -1143,9 +1097,9 @@ v.1.4
 		</xs:annotation>
 		<xs:complexType>
 			<xs:choice>
-				<xs:element ref="RuleBasedModel" minOccurs="0"/>
-				<xs:element ref="StatisticalStochasticModel" minOccurs="0"/>
-				<xs:element ref="DataDrivenModel" minOccurs="0"/>
+				<xs:element ref="RuleBasedModel"/>
+				<xs:element ref="StatisticalStochasticModel"/>
+				<xs:element ref="DataDrivenModel"/>
 			</xs:choice>
 		</xs:complexType>
 	</xs:element>
@@ -1167,11 +1121,11 @@ v.1.4
 			<xs:documentation>Quantiative measure to assess the competence of the developed model</xs:documentation>
 		</xs:annotation>
 		<xs:complexType>
-			<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
 				<xs:element ref="AbsoluteMetric" minOccurs="0"/>
 				<xs:element ref="DomainMetric" minOccurs="0"/>
 				<xs:element ref="IndirectPerformanceMetric" minOccurs="0"/>
-			</xs:sequence>
+			</xs:choice>
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="AbsoluteMetric">
@@ -1180,8 +1134,9 @@ v.1.4
 		</xs:annotation>
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="AbsoluteMetricType" minOccurs="0"/>
-				<xs:element ref="PerformanceMetricValue" minOccurs="0"/>
+				<xs:element ref="Description" minOccurs="0"/>
+				<xs:element ref="AbsoluteMetricType"/>
+				<xs:element ref="PerformanceMetricValue"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -1191,8 +1146,9 @@ v.1.4
 		</xs:annotation>
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="AggregatedDomainMetric" minOccurs="0"/>
-				<xs:element ref="IntervalByIntervalMetric" minOccurs="0"/>
+				<xs:element ref="Description" minOccurs="0"/>
+				<xs:element ref="DomainMetricType"/>
+				<xs:element ref="PerformanceMetricValue"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -1202,49 +1158,16 @@ v.1.4
 		</xs:annotation>
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="ComfortRelatedIndirectMetric" minOccurs="0"/>
-				<xs:element ref="EnergyRelatedIndirectMetric" minOccurs="0"/>
+				<xs:element ref="Description" minOccurs="0"/>
+				<xs:element ref="IndirectPerformanceMetricType"/>
+				<xs:element ref="PerformanceMetricValue"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="AbsoluteMetricType" type="AbsoluteMetricType"/>
-	<xs:element name="AggregatedDomainMetric">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element ref="AggregatedDomainMetricType" minOccurs="0"/>
-				<xs:element ref="PerformanceMetricValue" minOccurs="0"/>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
-	<xs:element name="IntervalByIntervalMetric">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element ref="AggregatedDomainMetricType" minOccurs="0"/>
-				<xs:element ref="PerformanceMetricValue" minOccurs="0"/>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
-	<xs:element name="ComfortRelatedIndirectMetric">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element ref="ComfortRelatedIndirectMetricType" minOccurs="0"/>
-				<xs:element ref="PerformanceMetricValue" minOccurs="0"/>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
-	<xs:element name="EnergyRelatedIndirectMetric">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element ref="EnergyRelatedIndirectMetricType" minOccurs="0"/>
-				<xs:element ref="PerformanceMetricValue" minOccurs="0"/>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
-	<xs:element name="AggregatedDomainMetricType" type="xs:string"/>
-	<xs:element name="IntervalByIntervalMetricType" type="xs:string"/>
-	<xs:element name="ComfortRelatedIndirectMetricType" type="xs:string"/>
-	<xs:element name="EnergyRelatedIndirectMetricType" type="xs:string"/>
-	<xs:element name="PerformanceMetricValue" type="xs:decimal"/>
+	<xs:element name="DomainMetricType" type="DomainMetricType"/>
+	<xs:element name="IndirectPerformanceMetricType" type="IndirectPerformanceMetricType"/>
+	<xs:element name="PerformanceMetricValue" type="xs:string"/>
 	<xs:element name="ModelImplementation">
 		<xs:annotation>
 			<xs:documentation>Description of computational environment and experimental settings used for testing the model</xs:documentation>
@@ -1261,13 +1184,13 @@ v.1.4
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element ref="ProgrammingLanguage" minOccurs="0"/>
-				<xs:element ref="SoftwarePackagesTools" minOccurs="0"/>
+				<xs:element ref="SoftwarePackagesTool" minOccurs="0"/>
 				<xs:element ref="OperatingSystem" minOccurs="0"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="ProgrammingLanguage" type="xs:string"/>
-	<xs:element name="SoftwarePackagesTools" type="xs:string"/>
+	<xs:element name="SoftwarePackagesTool" type="xs:string"/>
 	<xs:element name="OperatingSystem" type="xs:string"/>
 	<xs:element name="ComputationTime">
 		<xs:complexType>
@@ -1295,8 +1218,16 @@ v.1.4
 			<xs:documentation>Devices that collect data on indoor or outdoor environmental condition, building system, or occupant behavior</xs:documentation>
 		</xs:annotation>
 		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="Sensor" minOccurs="0"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Sensor">
+		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="SensorType" minOccurs="0"/>
+				<xs:element ref="Description" minOccurs="0"/>
+				<xs:element ref="SensorType"/>
 				<xs:element ref="SensorLocation" minOccurs="0"/>
 			</xs:sequence>
 		</xs:complexType>
@@ -1304,10 +1235,10 @@ v.1.4
 	<xs:element name="SensorType" type="SensorType"/>
 	<xs:element name="SensorLocation">
 		<xs:complexType>
-			<xs:sequence>
-				<xs:element ref="SpaceLevelofSensorLocation" minOccurs="0"/>
-				<xs:element ref="BuildingLevelofSensorLocation" minOccurs="0"/>
-			</xs:sequence>
+			<xs:choice>
+				<xs:element ref="SpaceLevelofSensorLocation"/>
+				<xs:element ref="BuildingLevelofSensorLocation"/>
+			</xs:choice>
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="SpaceLevelofSensorLocation" type="SpaceLevelofSensorLocationType"/>
@@ -1587,7 +1518,7 @@ v.1.4
 			<xs:attribute name="IfcOriginatingSystem" type="xs:string" use="optional"/>
 			<xs:attribute name="IfcCreationDate" type="xs:date" use="optional"/>
 			<xs:attribute name="IfcAuthor" type="xs:string" use="optional"/>
-			<xs:attribute name="gbXMLProjectGuid" type="xs:IDREF">
+			<xs:attribute name="gbXMLProjectGuid" type="xs:string">
 				<xs:annotation>
 					<xs:documentation>Reference to the GUID element from the gbXML file.</xs:documentation>
 				</xs:annotation>
@@ -1607,7 +1538,7 @@ v.1.4
 					<xs:documentation>Reference to the CreatedBy element from the gbXML file.</xs:documentation>
 				</xs:annotation>
 			</xs:attribute>
-			<xs:attribute name="gbXMLAuthor" type="xs:IDREF" use="optional">
+			<xs:attribute name="gbXMLAuthor" type="xs:string" use="optional">
 				<xs:annotation>
 					<xs:documentation>ID reference to the PersonInfo element from the gbXML file.</xs:documentation>
 				</xs:annotation>
@@ -1623,7 +1554,7 @@ v.1.4
 	</xs:element>
 	<xs:element name="Systems">
 		<xs:complexType>
-			<xs:choice>
+			<xs:choice maxOccurs="unbounded">
 				<xs:element ref="HVAC"/>
 				<xs:element ref="Fans"/>
 				<xs:element ref="Lights"/>
@@ -1644,20 +1575,19 @@ v.1.4
 	</xs:element>
 	<xs:element name="Zone">
 		<xs:complexType>
-			<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:sequence>
 				<xs:element ref="Description" minOccurs="0"/>
 				<xs:element ref="DesignHeatT" minOccurs="0"/>
 				<xs:element ref="DesignCoolT" minOccurs="0"/>
 				<xs:element ref="DesignHeatRH" minOccurs="0"/>
 				<xs:element ref="DesignCoolRH" minOccurs="0"/>
-			</xs:choice>
+			</xs:sequence>
 			<xs:attribute name="ID" type="xs:ID" use="required"/>
-			<xs:attribute name="Name" type="xs:string" use="optional"/>			
+			<xs:attribute name="Name" type="xs:string" use="optional"/>
 			<xs:attribute name="IfcGuid" type="xs:string"/>
 			<xs:attribute name="HeatScheduleIdRef" type="xs:IDREF"/>
 			<xs:attribute name="CoolScheduleIdRef" type="xs:IDREF"/>
-			<xs:attribute name="FanScheduleIdRef" type="xs:IDREF"/>	
-			<xs:attribute name="FanTempScheduleIdRef" type="xs:IDREF"/>			
+			<xs:attribute name="FanScheduleIdRef" type="xs:IDREF"/>
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="DesignHeatT">
@@ -1682,7 +1612,7 @@ v.1.4
 					<xs:attribute name="TempUnit" type="TempUnitType" use="optional"/>
 				</xs:extension>
 			</xs:simpleContent>
-		</xs:complexType>	
+		</xs:complexType>
 	</xs:element>
 	<xs:element name="DesignHeatRH">
 		<xs:annotation>
@@ -1731,7 +1661,6 @@ v.1.4
 			</xs:choice>
 			<xs:attribute name="ID" type="xs:ID" use="required"/>
 			<xs:attribute name="Name" type="xs:string" use="optional"/>
-			<xs:attribute name="ScheduleTypeLimitsId" type="xs:string"/>
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="WeekSchedule">
@@ -1746,7 +1675,6 @@ v.1.4
 			<xs:attribute name="ID" type="xs:ID" use="required"/>
 			<xs:attribute name="Name" type="xs:string" use="optional"/>
 			<xs:attribute name="ScheduleType" type="ScheduleType" use="required"/>
-			<xs:attribute name="ScheduleTypeLimitsId" type="xs:string"/>
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="WeekScheduleId">
@@ -1763,16 +1691,6 @@ v.1.4
 		<xs:annotation>
 			<xs:documentation>Month and day year schedule ends</xs:documentation>
 		</xs:annotation>
-	</xs:element>
-	<xs:element name="ScheduleTypeLimits">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element ref="LowerBound" minOccurs="0" maxOccurs="1"/>
-				<xs:element ref="UpperBound" minOccurs="0" maxOccurs="1"/>
-			</xs:sequence>
-			<xs:attribute name="ID" type="xs:ID" use="required"/>
-			<xs:attribute name="Type" type="ScheduleTypeLimits" use="required"/>
-		</xs:complexType>
 	</xs:element>
 	<xs:element name="DayScheduleId">
 		<xs:complexType>
@@ -1800,7 +1718,6 @@ v.1.4
 			<xs:attribute name="ID" type="xs:ID" use="required"/>
 			<xs:attribute name="Name" type="xs:string" use="optional"/>
 			<xs:attribute name="ScheduleType" type="ScheduleType" use="required"/>
-			<xs:attribute name="ScheduleTypeLimitsId" type="xs:string"/>
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="ScheduleValue">
@@ -1809,50 +1726,31 @@ v.1.4
 		</xs:annotation>
 		<xs:complexType>
 			<xs:simpleContent>
-			  <xs:extension base="xs:decimal">
-				<xs:attribute name="OutsideHighReset" type="xs:decimal" use="optional">
-					<xs:annotation>
-						<xs:documentation>Value of the outside drybulb temperature for when defining HVAC system lower supply reset temperature</xs:documentation>
-					</xs:annotation>
-				</xs:attribute>
-				<xs:attribute name="OutsideLowReset" type="xs:decimal" use="optional">
-					<xs:annotation>
-						<xs:documentation>Value of the outside drybulb temperature for when defining HVAC system upper supply reset temperature</xs:documentation>
-					</xs:annotation>			
-				</xs:attribute>
-				<xs:attribute name="SupplyHighReset" type="xs:decimal" use="optional">
-					<xs:annotation>
-						<xs:documentation>Value of the upper supply air setpoint temperature for reset of cooling air or heating air temperature</xs:documentation>
-					</xs:annotation>			
-				</xs:attribute>
-				<xs:attribute name="SupplyLowReset" type="xs:decimal" use="optional">
-					<xs:annotation>
-						<xs:documentation>Value of the lower supply air setpoint temperature for reset of cooling air or heating air temperature</xs:documentation>
-					</xs:annotation>			
-				</xs:attribute>
-			  </xs:extension>
+				<xs:extension base="xs:decimal">
+					<xs:attribute name="OutsideHighReset" type="xs:decimal" use="optional">
+						<xs:annotation>
+							<xs:documentation>Value of the outside drybulb temperature for when defining HVAC system lower supply reset temperature</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="OutsideLowReset" type="xs:decimal" use="optional">
+						<xs:annotation>
+							<xs:documentation>Value of the outside drybulb temperature for when defining HVAC system upper supply reset temperature</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="SupplyHighReset" type="xs:decimal" use="optional">
+						<xs:annotation>
+							<xs:documentation>Value of the upper supply air setpoint temperature for reset of cooling air or heating air temperature</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="SupplyLowReset" type="xs:decimal" use="optional">
+						<xs:annotation>
+							<xs:documentation>Value of the lower supply air setpoint temperature for reset of cooling air or heating air temperature</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+				</xs:extension>
 			</xs:simpleContent>
 		</xs:complexType>
 	</xs:element>
-	<xs:element name="OperationSchedule">
-		<xs:complexType>
-			<xs:choice minOccurs="0" maxOccurs="unbounded">
-				<xs:element name="OperationRange" type="OperationRange" minOccurs="0" maxOccurs="unbounded"/>
-			</xs:choice>
-			<xs:attribute name="ScheduleIdRef" type="xs:IDREF">
-				<xs:annotation>
-					<xs:documentation>Schedule of operation for a piece of equipment. For heating and cooling equipment (such as a boiler or chiller) this is the availability schedule, the schedule of temperatures that, when reached, the piece of equipment will be available.</xs:documentation>
-				</xs:annotation>
-			</xs:attribute>
-		</xs:complexType>
-	</xs:element>
-	<xs:complexType name="OperationRange">
-		<xs:choice>
-			<xs:element name="ParameterID"/>
-			<xs:element name="Min" minOccurs="0"/>
-			<xs:element name="Max" minOccurs="0"/>
-		</xs:choice>
-	</xs:complexType>
 	<xs:complexType name="CustomProbabilityModelType">
 		<xs:sequence>
 			<xs:element ref="StatusTransitionProbability" maxOccurs="unbounded"/>
@@ -2313,7 +2211,7 @@ v.1.4
 	<xs:simpleType name="BuildingType">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="AutomotiveFacility"/>
-			<xs:enumeration value="ConventionCenter"/>			
+			<xs:enumeration value="ConventionCenter"/>
 			<xs:enumeration value="Courthouse"/>
 			<xs:enumeration value="DataCenter"/>
 			<xs:enumeration value="DiningBarLoungeOrLeisure"/>
@@ -2584,11 +2482,9 @@ v.1.4
 	</xs:simpleType>
 	<xs:simpleType name="ParameterType">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="RoomAcousticLevel"/>
+			<xs:enumeration value="RoomSoundPressureLevel"/>
 			<xs:enumeration value="RoomAirTemperature"/>
 			<xs:enumeration value="RoomCO2Concentration"/>
-			<xs:enumeration value="RoomDirectSolarIrradiance"/>
-			<xs:enumeration value="RoomTransmittedSolarIrradiance"/>
 			<xs:enumeration value="RoomWorkPlaneDaylightIlluminance"/>
 			<xs:enumeration value="RoomCeilingDaylightIlluminance"/>
 			<xs:enumeration value="RoomLightsPowerDensity"/>
@@ -2598,15 +2494,13 @@ v.1.4
 			<xs:enumeration value="RoomVolatileOrganicCompounds"/>
 			<xs:enumeration value="RoomWindSpeed"/>
 			<xs:enumeration value="OutdoorDryBulbTemperature"/>
-			<xs:enumeration value="OutdoorCO2Concentration"/>
-			<xs:enumeration value="OutdoorParticulateMatter"/>
 			<xs:enumeration value="OutdoorRainIndicator"/>
 			<xs:enumeration value="OutdoorPrecipitationDepth"/>
-			<xs:enumeration value="OutdoorPrecipitationRate"/>
+			<xs:enumeration value="OutdoorCO2Concentration"/>
+			<xs:enumeration value="OutdoorParticulateMatter"/>
 			<xs:enumeration value="OutdoorRelativeHumidity"/>
 			<xs:enumeration value="OutdoorSolarAltitudeAngle"/>
-			<xs:enumeration value="OutdoorDirectSolarIrradiance"/>
-			<xs:enumeration value="OutdoorDiffuseSolarIrradiance"/>
+			<xs:enumeration value="OutdoorSolarIrradiance"/>
 			<xs:enumeration value="OutdoorWindDirection"/>
 			<xs:enumeration value="OutdoorWindSpeed"/>
 		</xs:restriction>
@@ -2806,12 +2700,6 @@ v.1.4
 			<xs:enumeration value="ActivityLevel"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="ScheduleTypeLimits">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="Continuous"/>
-			<xs:enumeration value="Discrete"/>
-		</xs:restriction>
-	</xs:simpleType>
 	<xs:simpleType name="TypesDataCollectedList">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="CrossSectionSurvey"/>
@@ -2910,6 +2798,18 @@ v.1.4
 			<xs:enumeration value="NormalizedMeanSquaredError"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:simpleType name="DomainMetricType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="AggregatedMetric"/>
+			<xs:enumeration value="IntervalByIntervalMetric"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="IndirectPerformanceMetricType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ComfortRelatedMetric"/>
+			<xs:enumeration value="EnergyRelatedMetric"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:simpleType name="SensorType">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="ACState"/>
@@ -2918,17 +2818,17 @@ v.1.4
 			<xs:enumeration value="Camera"/>
 			<xs:enumeration value="CO2Sensor"/>
 			<xs:enumeration value="COSensor"/>
-			<xs:enumeration value="ElectricSensor"/>
+			<xs:enumeration value="PowerSensor"/>
 			<xs:enumeration value="DoorSensor"/>
 			<xs:enumeration value="LightSensor"/>
 			<xs:enumeration value="LightSwitch"/>
 			<xs:enumeration value="MotionSensor"/>
-			<xs:enumeration value="RelativeHumiditySensor"/>
+			<xs:enumeration value="HumiditySensor"/>
 			<xs:enumeration value="SmartMeter"/>
 			<xs:enumeration value="SmartPlug"/>
 			<xs:enumeration value="SolarIrradianceSensor"/>
 			<xs:enumeration value="SoundSensor"/>
-			<xs:enumeration value="AirTemperatureSensor"/>
+			<xs:enumeration value="TemperatureSensor"/>
 			<xs:enumeration value="WiFiProbeSensor"/>
 			<xs:enumeration value="VolatileOrganicCompoundsSensor"/>
 			<xs:enumeration value="ParticulateMatterSensor"/>

@@ -6,171 +6,869 @@
       <Address>Boston, MA</Address>
       <Area AreaUnit="SquareFeet">15811.390974</Area>
       <Spaces ID="All_Spaces">
-        <Space ID="sp-1-Open" Name="1 Open" ZoneIdRef="zone-open" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+        <Space ID="sp-1-Open" Name="1 Open" ZoneIdRef="zone-open" LightScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
           <SpaceType>Other</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">3997.489662</Area>
-          <Systems/>
+          <Systems>
+            <HVAC gbXMLZoneHVACEquipmentIdRef="HVACEquip-1">
+              <HVACType>ZoneOnOff</HVACType>
+            </HVAC>
+            <Fans gbXMLFanIdRef="airSystem-1">
+              <FanType>HVACConstantVolume</FanType>
+            </Fans>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <Windows gbXMLWindowIdRef="su-2-op-1,su-5-op-1,su-11-op-1,su-12-op-1,su-13-op-1,su-20-op-1,su-21-op-1,su-22-op-1">
+              <WindowType>Operable</WindowType>
+            </Windows>
+            <ShadesAndBlinds gbXMLBlindIdRef="simpleBlind">
+              <ShadeAndBlindType>Operable</ShadeAndBlindType>
+            </ShadesAndBlinds>
+            <Doors gbXMLDoorIdRef="su-15-op-1,su-16-op-1,su-17-op-1,su-18-op-1,su-30-op-1,su-31-op-1,su-32-op-1,su-33-op-1,su-34-op-1,su-35-op-1,su-36-op-1,su-37-op-1,su-38-op-1,su-39-op-1,su-42-op-1,su-43-op-1,su-44-op-1,su-45-op-1,su-48-op-1,su-49-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-2-Open" Name="2 Open" ZoneIdRef="zone-open" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+        <Space ID="sp-2-Open" Name="2 Open" ZoneIdRef="zone-open" LightScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
           <SpaceType>Other</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">3818.100773</Area>
+          <Systems>
+            <HVAC gbXMLZoneHVACEquipmentIdRef="HVACEquip-1">
+              <HVACType>ZoneOnOff</HVACType>
+            </HVAC>
+            <Fans gbXMLFanIdRef="airSystem-1">
+              <FanType>HVACConstantVolume</FanType>
+            </Fans>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <Windows gbXMLWindowIdRef="su-56-op-1,su-59-op-1,su-65-op-1,su-66-op-1,su-67-op-1,su-74-op-1,su-75-op-1,su-76-op-1">
+              <WindowType>Operable</WindowType>
+            </Windows>
+            <ShadesAndBlinds gbXMLBlindIdRef="simpleBlind">
+              <ShadeAndBlindType>Operable</ShadeAndBlindType>
+            </ShadesAndBlinds>
+            <Doors gbXMLDoorIdRef="su-82-op-1,su-83-op-1,su-84-op-1,su-85-op-1,su-88-op-1,su-89-op-1,su-91-op-1,su-92-op-1,su-93-op-1,su-94-op-1,su-95-op-1,su-97-op-1,su-98-op-1,su-99-op-1,su-100-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-3-Office" Name="3 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+        <Space ID="sp-3-Office" Name="3 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="EquipSched-1" BuildingStoreyIdRef="story-1">
           <SpaceType>Office</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">231.311415</Area>
+          <Systems>
+            <HVAC gbXMLZoneHVACEquipmentIdRef="HVACEquip-1">
+              <HVACType>ZoneOnOff</HVACType>
+            </HVAC>
+            <Thermostats gbXMLAirLoopIdRef="airLoop-1">
+              <ThermostatType>Adjustable</ThermostatType>
+            </Thermostats>
+            <Fans gbXMLFanIdRef="airSystem-1">
+              <FanType>HVACConstantVolume</FanType>
+            </Fans>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <PlugLoad gbXMLInteriorEquipmentIdRef="Equip-1">
+              <PlugLoadType>ContinuousControl</PlugLoadType>
+            </PlugLoad>
+            <Windows gbXMLWindowIdRef="su-101-op-1,su-101-op-2,su-102-op-1">
+              <WindowType>Operable</WindowType>
+            </Windows>
+            <ShadesAndBlinds gbXMLBlindIdRef="simpleBlind">
+              <ShadeAndBlindType>Operable</ShadeAndBlindType>
+            </ShadesAndBlinds>
+            <Doors gbXMLDoorIdRef="su-30-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-4-Office" Name="4 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+        <Space ID="sp-4-Office" Name="4 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="EquipSched-1" BuildingStoreyIdRef="story-1">
           <SpaceType>Office</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">233.181858</Area>
+          <Systems>
+            <HVAC gbXMLZoneHVACEquipmentIdRef="HVACEquip-1">
+              <HVACType>ZoneOnOff</HVACType>
+            </HVAC>
+            <Thermostats gbXMLAirLoopIdRef="airLoop-1">
+              <ThermostatType>Adjustable</ThermostatType>
+            </Thermostats>
+            <Fans gbXMLFanIdRef="airSystem-1">
+              <FanType>HVACConstantVolume</FanType>
+            </Fans>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <PlugLoad gbXMLInteriorEquipmentIdRef="Equip-1">
+              <PlugLoadType>ContinuousControl</PlugLoadType>
+            </PlugLoad>
+            <Windows gbXMLWindowIdRef="su-107-op-1,su-107-op-2">
+              <WindowType>Operable</WindowType>
+            </Windows>
+            <ShadesAndBlinds gbXMLBlindIdRef="simpleBlind">
+              <ShadeAndBlindType>Operable</ShadeAndBlindType>
+            </ShadesAndBlinds>
+            <Doors gbXMLDoorIdRef="su-31-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-5-Office" Name="5 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+        <Space ID="sp-5-Office" Name="5 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="EquipSched-1" BuildingStoreyIdRef="story-1">
           <SpaceType>Office</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">231.311415</Area>
+          <Systems>
+            <HVAC gbXMLZoneHVACEquipmentIdRef="HVACEquip-1">
+              <HVACType>ZoneOnOff</HVACType>
+            </HVAC>
+            <Thermostats gbXMLAirLoopIdRef="airLoop-1">
+              <ThermostatType>Adjustable</ThermostatType>
+            </Thermostats>
+            <Fans gbXMLFanIdRef="airSystem-1">
+              <FanType>HVACConstantVolume</FanType>
+            </Fans>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <PlugLoad gbXMLInteriorEquipmentIdRef="Equip-1">
+              <PlugLoadType>ContinuousControl</PlugLoadType>
+            </PlugLoad>
+            <Windows gbXMLWindowIdRef="su-111-op-1,su-112-op-1,su-112-op-2">
+              <WindowType>Operable</WindowType>
+            </Windows>
+            <ShadesAndBlinds gbXMLBlindIdRef="simpleBlind">
+              <ShadeAndBlindType>Operable</ShadeAndBlindType>
+            </ShadesAndBlinds>
+            <Doors gbXMLDoorIdRef="su-32-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-6-Office" Name="6 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+        <Space ID="sp-6-Office" Name="6 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="EquipSched-1" BuildingStoreyIdRef="story-2">
           <SpaceType>Office</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">201.244141</Area>
+          <Systems>
+            <HVAC gbXMLZoneHVACEquipmentIdRef="HVACEquip-1">
+              <HVACType>ZoneOnOff</HVACType>
+            </HVAC>
+            <Thermostats gbXMLAirLoopIdRef="airLoop-1">
+              <ThermostatType>Adjustable</ThermostatType>
+            </Thermostats>
+            <Fans gbXMLFanIdRef="airSystem-1">
+              <FanType>HVACConstantVolume</FanType>
+            </Fans>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <PlugLoad gbXMLInteriorEquipmentIdRef="Equip-1">
+              <PlugLoadType>ContinuousControl</PlugLoadType>
+            </PlugLoad>
+            <Windows gbXMLWindowIdRef="su-116-op-1,su-116-op-2,su-117-op-1">
+              <WindowType>Operable</WindowType>
+            </Windows>
+            <ShadesAndBlinds gbXMLBlindIdRef="simpleBlind">
+              <ShadeAndBlindType>Operable</ShadeAndBlindType>
+            </ShadesAndBlinds>
+            <Doors gbXMLDoorIdRef="su-82-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-7-Office" Name="7 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+        <Space ID="sp-7-Office" Name="7 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="EquipSched-1" BuildingStoreyIdRef="story-2">
           <SpaceType>Office</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">292.832031</Area>
+          <Systems>
+            <HVAC gbXMLZoneHVACEquipmentIdRef="HVACEquip-1">
+              <HVACType>ZoneOnOff</HVACType>
+            </HVAC>
+            <Thermostats gbXMLAirLoopIdRef="airLoop-1">
+              <ThermostatType>Adjustable</ThermostatType>
+            </Thermostats>
+            <Fans gbXMLFanIdRef="airSystem-1">
+              <FanType>HVACConstantVolume</FanType>
+            </Fans>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <PlugLoad gbXMLInteriorEquipmentIdRef="Equip-1">
+              <PlugLoadType>ContinuousControl</PlugLoadType>
+            </PlugLoad>
+            <Windows gbXMLWindowIdRef="su-120-op-1,su-120-op-2">
+              <WindowType>Operable</WindowType>
+            </Windows>
+            <ShadesAndBlinds gbXMLBlindIdRef="simpleBlind">
+              <ShadeAndBlindType>Operable</ShadeAndBlindType>
+            </ShadesAndBlinds>
+            <Doors gbXMLDoorIdRef="su-83-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-8-Office" Name="8 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+        <Space ID="sp-8-Office" Name="8 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="EquipSched-1" BuildingStoreyIdRef="story-2">
           <SpaceType>Office</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">201.244141</Area>
+          <Systems>
+            <HVAC gbXMLZoneHVACEquipmentIdRef="HVACEquip-1">
+              <HVACType>ZoneOnOff</HVACType>
+            </HVAC>
+            <Thermostats gbXMLAirLoopIdRef="airLoop-1">
+              <ThermostatType>Adjustable</ThermostatType>
+            </Thermostats>
+            <Fans gbXMLFanIdRef="airSystem-1">
+              <FanType>HVACConstantVolume</FanType>
+            </Fans>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <PlugLoad gbXMLInteriorEquipmentIdRef="Equip-1">
+              <PlugLoadType>ContinuousControl</PlugLoadType>
+            </PlugLoad>
+            <Windows gbXMLWindowIdRef="su-123-op-1,su-124-op-1,su-124-op-2">
+              <WindowType>Operable</WindowType>
+            </Windows>
+            <ShadesAndBlinds gbXMLBlindIdRef="simpleBlind">
+              <ShadeAndBlindType>Operable</ShadeAndBlindType>
+            </ShadesAndBlinds>
+            <Doors gbXMLDoorIdRef="su-84-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-9-Office" Name="9 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+        <Space ID="sp-9-Office" Name="9 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="EquipSched-1" BuildingStoreyIdRef="story-1">
           <SpaceType>Office</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">192.342014</Area>
+          <Systems>
+            <HVAC gbXMLZoneHVACEquipmentIdRef="HVACEquip-1">
+              <HVACType>ZoneOnOff</HVACType>
+            </HVAC>
+            <Thermostats gbXMLAirLoopIdRef="airLoop-1">
+              <ThermostatType>Adjustable</ThermostatType>
+            </Thermostats>
+            <Fans gbXMLFanIdRef="airSystem-1">
+              <FanType>HVACConstantVolume</FanType>
+            </Fans>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <PlugLoad gbXMLInteriorEquipmentIdRef="Equip-1">
+              <PlugLoadType>ContinuousControl</PlugLoadType>
+            </PlugLoad>
+            <Windows gbXMLWindowIdRef="su-126-op-1">
+              <WindowType>Operable</WindowType>
+            </Windows>
+            <ShadesAndBlinds gbXMLBlindIdRef="simpleBlind">
+              <ShadeAndBlindType>Operable</ShadeAndBlindType>
+            </ShadesAndBlinds>
+            <Doors gbXMLDoorIdRef="su-33-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-10-Office" Name="10 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+        <Space ID="sp-10-Office" Name="10 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="EquipSched-1" BuildingStoreyIdRef="story-1">
           <SpaceType>Office</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">189.538194</Area>
+          <Systems>
+            <HVAC gbXMLZoneHVACEquipmentIdRef="HVACEquip-1">
+              <HVACType>ZoneOnOff</HVACType>
+            </HVAC>
+            <Thermostats gbXMLAirLoopIdRef="airLoop-1">
+              <ThermostatType>Adjustable</ThermostatType>
+            </Thermostats>
+            <Fans gbXMLFanIdRef="airSystem-1">
+              <FanType>HVACConstantVolume</FanType>
+            </Fans>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <PlugLoad gbXMLInteriorEquipmentIdRef="Equip-1">
+              <PlugLoadType>ContinuousControl</PlugLoadType>
+            </PlugLoad>
+            <Windows gbXMLWindowIdRef="su-132-op-1">
+              <WindowType>Operable</WindowType>
+            </Windows>
+            <ShadesAndBlinds gbXMLBlindIdRef="simpleBlind">
+              <ShadeAndBlindType>Operable</ShadeAndBlindType>
+            </ShadesAndBlinds>
+            <Doors gbXMLDoorIdRef="su-34-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-11-Office" Name="11 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+        <Space ID="sp-11-Office" Name="11 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="EquipSched-1" BuildingStoreyIdRef="story-1">
           <SpaceType>Office</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">234.186849</Area>
+          <Systems>
+            <HVAC gbXMLZoneHVACEquipmentIdRef="HVACEquip-1">
+              <HVACType>ZoneOnOff</HVACType>
+            </HVAC>
+            <Thermostats gbXMLAirLoopIdRef="airLoop-1">
+              <ThermostatType>Adjustable</ThermostatType>
+            </Thermostats>
+            <Fans gbXMLFanIdRef="airSystem-1">
+              <FanType>HVACConstantVolume</FanType>
+            </Fans>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <PlugLoad gbXMLInteriorEquipmentIdRef="Equip-1">
+              <PlugLoadType>ContinuousControl</PlugLoadType>
+            </PlugLoad>
+            <Windows gbXMLWindowIdRef="su-137-op-1,su-137-op-2,su-138-op-1">
+              <WindowType>Operable</WindowType>
+            </Windows>
+            <ShadesAndBlinds gbXMLBlindIdRef="simpleBlind">
+              <ShadeAndBlindType>Operable</ShadeAndBlindType>
+            </ShadesAndBlinds>
+            <Doors gbXMLDoorIdRef="su-35-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-12-Office" Name="12 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+        <Space ID="sp-12-Office" Name="12 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="EquipSched-1" BuildingStoreyIdRef="story-1">
           <SpaceType>Office</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">244.290365</Area>
+          <Systems>
+            <HVAC gbXMLZoneHVACEquipmentIdRef="HVACEquip-1">
+              <HVACType>ZoneOnOff</HVACType>
+            </HVAC>
+            <Thermostats gbXMLAirLoopIdRef="airLoop-1">
+              <ThermostatType>Adjustable</ThermostatType>
+            </Thermostats>
+            <Fans gbXMLFanIdRef="airSystem-1">
+              <FanType>HVACConstantVolume</FanType>
+            </Fans>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <PlugLoad gbXMLInteriorEquipmentIdRef="Equip-1">
+              <PlugLoadType>ContinuousControl</PlugLoadType>
+            </PlugLoad>
+            <Windows gbXMLWindowIdRef="su-144-op-1,su-144-op-2">
+              <WindowType>Operable</WindowType>
+            </Windows>
+            <ShadesAndBlinds gbXMLBlindIdRef="simpleBlind">
+              <ShadeAndBlindType>Operable</ShadeAndBlindType>
+            </ShadesAndBlinds>
+            <Doors gbXMLDoorIdRef="su-36-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-13-Office" Name="13 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+        <Space ID="sp-13-Office" Name="13 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="EquipSched-1" BuildingStoreyIdRef="story-1">
           <SpaceType>Office</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">210.538194</Area>
+          <Systems>
+            <HVAC gbXMLZoneHVACEquipmentIdRef="HVACEquip-1">
+              <HVACType>ZoneOnOff</HVACType>
+            </HVAC>
+            <Thermostats gbXMLAirLoopIdRef="airLoop-1">
+              <ThermostatType>Adjustable</ThermostatType>
+            </Thermostats>
+            <Fans gbXMLFanIdRef="airSystem-1">
+              <FanType>HVACConstantVolume</FanType>
+            </Fans>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <PlugLoad gbXMLInteriorEquipmentIdRef="Equip-1">
+              <PlugLoadType>ContinuousControl</PlugLoadType>
+            </PlugLoad>
+            <Windows gbXMLWindowIdRef="su-149-op-1">
+              <WindowType>Operable</WindowType>
+            </Windows>
+            <ShadesAndBlinds gbXMLBlindIdRef="simpleBlind">
+              <ShadeAndBlindType>Operable</ShadeAndBlindType>
+            </ShadesAndBlinds>
+            <Doors gbXMLDoorIdRef="su-37-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-14-Office" Name="14 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+        <Space ID="sp-14-Office" Name="14 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="EquipSched-1" BuildingStoreyIdRef="story-1">
           <SpaceType>Office</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">259.392361</Area>
+          <Systems>
+            <HVAC gbXMLZoneHVACEquipmentIdRef="HVACEquip-1">
+              <HVACType>ZoneOnOff</HVACType>
+            </HVAC>
+            <Thermostats gbXMLAirLoopIdRef="airLoop-1">
+              <ThermostatType>Adjustable</ThermostatType>
+            </Thermostats>
+            <Fans gbXMLFanIdRef="airSystem-1">
+              <FanType>HVACConstantVolume</FanType>
+            </Fans>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <PlugLoad gbXMLInteriorEquipmentIdRef="Equip-1">
+              <PlugLoadType>ContinuousControl</PlugLoadType>
+            </PlugLoad>
+            <Windows gbXMLWindowIdRef="su-154-op-1,su-154-op-2">
+              <WindowType>Operable</WindowType>
+            </Windows>
+            <ShadesAndBlinds gbXMLBlindIdRef="simpleBlind">
+              <ShadeAndBlindType>Operable</ShadeAndBlindType>
+            </ShadesAndBlinds>
+            <Doors gbXMLDoorIdRef="su-38-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-15-Stairwell" Name="15 Stairwell" ZoneIdRef="zone-stairewell" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+        <Space ID="sp-15-Stairwell" Name="15 Stairwell" ZoneIdRef="zone-stairewell" LightScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
           <SpaceType>Other</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">253.350694</Area>
+          <Systems>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <Doors gbXMLDoorIdRef="su-39-op-1,su-158-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-16-Office" Name="16 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+        <Space ID="sp-16-Office" Name="16 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="EquipSched-1" BuildingStoreyIdRef="story-1">
           <SpaceType>Office</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">231.230903</Area>
+          <Systems>
+            <HVAC gbXMLZoneHVACEquipmentIdRef="HVACEquip-1">
+              <HVACType>ZoneOnOff</HVACType>
+            </HVAC>
+            <Thermostats gbXMLAirLoopIdRef="airLoop-1">
+              <ThermostatType>Adjustable</ThermostatType>
+            </Thermostats>
+            <Fans gbXMLFanIdRef="airSystem-1">
+              <FanType>HVACConstantVolume</FanType>
+            </Fans>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <PlugLoad gbXMLInteriorEquipmentIdRef="Equip-1">
+              <PlugLoadType>ContinuousControl</PlugLoadType>
+            </PlugLoad>
+            <Windows gbXMLWindowIdRef="su-163-op-1,su-163-op-2,su-164-op-1,su-164-op-2">
+              <WindowType>Operable</WindowType>
+            </Windows>
+            <ShadesAndBlinds gbXMLBlindIdRef="simpleBlind">
+              <ShadeAndBlindType>Operable</ShadeAndBlindType>
+            </ShadesAndBlinds>
+            <Doors gbXMLDoorIdRef="su-42-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-17-Office" Name="17 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+        <Space ID="sp-17-Office" Name="17 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="EquipSched-1" BuildingStoreyIdRef="story-1">
           <SpaceType>Office</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">233.100694</Area>
+          <Systems>
+            <HVAC gbXMLZoneHVACEquipmentIdRef="HVACEquip-1">
+              <HVACType>ZoneOnOff</HVACType>
+            </HVAC>
+            <Thermostats gbXMLAirLoopIdRef="airLoop-1">
+              <ThermostatType>Adjustable</ThermostatType>
+            </Thermostats>
+            <Fans gbXMLFanIdRef="airSystem-1">
+              <FanType>HVACConstantVolume</FanType>
+            </Fans>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <PlugLoad gbXMLInteriorEquipmentIdRef="Equip-1">
+              <PlugLoadType>ContinuousControl</PlugLoadType>
+            </PlugLoad>
+            <Windows gbXMLWindowIdRef="su-168-op-1,su-168-op-2">
+              <WindowType>Operable</WindowType>
+            </Windows>
+            <ShadesAndBlinds gbXMLBlindIdRef="simpleBlind">
+              <ShadeAndBlindType>Operable</ShadeAndBlindType>
+            </ShadesAndBlinds>
+            <Doors gbXMLDoorIdRef="su-43-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-18-Office" Name="18 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+        <Space ID="sp-18-Office" Name="18 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="EquipSched-1" BuildingStoreyIdRef="story-1">
           <SpaceType>Office</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">231.230903</Area>
+          <Systems>
+            <HVAC gbXMLZoneHVACEquipmentIdRef="HVACEquip-1">
+              <HVACType>ZoneOnOff</HVACType>
+            </HVAC>
+            <Thermostats gbXMLAirLoopIdRef="airLoop-1">
+              <ThermostatType>Adjustable</ThermostatType>
+            </Thermostats>
+            <Fans gbXMLFanIdRef="airSystem-1">
+              <FanType>HVACConstantVolume</FanType>
+            </Fans>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <PlugLoad gbXMLInteriorEquipmentIdRef="Equip-1">
+              <PlugLoadType>ContinuousControl</PlugLoadType>
+            </PlugLoad>
+            <Windows gbXMLWindowIdRef="su-172-op-1,su-172-op-2,su-173-op-1,su-173-op-2">
+              <WindowType>Operable</WindowType>
+            </Windows>
+            <ShadesAndBlinds gbXMLBlindIdRef="simpleBlind">
+              <ShadeAndBlindType>Operable</ShadeAndBlindType>
+            </ShadesAndBlinds>
+            <Doors gbXMLDoorIdRef="su-44-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-19-Mens_Room" Name="19 Mens Room" ZoneIdRef="zone-restroom" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+        <Space ID="sp-19-Mens_Room" Name="19 Mens Room" ZoneIdRef="zone-restroom" LightScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
           <SpaceType>Other</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">225.256944</Area>
+          <Systems>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <Doors gbXMLDoorIdRef="su-45-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-20-Ladies_Room" Name="20 Ladies Room" ZoneIdRef="zone-restroom" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+        <Space ID="sp-20-Ladies_Room" Name="20 Ladies Room" ZoneIdRef="zone-restroom" LightScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
           <SpaceType>Other</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">223.184028</Area>
+          <Systems>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <Doors gbXMLDoorIdRef="su-48-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-21-MechanicalElectrical" Name="21 Mechanical/Electrical" ZoneIdRef="zone-mechanicalElectrical" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-1">
+        <Space ID="sp-21-MechanicalElectrical" Name="21 Mechanical/Electrical" ZoneIdRef="zone-mechanicalElectrical" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="EquipSched-1" BuildingStoreyIdRef="story-1">
           <SpaceType>Other</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">158.923611</Area>
+          <Systems>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <PlugLoad gbXMLInteriorEquipmentIdRef="Equip-1">
+              <PlugLoadType>ContinuousControl</PlugLoadType>
+            </PlugLoad>
+            <Doors gbXMLDoorIdRef="su-49-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-22-Mens_Room" Name="22 Mens Room" ZoneIdRef="zone-restroom" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+        <Space ID="sp-22-Mens_Room" Name="22 Mens Room" ZoneIdRef="zone-restroom" LightScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
           <SpaceType>Other</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">225.256944</Area>
+          <Systems>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <Doors gbXMLDoorIdRef="su-85-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-23-Ladies_Room" Name="23 Ladies Room" ZoneIdRef="zone-restroom" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+        <Space ID="sp-23-Ladies_Room" Name="23 Ladies Room" ZoneIdRef="zone-restroom" LightScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
           <SpaceType>Other</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">223.184028</Area>
+          <Systems>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <Doors gbXMLDoorIdRef="su-88-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-24-MechanicalElectrical" Name="24 Mechanical/Electrical" ZoneIdRef="zone-mechanicalElectrical" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+        <Space ID="sp-24-MechanicalElectrical" Name="24 Mechanical/Electrical" ZoneIdRef="zone-mechanicalElectrical" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="EquipSched-1" BuildingStoreyIdRef="story-2">
           <SpaceType>Other</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">158.923611</Area>
+          <Systems>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <PlugLoad gbXMLInteriorEquipmentIdRef="Equip-1">
+              <PlugLoadType>ContinuousControl</PlugLoadType>
+            </PlugLoad>
+            <Doors gbXMLDoorIdRef="su-89-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-25-Lounge" Name="25 Lounge" ZoneIdRef="zone-lounge" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+        <Space ID="sp-25-Lounge" Name="25 Lounge" ZoneIdRef="zone-lounge" LightScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
           <SpaceType>Other</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">474.751736</Area>
+          <Systems>
+            <HVAC gbXMLZoneHVACEquipmentIdRef="HVACEquip-1">
+              <HVACType>ZoneOnOff</HVACType>
+            </HVAC>
+            <Fans gbXMLFanIdRef="airSystem-1">
+              <FanType>HVACConstantVolume</FanType>
+            </Fans>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <Windows gbXMLWindowIdRef="su-194-op-1,su-194-op-2">
+              <WindowType>Operable</WindowType>
+            </Windows>
+            <ShadesAndBlinds gbXMLBlindIdRef="simpleBlind">
+              <ShadeAndBlindType>Operable</ShadeAndBlindType>
+            </ShadesAndBlinds>
+            <Doors gbXMLDoorIdRef="su-91-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-26-Office" Name="26 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+        <Space ID="sp-26-Office" Name="26 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="EquipSched-1" BuildingStoreyIdRef="story-2">
           <SpaceType>Office</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">370.807292</Area>
+          <Systems>
+            <HVAC gbXMLZoneHVACEquipmentIdRef="HVACEquip-1">
+              <HVACType>ZoneOnOff</HVACType>
+            </HVAC>
+            <Thermostats gbXMLAirLoopIdRef="airLoop-1">
+              <ThermostatType>Adjustable</ThermostatType>
+            </Thermostats>
+            <Fans gbXMLFanIdRef="airSystem-1">
+              <FanType>HVACConstantVolume</FanType>
+            </Fans>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <PlugLoad gbXMLInteriorEquipmentIdRef="Equip-1">
+              <PlugLoadType>ContinuousControl</PlugLoadType>
+            </PlugLoad>
+            <Windows gbXMLWindowIdRef="su-199-op-1,su-199-op-2,su-200-op-1,su-200-op-2">
+              <WindowType>Operable</WindowType>
+            </Windows>
+            <ShadesAndBlinds gbXMLBlindIdRef="simpleBlind">
+              <ShadeAndBlindType>Operable</ShadeAndBlindType>
+            </ShadesAndBlinds>
+            <Doors gbXMLDoorIdRef="su-92-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-27-Office" Name="27 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+        <Space ID="sp-27-Office" Name="27 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="EquipSched-1" BuildingStoreyIdRef="story-2">
           <SpaceType>Office</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">180.295139</Area>
+          <Systems>
+            <HVAC gbXMLZoneHVACEquipmentIdRef="HVACEquip-1">
+              <HVACType>ZoneOnOff</HVACType>
+            </HVAC>
+            <Thermostats gbXMLAirLoopIdRef="airLoop-1">
+              <ThermostatType>Adjustable</ThermostatType>
+            </Thermostats>
+            <Fans gbXMLFanIdRef="airSystem-1">
+              <FanType>HVACConstantVolume</FanType>
+            </Fans>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <PlugLoad gbXMLInteriorEquipmentIdRef="Equip-1">
+              <PlugLoadType>ContinuousControl</PlugLoadType>
+            </PlugLoad>
+            <Windows gbXMLWindowIdRef="su-203-op-1">
+              <WindowType>Operable</WindowType>
+            </Windows>
+            <ShadesAndBlinds gbXMLBlindIdRef="simpleBlind">
+              <ShadeAndBlindType>Operable</ShadeAndBlindType>
+            </ShadesAndBlinds>
+            <Doors gbXMLDoorIdRef="su-93-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-28-Office" Name="28 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+        <Space ID="sp-28-Office" Name="28 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="EquipSched-1" BuildingStoreyIdRef="story-2">
           <SpaceType>Office</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">182.621528</Area>
+          <Systems>
+            <HVAC gbXMLZoneHVACEquipmentIdRef="HVACEquip-1">
+              <HVACType>ZoneOnOff</HVACType>
+            </HVAC>
+            <Thermostats gbXMLAirLoopIdRef="airLoop-1">
+              <ThermostatType>Adjustable</ThermostatType>
+            </Thermostats>
+            <Fans gbXMLFanIdRef="airSystem-1">
+              <FanType>HVACConstantVolume</FanType>
+            </Fans>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <PlugLoad gbXMLInteriorEquipmentIdRef="Equip-1">
+              <PlugLoadType>ContinuousControl</PlugLoadType>
+            </PlugLoad>
+            <Windows gbXMLWindowIdRef="su-206-op-1">
+              <WindowType>Operable</WindowType>
+            </Windows>
+            <ShadesAndBlinds gbXMLBlindIdRef="simpleBlind">
+              <ShadeAndBlindType>Operable</ShadeAndBlindType>
+            </ShadesAndBlinds>
+            <Doors gbXMLDoorIdRef="su-94-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-29-Office" Name="29 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+        <Space ID="sp-29-Office" Name="29 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="EquipSched-1" BuildingStoreyIdRef="story-2">
           <SpaceType>Office</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">259.392361</Area>
+          <Systems>
+            <HVAC gbXMLZoneHVACEquipmentIdRef="HVACEquip-1">
+              <HVACType>ZoneOnOff</HVACType>
+            </HVAC>
+            <Thermostats gbXMLAirLoopIdRef="airLoop-1">
+              <ThermostatType>Adjustable</ThermostatType>
+            </Thermostats>
+            <Fans gbXMLFanIdRef="airSystem-1">
+              <FanType>HVACConstantVolume</FanType>
+            </Fans>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <PlugLoad gbXMLInteriorEquipmentIdRef="Equip-1">
+              <PlugLoadType>ContinuousControl</PlugLoadType>
+            </PlugLoad>
+            <Windows gbXMLWindowIdRef="su-209-op-1,su-209-op-2">
+              <WindowType>Operable</WindowType>
+            </Windows>
+            <ShadesAndBlinds gbXMLBlindIdRef="simpleBlind">
+              <ShadeAndBlindType>Operable</ShadeAndBlindType>
+            </ShadesAndBlinds>
+            <Doors gbXMLDoorIdRef="su-95-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-30-Stairwell" Name="30 Stairwell" ZoneIdRef="zone-stairewell" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+        <Space ID="sp-30-Stairwell" Name="30 Stairwell" ZoneIdRef="zone-stairewell" LightScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
           <SpaceType>Other</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">225.434028</Area>
+          <Systems>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <Doors gbXMLDoorIdRef="su-97-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-31-Conference_Room" Name="31 Conference Room" ZoneIdRef="zone-conferenceroom" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+        <Space ID="sp-31-Conference_Room" Name="31 Conference Room" ZoneIdRef="zone-conferenceroom" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="EquipSched-1" BuildingStoreyIdRef="story-2">
           <SpaceType>MeetingRoom</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">308.522569</Area>
+          <Systems>
+            <HVAC gbXMLZoneHVACEquipmentIdRef="HVACEquip-1">
+              <HVACType>ZoneOnOff</HVACType>
+            </HVAC>
+            <Fans gbXMLFanIdRef="airSystem-1">
+              <FanType>HVACConstantVolume</FanType>
+            </Fans>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <PlugLoad gbXMLInteriorEquipmentIdRef="Equip-1">
+              <PlugLoadType>ContinuousControl</PlugLoadType>
+            </PlugLoad>
+            <Windows gbXMLWindowIdRef="su-215-op-1,su-215-op-2,su-216-op-1,su-216-op-2">
+              <WindowType>Operable</WindowType>
+            </Windows>
+            <ShadesAndBlinds gbXMLBlindIdRef="simpleBlind">
+              <ShadeAndBlindType>Operable</ShadeAndBlindType>
+            </ShadesAndBlinds>
+            <Doors gbXMLDoorIdRef="su-98-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-32-Office" Name="32 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+        <Space ID="sp-32-Office" Name="32 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="EquipSched-1" BuildingStoreyIdRef="story-2">
           <SpaceType>Office</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">233.100694</Area>
+          <Systems>
+            <HVAC gbXMLZoneHVACEquipmentIdRef="HVACEquip-1">
+              <HVACType>ZoneOnOff</HVACType>
+            </HVAC>
+            <Thermostats gbXMLAirLoopIdRef="airLoop-1">
+              <ThermostatType>Adjustable</ThermostatType>
+            </Thermostats>
+            <Fans gbXMLFanIdRef="airSystem-1">
+              <FanType>HVACConstantVolume</FanType>
+            </Fans>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <PlugLoad gbXMLInteriorEquipmentIdRef="Equip-1">
+              <PlugLoadType>ContinuousControl</PlugLoadType>
+            </PlugLoad>
+            <Windows gbXMLWindowIdRef="su-219-op-1,su-219-op-2">
+              <WindowType>Operable</WindowType>
+            </Windows>
+            <ShadesAndBlinds gbXMLBlindIdRef="simpleBlind">
+              <ShadeAndBlindType>Operable</ShadeAndBlindType>
+            </ShadesAndBlinds>
+            <Doors gbXMLDoorIdRef="su-99-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
-        <Space ID="sp-33-Office" Name="33 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="schLightEquip" BuildingStoreyIdRef="story-2">
+        <Space ID="sp-33-Office" Name="33 Office" ZoneIdRef="zone-office" LightScheduleIdRef="schLightEquip" PlugLoadScheduleIdRef="EquipSched-1" BuildingStoreyIdRef="story-2">
           <SpaceType>Office</SpaceType>
           <HVACConditionType>HeatedAndCooled</HVACConditionType>
           <Area AreaUnit="SquareFeet">231.230903</Area>
+          <Systems>
+            <HVAC gbXMLZoneHVACEquipmentIdRef="HVACEquip-1">
+              <HVACType>ZoneOnOff</HVACType>
+            </HVAC>
+            <Thermostats gbXMLAirLoopIdRef="airLoop-1">
+              <ThermostatType>Adjustable</ThermostatType>
+            </Thermostats>
+            <Fans gbXMLFanIdRef="airSystem-1">
+              <FanType>HVACConstantVolume</FanType>
+            </Fans>
+            <Lights gbXMLLightingSystemIdRef="LightSys-1">
+              <LightType>OnOff</LightType>
+            </Lights>
+            <PlugLoad gbXMLInteriorEquipmentIdRef="Equip-1">
+              <PlugLoadType>ContinuousControl</PlugLoadType>
+            </PlugLoad>
+            <Windows gbXMLWindowIdRef="su-222-op-1,su-222-op-2,su-223-op-1,su-223-op-2">
+              <WindowType>Operable</WindowType>
+            </Windows>
+            <ShadesAndBlinds gbXMLBlindIdRef="simpleBlind">
+              <ShadeAndBlindType>Operable</ShadeAndBlindType>
+            </ShadesAndBlinds>
+            <Doors gbXMLDoorIdRef="su-100-op-1">
+              <DoorType>Operable</DoorType>
+            </Doors>
+          </Systems>
         </Space>
       </Spaces>
       <BuildingStorey ID="story-1" Name="L1">
@@ -183,13 +881,13 @@
   </Buildings>
   <Behaviors/>
   <Zones>
-    <Zone ID="zone-open" Name="Entrance">
+    <Zone ID="zone-open" Name="Entrance" CoolScheduleIdRef="coolSched-1" FanScheduleIdRef="fanSched-1">
       <DesignHeatT TempUnit="F">70</DesignHeatT>
       <DesignCoolT TempUnit="F">75</DesignCoolT>
       <DesignHeatRH>0</DesignHeatRH>
       <DesignCoolRH>0.7</DesignCoolRH>
     </Zone>
-    <Zone ID="zone-office" Name="Office">
+    <Zone ID="zone-office" Name="Office zone" CoolScheduleIdRef="coolSched-1" FanScheduleIdRef="fanSched-1">
       <DesignHeatT TempUnit="F">70</DesignHeatT>
       <DesignCoolT TempUnit="F">75</DesignCoolT>
       <DesignHeatRH>0</DesignHeatRH>
@@ -207,7 +905,7 @@
       <DesignHeatRH>0</DesignHeatRH>
       <DesignCoolRH>0.7</DesignCoolRH>
     </Zone>
-    <Zone ID="zone-lounge" Name="Lounge">
+    <Zone ID="zone-lounge" Name="Lounge" CoolScheduleIdRef="coolSched-1" FanScheduleIdRef="fanSched-1">
       <DesignHeatT TempUnit="F">70</DesignHeatT>
       <DesignCoolT TempUnit="F">75</DesignCoolT>
       <DesignHeatRH>0</DesignHeatRH>
@@ -219,7 +917,7 @@
       <DesignHeatRH>0</DesignHeatRH>
       <DesignCoolRH>0.7</DesignCoolRH>
     </Zone>
-    <Zone ID="zone-conferenceroom" Name="Conference Room">
+    <Zone ID="zone-conferenceroom" Name="Conference Room" CoolScheduleIdRef="coolSched-1" FanScheduleIdRef="fanSched-1">
       <DesignHeatT TempUnit="F">70</DesignHeatT>
       <DesignCoolT TempUnit="F">75</DesignCoolT>
       <DesignHeatRH>0</DesignHeatRH>
@@ -227,27 +925,57 @@
     </Zone>
   </Zones>
   <Schedules>
-    <Schedule ID="schLightEquip" ScheduleType="Fraction">
+    <Schedule ID="schLightEquip">
       <YearSchedule ID="schLightEquipYear">
         <BeginDate>2024-01-01</BeginDate>
         <EndDate>2024-12-31</EndDate>
         <WeekScheduleId WeekScheduleIdRef="schLightEquipWeek"/>
       </YearSchedule>
     </Schedule>
-    <Schedule ID="schOccupancy" ScheduleType="Fraction">
+    <Schedule ID="schOccupancy">
       <YearSchedule ID="schOccupancyYear">
         <BeginDate>2024-01-01</BeginDate>
         <EndDate>2024-12-31</EndDate>
         <WeekScheduleId WeekScheduleIdRef="schOccupancyWeek"/>
       </YearSchedule>
     </Schedule>
-    <WeekSchedule ID="schLightEquipWeek" ScheduleType="Fraction" Name="Office Lighting - 6 AM to 11 PM">
-      <DayScheduleId DayScheduleIdRef="schLightEquipDay" DayofWeek="Monday"/>
+    <Schedule ID="Coolsched-1">
+      <YearSchedule ID="schCoolYear">
+        <BeginDate>2024-01-01</BeginDate>
+        <EndDate>2024-12-31</EndDate>
+        <WeekScheduleId WeekScheduleIdRef="schCoolWeek"/>
+      </YearSchedule>
+    </Schedule>
+    <Schedule ID="fanSched-1">
+      <YearSchedule ID="schFanYear">
+        <BeginDate>2024-01-01</BeginDate>
+        <EndDate>2024-12-31</EndDate>
+        <WeekScheduleId WeekScheduleIdRef="schFanWeek"/>
+      </YearSchedule>
+    </Schedule>
+    <Schedule ID="EquipSched-1">
+      <YearSchedule ID="schEquipYear">
+        <BeginDate>2024-01-01</BeginDate>
+        <EndDate>2024-12-31</EndDate>
+        <WeekScheduleId WeekScheduleIdRef="schEquipWeek"/>
+      </YearSchedule>
+    </Schedule>
+    <WeekSchedule ID="schCoolWeek" Name="Common-Office-Temperature" ScheduleType="Temp">
+      <DayScheduleId DayScheduleIdRef="schCoolDay" DayofWeek="Weekdays"/>
     </WeekSchedule>
-    <WeekSchedule ID="schOccupancyWeek" ScheduleType="Fraction" Name="Common Office Occupancy - 8 AM to 5 PM">
-      <DayScheduleId DayScheduleIdRef="schOccupancyDay" DayofWeek="Weekends"/>
+    <WeekSchedule ID="schFanWeek" Name="Office Fan - 6 AM to 11 PM" ScheduleType="OnOff">
+      <DayScheduleId DayScheduleIdRef="schFanDay" DayofWeek="Weekdays"/>
     </WeekSchedule>
-    <DaySchedule ID="schLightEquipDay" ScheduleType="Fraction" Name="Office Lighting - 6 AM to 11 PM">
+    <WeekSchedule ID="schLightEquipWeek" Name="Office Lighting - 6 AM to 11 PM" ScheduleType="Fraction">
+      <DayScheduleId DayScheduleIdRef="schLightEquipDay" DayofWeek="Weekdays"/>
+    </WeekSchedule>
+    <WeekSchedule ID="schOccupancyWeek" Name="Common Office Occupancy - 8 AM to 5 PM" ScheduleType="Fraction">
+      <DayScheduleId DayScheduleIdRef="schOccupancyDay" DayofWeek="Weekdays"/>
+    </WeekSchedule>
+    <WeekSchedule ID="schEquipWeek" Name="7DayWeek - Office/Lab" ScheduleType="Fraction">
+      <DayScheduleId DayScheduleIdRef="schEquipDay" DayofWeek="Weekdays"/>
+    </WeekSchedule>
+    <DaySchedule ID="schLightEquipDay" Name="Office Lighting - 6 AM to 11 PM" ScheduleType="Fraction">
       <ScheduleValue>0</ScheduleValue>
       <ScheduleValue>0</ScheduleValue>
       <ScheduleValue>0</ScheduleValue>
@@ -273,7 +1001,7 @@
       <ScheduleValue>0</ScheduleValue>
       <ScheduleValue>0</ScheduleValue>
     </DaySchedule>
-    <DaySchedule ID="schOccupancyDay" ScheduleType="Fraction" Name="Common Office Occupancy - 8 AM to 5 PM">
+    <DaySchedule ID="schOccupancyDay" Name="Common Office Occupancy - 8 AM to 5 PM" ScheduleType="Fraction">
       <ScheduleValue>0</ScheduleValue>
       <ScheduleValue>0</ScheduleValue>
       <ScheduleValue>0</ScheduleValue>
@@ -298,6 +1026,84 @@
       <ScheduleValue>0.1</ScheduleValue>
       <ScheduleValue>0</ScheduleValue>
       <ScheduleValue>0</ScheduleValue>
+    </DaySchedule>
+    <DaySchedule ID="schCoolDay" Name="Common-Office-Temperature" ScheduleType="Temp">
+      <ScheduleValue>85</ScheduleValue>
+      <ScheduleValue>85</ScheduleValue>
+      <ScheduleValue>85</ScheduleValue>
+      <ScheduleValue>85</ScheduleValue>
+      <ScheduleValue>85</ScheduleValue>
+      <ScheduleValue>75</ScheduleValue>
+      <ScheduleValue>75</ScheduleValue>
+      <ScheduleValue>75</ScheduleValue>
+      <ScheduleValue>75</ScheduleValue>
+      <ScheduleValue>75</ScheduleValue>
+      <ScheduleValue>75</ScheduleValue>
+      <ScheduleValue>75</ScheduleValue>
+      <ScheduleValue>75</ScheduleValue>
+      <ScheduleValue>75</ScheduleValue>
+      <ScheduleValue>75</ScheduleValue>
+      <ScheduleValue>75</ScheduleValue>
+      <ScheduleValue>75</ScheduleValue>
+      <ScheduleValue>75</ScheduleValue>
+      <ScheduleValue>75</ScheduleValue>
+      <ScheduleValue>75</ScheduleValue>
+      <ScheduleValue>75</ScheduleValue>
+      <ScheduleValue>75</ScheduleValue>
+      <ScheduleValue>85</ScheduleValue>
+      <ScheduleValue>85</ScheduleValue>
+    </DaySchedule>
+    <DaySchedule ID="schFanDay" Name="Office Fan - 6 AM to 11 PM" ScheduleType="OnOff">
+      <ScheduleValue>0</ScheduleValue>
+      <ScheduleValue>0</ScheduleValue>
+      <ScheduleValue>0</ScheduleValue>
+      <ScheduleValue>0</ScheduleValue>
+      <ScheduleValue>0</ScheduleValue>
+      <ScheduleValue>1</ScheduleValue>
+      <ScheduleValue>1</ScheduleValue>
+      <ScheduleValue>1</ScheduleValue>
+      <ScheduleValue>1</ScheduleValue>
+      <ScheduleValue>1</ScheduleValue>
+      <ScheduleValue>1</ScheduleValue>
+      <ScheduleValue>1</ScheduleValue>
+      <ScheduleValue>1</ScheduleValue>
+      <ScheduleValue>1</ScheduleValue>
+      <ScheduleValue>1</ScheduleValue>
+      <ScheduleValue>1</ScheduleValue>
+      <ScheduleValue>1</ScheduleValue>
+      <ScheduleValue>1</ScheduleValue>
+      <ScheduleValue>1</ScheduleValue>
+      <ScheduleValue>1</ScheduleValue>
+      <ScheduleValue>1</ScheduleValue>
+      <ScheduleValue>1</ScheduleValue>
+      <ScheduleValue>0</ScheduleValue>
+      <ScheduleValue>0</ScheduleValue>
+    </DaySchedule>
+    <DaySchedule ID="schEquipDay" Name="Office Equipment - 6 AM to 11 PM" ScheduleType="Fraction">
+      <ScheduleValue>0.210979924</ScheduleValue>
+      <ScheduleValue>0.210979924</ScheduleValue>
+      <ScheduleValue>0.210979924</ScheduleValue>
+      <ScheduleValue>0.210979924</ScheduleValue>
+      <ScheduleValue>0.210979924</ScheduleValue>
+      <ScheduleValue>0.210979924</ScheduleValue>
+      <ScheduleValue>0.210979924</ScheduleValue>
+      <ScheduleValue>0.3</ScheduleValue>
+      <ScheduleValue>0.9</ScheduleValue>
+      <ScheduleValue>0.9</ScheduleValue>
+      <ScheduleValue>0.9</ScheduleValue>
+      <ScheduleValue>0.9</ScheduleValue>
+      <ScheduleValue>0.8</ScheduleValue>
+      <ScheduleValue>0.9</ScheduleValue>
+      <ScheduleValue>0.9</ScheduleValue>
+      <ScheduleValue>0.9</ScheduleValue>
+      <ScheduleValue>0.9</ScheduleValue>
+      <ScheduleValue>0.5</ScheduleValue>
+      <ScheduleValue>0.3</ScheduleValue>
+      <ScheduleValue>0.3</ScheduleValue>
+      <ScheduleValue>0.2</ScheduleValue>
+      <ScheduleValue>0.2</ScheduleValue>
+      <ScheduleValue>0.210979924</ScheduleValue>
+      <ScheduleValue>0.210979924</ScheduleValue>
     </DaySchedule>
   </Schedules>
 </OccupantBehavior>
