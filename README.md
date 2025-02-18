@@ -58,9 +58,11 @@ gb-obXML-converter/
 └── gb-to-obXML_converter.py          # Main converter script
 ```
 
-## Contact
-If you have any questions about this code, please reach out to Jihoon Chung (jihoonchung.research@gmail.com)
-
 ## References
 - Green Building XML (gbXML) Schema, available at https://www.gbxml.org/
 - Occupant Behavior XML (obXML) Schema, available at https://behavior.lbl.gov/
+
+## Citation and Acknowledgment
+This code was developed as part of the research published in the journal paper:
+Author names. (2025). Enhancing Occupant Behavior Representation for Interoperability between Building Information Modeling and Building Energy Modeling. *Building Simulation*.
+If you use this code in your work, please cite the above publication.
