@@ -64,4 +64,3 @@ If you have any questions about this code, please reach out to Jihoon Chung (jih
 ## References
 - Green Building XML (gbXML) Schema, available at https://www.gbxml.org/
 - Occupant Behavior XML (obXML) Schema, available at https://behavior.lbl.gov/
-- XSL Transformations (XSLT) Version 1.0, available at https://www.w3.org/TR/xslt-10/
