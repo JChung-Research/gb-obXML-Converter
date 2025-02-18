@@ -60,6 +60,7 @@ gb-obXML-converter/
 
 ## Citation
 This code was developed as part of the research published in the journal paper:
+
 Author names. (2025). Enhancing Occupant Behavior Representation for Interoperability between Building Information Modeling and Building Energy Modeling. *Building Simulation*.
 
 If you use this code in your work, please cite the above publication.
