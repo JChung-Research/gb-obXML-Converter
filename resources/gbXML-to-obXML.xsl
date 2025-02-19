@@ -179,10 +179,6 @@
             <HVACConditionType>
                 <xsl:value-of select="@conditionType"/>
             </HVACConditionType>
-            <xsl:call-template name="add-Area">
-                <xsl:with-param name="Area" select="gb:Area"/>
-                <xsl:with-param name="unit" select="gb:Area/@unit"/>
-            </xsl:call-template>
             <xsl:apply-templates select="gb:BuildingSystems"/>
             <xsl:if test="not(gb:BuildingSystems)">
                 <xsl:call-template name="add-Systems">
@@ -192,6 +188,10 @@
                     <xsl:with-param name="IntEquipId" select="gb:IntEquipId"/>
                 </xsl:call-template>
             </xsl:if>
+            <xsl:call-template name="add-Area">
+                <xsl:with-param name="Area" select="gb:Area"/>
+                <xsl:with-param name="unit" select="gb:Area/@unit"/>
+            </xsl:call-template>
             <xsl:apply-templates select="gb:OccupantID"/>
             <xsl:apply-templates select="gb:MeetingEvent"/>
             <xsl:apply-templates select="gb:GroupPriority"/>
@@ -373,7 +373,6 @@
     <xsl:template name="add-Schedule">
         <xsl:param name="Name"/>
         <xsl:param name="scheduleType"/>        
-        <xsl:param name="scheduleTypeLimitsId"/>
         <xsl:if test="$Name != ''">
             <xsl:attribute name="Name">
                 <xsl:value-of select="$Name"/>
@@ -382,11 +381,6 @@
         <xsl:if test="$scheduleType != ''">
             <xsl:attribute name="ScheduleType">
                 <xsl:value-of select="$scheduleType"/>
-            </xsl:attribute>
-        </xsl:if>
-        <xsl:if test="$scheduleTypeLimitsId != ''">
-            <xsl:attribute name="ScheduleTypeLimitsId">
-                <xsl:value-of select="$scheduleTypeLimitsId"/>
             </xsl:attribute>
         </xsl:if>
     </xsl:template>
@@ -422,7 +416,7 @@
         <Schedule ID="{@id}">
             <xsl:call-template name="add-Schedule">
                 <xsl:with-param name="Name" select="@Name"/>
-                <xsl:with-param name="scheduleTypeLimitsId" select="@scheduleTypeLimitsId"/>
+                <xsl:with-param name="scheduleType" select="@type"/>
             </xsl:call-template>
             <xsl:apply-templates select="gb:Description"/>   
             <xsl:apply-templates select="gb:YearSchedule"/>
@@ -433,7 +427,6 @@
         <YearSchedule ID="{@id}">
             <xsl:call-template name="add-Schedule">
                 <xsl:with-param name="Name" select="gb:Name"/> 
-                <xsl:with-param name="scheduleTypeLimitsId" select="@scheduleTypeLimitsId"/>
             </xsl:call-template>
             <xsl:apply-templates select="gb:Description"/>           
             <BeginDate>
@@ -453,7 +446,6 @@
             <xsl:call-template name="add-Schedule">
                 <xsl:with-param name="Name" select="gb:Name"/> 
                 <xsl:with-param name="scheduleType" select="@scheduleType"/> 
-                <xsl:with-param name="scheduleTypeLimitsId" select="@scheduleTypeLimitsId"/>
             </xsl:call-template>
             <xsl:apply-templates select="gb:Description"/>        
             <DayScheduleId DayScheduleIdRef="{gb:Day/@dayScheduleIdRef}">                
@@ -468,7 +460,6 @@
             <xsl:call-template name="add-Schedule">
                 <xsl:with-param name="Name" select="gb:Name"/> 
                 <xsl:with-param name="scheduleType" select="@scheduleType"/> 
-                <xsl:with-param name="scheduleTypeLimitsId" select="@scheduleTypeLimitsId"/>
             </xsl:call-template>
             <xsl:apply-templates select="gb:Description"/>         
             <xsl:apply-templates select="gb:ScheduleValue"/>

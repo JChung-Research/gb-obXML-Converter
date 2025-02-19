@@ -231,7 +231,7 @@ v.1.4
 107. Changed the name of the element ‘Duration’ to ‘OccupancyDuration’ 
 108. Changed the name of the element ‘Weather’ to 'WeatherStation'
 109. Added enumeration ‘LightStateLog’, 'ThermostatControlLog' and 'WeatherStation' to simpleType ‘TypesDataCollectedList’
-110. Updated the equation of 'eqLogit1DQuadraticType' from “p = A + C / {1 + exp(-B*[log10(P1)-D]}“ to “log(p/(1-p)) = A*P1*P1+B*P1+C"
+110. Updated the equation of 'eqLogit1DQuadraticType' from “p = A + C / {1 + exp(-B*[log10(P1)-D]}“ to “log(p/(1-p)) = A*P1*P1+B*P1+C" and added Hunt1D and eqHunt1DType with  “p = A + C / {1 + exp(-B*[log10(P1)-D]}“ 
 111. Added 'ZoneIdRef' attribute of type 'xs:IDREF' to element 'Space'
 112. Added 'LightScheduleIdRef' attribute of type 'xs:IDREF' to element 'Space'
 113. Added 'PlugLoadScheduleIdRef' attribute of type 'xs:IDREF' to element 'Space'
@@ -326,6 +326,7 @@ v.1.4
 	<xs:element name="Logit9D" type="eqLogit9DLinearType"/>
 	<xs:element name="Logit9DCustom" type="eqLogit9DCustomType"/>
 	<xs:element name="Weibull1D" type="eqWeibull1D3P"/>
+	<xs:element name="Hunt1D" type="eqHunt1DType"/>	
 	<xs:element name="Logit1DQuadratic" type="eqLogit1DQuadraticType"/>
 	<xs:element name="Logit2DQuadratic" type="eqLogit2DQuadraticType"/>
 	<xs:element name="ControlValue" type="xs:double"/>
@@ -988,6 +989,7 @@ v.1.4
 				<xs:element ref="Logit9D" minOccurs="0"/>
 				<xs:element ref="Logit9DCustom" minOccurs="0"/>
 				<xs:element ref="Weibull1D" minOccurs="0"/>
+				<xs:element ref="Hunt1D" minOccurs="0"/>
 				<xs:element ref="Logit1DQuadratic" minOccurs="0"/>
 				<xs:element ref="Logit2DQuadratic" minOccurs="0"/>
 			</xs:choice>
@@ -1333,7 +1335,7 @@ v.1.4
 			<xs:sequence>
 				<xs:element ref="Description" minOccurs="0"/>
 				<xs:element ref="SpaceType"/>
-				<xs:element ref="HVACConditionType"/>
+				<xs:element ref="HVACConditionType" minOccurs="0"/>
 				<xs:element ref="GroupPriority" minOccurs="0"/>
 				<xs:element ref="Systems" minOccurs="0"/>
 				<xs:element ref="NumOccupants" minOccurs="0"/>
@@ -2098,6 +2100,16 @@ v.1.4
 			<xs:element ref="Parameter7ID" minOccurs="0"/>
 			<xs:element ref="Parameter8ID" minOccurs="0"/>
 			<xs:element ref="Parameter9ID" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="eqHunt1DType">
+		<xs:sequence>
+			<xs:element name="Description" default="p = A + C / {1 + exp(-B*[log10(P1)-D]}" minOccurs="0"/>
+			<xs:element ref="CoefficientA"/>
+			<xs:element ref="CoefficientB"/>
+			<xs:element ref="CoefficientC"/>
+			<xs:element ref="CoefficientD"/>
+			<xs:element ref="Parameter1ID"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="eqLogit1DQuadraticType">

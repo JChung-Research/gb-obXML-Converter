@@ -3342,7 +3342,7 @@
 							<CartesianPoint>
 								<Coordinate>-1.604888</Coordinate>
 								<Coordinate>49.252519</Coordinate>
-						gbXMLtoolXML_gb-obXML.xsl		<Coordinate>12.000000</Coordinate>
+								<Coordinate>12.000000</Coordinate>
 							</CartesianPoint>
 							<CartesianPoint>
 								<Coordinate>-1.604888</Coordinate>
@@ -23894,8 +23894,8 @@
 		<CADObjectId>149181</CADObjectId>
 		<AirSystemId airSystemIdRef="airSystem-1"/>
 	</ZoneHVACEquipment>
-	<AirSystem id="airSystem-1">
-		<Fan fanType="ConstantVolume"/>
+	<AirSystem id="airSystem-1" heatingCoilType="HotWater" coolingCoilType="ChilledWater">
+		<Fan id="fan-1" fanType="ConstantVolume"/>
 	</AirSystem>
 	<AirLoop id="airLoop-1" systemType="ConstantVolumeFixedOA" controlZoneIdRef="zone-office">
 		<Name>Air loop</Name>
@@ -23904,6 +23904,7 @@
 			<MaxTemp unit="F">120</MaxTemp>
 		</TemperatureControl>
 	</AirLoop>
+	<LightingSystem id="LightSys-1"/>
 	<WindowType id="simpleWindow">
 		<Name>Pilkington RW33 double glazing (1/4 in + 1/4 in)</Name>
 		<Description>Pilkington RW33 double glazing (1/4 in + 1/4 in)</Description>
@@ -24097,7 +24098,7 @@
 		</YearSchedule>
 		<Name>Common Office Occupancy - 8 AM to 5 PM</Name>
 	</Schedule>
-	<Schedule id="Coolsched-1" type="Temp">
+	<Schedule id="coolSched-1" type="Temp">
 		<Name>Common-Office-Temperature</Name>
 		<YearSchedule id="schCoolYear">
 			<BeginDate>2024-01-01</BeginDate>
