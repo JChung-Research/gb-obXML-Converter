@@ -61,7 +61,7 @@ gb-obXML-converter/
 ## Citation
 This code was developed as part of the research published in the journal paper:
 
-*[Under Review]* Author names. (2025). Enhancing Occupant Behavior Representation for Interoperability between Building Information Modeling and Building Energy Modeling. *Building Simulation*.
+Chung, J., Hong, T., Malik, J., and Shelden, D. Enhancing occupant behavior representation for interoperability between building information modeling and building energy modeling. *Build. Simul.* (2025). https://doi.org/10.1007/s12273-025-1313-z
 
 If you use this code in your work, please cite the above publication.
 
